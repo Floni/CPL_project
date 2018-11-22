@@ -1,0 +1,300 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving left and right moves the cursor (example for multiple commands) *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving left moves the cursor *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving up moves the cursor *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving down moves the cursor *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving right moves the cursor  *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Next word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Back word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- End of word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- End of line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Start of line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Match brackets *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete backwards *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Join line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Insert into normal mode *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Insert after character *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Open newline *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Substitute *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Go *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Insert in line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Insert after line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Change to the end of the line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:284)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.Viw$.processKey(Viw.scala:6)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1(ViwTest.scala:73)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.$anonfun$viwTest$1$adapted(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft(IndexedSeqOptimized.scala:56)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.IndexedSeqOptimized.foldLeft$(IndexedSeqOptimized.scala:64)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.StringOps.foldLeft(StringOps.scala:29)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest(ViwTest.scala:72)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.ViwTest.viwTest$(ViwTest.scala:68)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at viw.CommandsTest.viwTest(CommandsTest.scala:5)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m

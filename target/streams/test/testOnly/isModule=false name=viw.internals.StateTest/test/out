@@ -1,0 +1,3 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mStateTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- State from cursoredText should be equal to its source[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- State from cursoredText should be equal to its source with an empty cursor[0m[0m
