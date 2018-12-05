@@ -26,9 +26,6 @@ object CursorMover {
   def moveCursorLeft(state: State) : Option[State] = {
     if (state.position.character > 0) {
       Option(State(state.content, Position(state.position.line, state.position.character - 1), None, state.mode))
-    } else if (state.position.line > 0) {
-      val newLine = state.position.line - 1
-      Option(State(state.content, Position(newLine, state.contentLines(newLine).length), None, state.mode))
     } else {
       Option(state)
     }
@@ -37,9 +34,6 @@ object CursorMover {
   def moveCursorRight(state: State) : Option[State] = {
     if (state.position.character < state.contentLines(state.position.line).length) {
       Option(State(state.content, Position(state.position.line, state.position.character + 1), None, state.mode))
-    } else if (state.position.line < state.contentLines.length) {
-      val newLine = state.position.line + 1
-      Option(State(state.content, Position(newLine, 0), None, state.mode))
     } else {
       Option(state)
     }
