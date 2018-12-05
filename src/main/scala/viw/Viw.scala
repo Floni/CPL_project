@@ -11,7 +11,11 @@ object Viw {
   }
 }
 
+// TODO: define abstract command class and subclass it for each (set of) command.
+
 object CursorMover {
+  // TODO: reduce code duplication by merging the move functions
+  // TODO: Do this by calculating the new line and new char pos based on command and return in a general manner
   def moveCursorLeft(state: State) : Option[State] = {
     if (state.position.character > 0) {
       Option(State(state.content, Position(state.position.line, state.position.character - 1), None, state.mode))
