@@ -38,5 +38,16 @@ object CursorMover {
     }
   }
 
+  def moveCursorUp(state: State) : Option[State] = {
+    if (state.position.line > 0) {
+      Option(State(state.content, Position(state.position.line - 1, state.position.character), None, state.mode))
+    } else {Option(state)}
+  }
+
+  def moveCursorDown(state: State) : Option[State] = {
+    if (state.position.line < state.contentLines.length) {
+      Option(State(state.content, Position(state.position.line + 1, state.position.character), None, state.mode))
+    } else {Option(state)}
+  }
 
 }

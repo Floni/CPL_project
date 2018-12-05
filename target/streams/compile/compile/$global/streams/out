@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\project\src\main\scala\viw\Viw.scala:10:5: '=>' expected but 'case' found.[0m
-[0m[[0m[31merror[0m] [0m[0m    case _ => None[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\project\src\main\scala\viw\Viw.scala:43:3: illegal start of simple expression[0m
+[0m[[0m[31merror[0m] [0m[0m  }[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
