@@ -37,6 +37,16 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Moving left at start of the line") {
+    viwTrue(
+      "h",
+      """abc
+        |#a#b""".stripMargin,
+      """abc
+        |#a#b""".stripMargin
+    )
+  }
+
   test("Moving up moves the cursor") {
     viwTrue(
       "k",
@@ -46,6 +56,16 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """Lorem ipsum dolor sit amet, #c#onsectetur adipiscing elit.
         |Cras quis massa eu ex commodo imperdiet.
         |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+    )
+  }
+
+  test("Moving up on first line") {
+    viwTrue(
+      "k",
+      """a#b#c
+        |abc""".stripMargin,
+      """a#b#c
+        |abc""".stripMargin,
     )
   }
 
@@ -59,6 +79,16 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Moving down on last line") {
+    viwTrue(
+      "j",
+      """abc
+        |a#b#c""".stripMargin,
+      """abc
+        |a#b#c""".stripMargin,
+    )
+  }
+
   test("Moving right moves the cursor ") {
     viwTrue(
       "l",
@@ -66,6 +96,18 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """Lorem ipsum dolor sit amet#,# consectetur adipiscing elit.
         |Cras quis massa eu ex commodo imperdiet.
         |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+    )
+  }
+
+  test("Moving right at end of the line") {
+    viwTrue(
+      "l",
+      """ab#c#
+        |abc
+      """.stripMargin,
+      """ab#c#
+        |abc
+      """.stripMargin
     )
   }
 
