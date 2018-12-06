@@ -3,54 +3,52 @@ package viw
 import viw.internals.State
 import viw.internals.State.Position
 
+import Math.min, Math.max
+
 object Viw {
   def processKey(key: String, state: State) : Option[State] = key match{
-    case k if k == "h" => CursorMover.moveCursorLeft(state)
-    case k if k == "l" => CursorMover.moveCursorRight(state)
-    case k if k == "k" => CursorMover.moveCursorUp(state)
-    case k if k == "j" => CursorMover.moveCursorDown(state)
+    case "h" => new MoveLeftCommand(state, key).eval
+    case "j" => new MoveDownCommand(state, key).eval
+    case "k" => new MoveUpCommand(state, key).eval
+    case "l" => new MoveRightCommand(state, key).eval
     case _ => None
   }
 }
 
-// TODO: define abstract command class and subclass it for each (set of) command.
+trait Command {
+  def eval: Option[State]
+}
 
-// TODO: reduce code duplication by merging the move functions
-// TODO: Do this by calculating the new line and new char pos based on command and return in a general manner
+abstract class MoveCommand extends Command {}
 
-// TODO: Better way to copy (a part of) the state? Or edit this in some way?
-
-// TODO: Vim
-
-object CursorMover {
-  def moveCursorLeft(state: State) : Option[State] = {
-    if (state.position.character > 0) {
-      Option(State(state.content, Position(state.position.line, state.position.character - 1), None, state.mode))
-    } else {
-      Option(state)
-    }
+class MoveLeftCommand(state: State, key: String) extends MoveCommand {
+  def eval: Option[State] = {
+    val newPos = Position(state.position.line, max(0, state.position.character - 1))
+    Option(state.copy(position = newPos))
   }
+}
 
-  def moveCursorRight(state: State) : Option[State] = {
-    if (state.position.character < state.contentLines(state.position.line).length) {
-      Option(State(state.content, Position(state.position.line, state.position.character + 1), None, state.mode))
-    } else {
-      Option(state)
-    }
+class MoveDownCommand(state: State, key: String) extends MoveCommand {
+  def eval: Option[State] = {
+    val newPos = if (state.position.line < state.contentLines.length - 1) {
+      Position(state.position.line + 1, min(state.contentLines(state.position.line + 1).length, state.position.character))
+    } else state.position
+    Option(state.copy(position = newPos))
   }
+}
 
-  // TODO: What if the line we move to is shorter than character pos? Just setting it to the length of that line is not
-  // TODO: right because when moving again to another line that has length at least as large as the char pos, then the char pos will again be the original
-  def moveCursorUp(state: State) : Option[State] = {
-    if (state.position.line > 0) {
-      Option(State(state.content, Position(state.position.line - 1, state.position.character), None, state.mode))
-    } else {Option(state)}
+class MoveUpCommand(state: State, key: String) extends MoveCommand {
+  def eval: Option[State] = {
+    val newPos = if (state.position.line > 0) {
+      Position(state.position.line - 1, min(state.contentLines(state.position.line - 1).length, state.position.character))
+    } else state.position
+    Option(state.copy(position = newPos))
   }
+}
 
-  def moveCursorDown(state: State) : Option[State] = {
-    if (state.position.line < state.contentLines.length) {
-      Option(State(state.content, Position(state.position.line + 1, state.position.character), None, state.mode))
-    } else {Option(state)}
+class MoveRightCommand(state: State, key: String) extends MoveCommand {
+  def eval: Option[State] = {
+    val newPos = Position(state.position.line, min(state.contentLines(state.position.line).length - 1, state.position.character + 1))
+    Option(state.copy(position = newPos))
   }
-
 }
