@@ -42,12 +42,15 @@ object Viw {
 }
 
 abstract class Command(state: State) {
-  def eval: Option[State]
-
   val line = state.position.line
   val char = state.position.character
   val contentLines = state.contentLines
   val position = state.position
+  val lines = contentLines.length
+
+  def eval: Option[State]
+
+  def lineLength(line: Int) : Int = contentLines(line).length
 }
 
 abstract class MoveCommand(state: State) extends Command(state) {}
@@ -61,25 +64,25 @@ case class MoveLeftCommand(state: State) extends MoveCommand(state) {
 
 case class MoveDownCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
-    val newPos = if (state.position.line < contentLines.length - 1) {
-      Position(line + 1, min(contentLines(line + 1).length, char))
-    } else state.position
+    val newPos = if (line < lines - 1) {
+      Position(line + 1, min(lineLength(line + 1), char))
+    } else position
     Some(state.copy(position = newPos))
   }
 }
 
 case class MoveUpCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
-    val newPos = if (state.position.line > 0) {
-      Position(line - 1, min(contentLines(line - 1).length, char))
-    } else state.position
+    val newPos = if (line> 0) {
+      Position(line - 1, min(lineLength(line - 1), char))
+    } else position
     Some(state.copy(position = newPos))
   }
 }
 
 case class MoveRightCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
-    val newPos = Position(line, min(contentLines(line).length - 1, char + 1))
+    val newPos = Position(line, min(lineLength(line) - 1, char + 1))
     Some(state.copy(position = newPos))
   }
 }
@@ -110,7 +113,7 @@ case class EndWordCommand(state: State) extends MoveWordCommand(state) {
 }
 
 case class EndLineCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = Some(state.copy(position = position.copy(character = contentLines(line).length - 1)))
+  def eval: Option[State] = Some(state.copy(position = position.copy(character = lineLength(line) - 1)))
 }
 
 case class StartLineCommand(state: State) extends MoveCommand(state) {
@@ -163,7 +166,7 @@ case class OpenCommand(state: State) extends Command(state) {
   def eval: Option[State] = Some(state.copy(
     content = (contentLines.slice(0, line + 1) ++
       Vector("\n") ++
-      contentLines.slice(line + 1, contentLines.length)).mkString(""),
+      contentLines.slice(line + 1, lines)).mkString(""),
     Position(line + 1, 0),
     mode = false))
 }
@@ -173,12 +176,12 @@ case class SubstituteCommand(state: State) extends Command(state) {
     content = (contentLines.slice(0, line) ++
       contentLines(line).slice(0, char) ++
       contentLines(line).slice(char + 1, contentLines(line).length) ++
-      contentLines.slice(line + 1, contentLines.length)).mkString(""),
+      contentLines.slice(line + 1, lines)).mkString(""),
     mode = false))
 }
 
 case class GoCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Some(state.copy(position = Position(contentLines.length - 1, 0), mode = false))
+  def eval: Option[State] = Some(state.copy(position = Position(lines - 1, 0), mode = false))
 }
 
 case class InsertInLineCommand(state: State) extends Command(state) {
@@ -186,13 +189,13 @@ case class InsertInLineCommand(state: State) extends Command(state) {
 }
 
 case class InsertAfterLineCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Some(state.copy(position = position.copy(character = contentLines(line).length), mode = false))
+  def eval: Option[State] = Some(state.copy(position = position.copy(character = lineLength(line)), mode = false))
 }
 
 case class ChangeLineCommand(state: State) extends Command(state) {
   def eval: Option[State] = Some(state.copy(
     content = (contentLines.slice(0, line) ++
       contentLines(line).slice(0, char) ++
-      contentLines.slice(line + 1, contentLines(line).length)).mkString(""),
+      contentLines.slice(line + 1, lineLength(line))).mkString(""),
     mode = false))
 }
