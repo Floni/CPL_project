@@ -5,19 +5,25 @@ import viw.internals.State.Position
 
 import Math.min, Math.max
 
-
-
 object Viw {
-  def processKey(key: String, state: State) : Option[State] = key match{
-    case "h" => new MoveLeftCommand(state).eval
-    case "j" => new MoveDownCommand(state).eval
-    case "k" => new MoveUpCommand(state).eval
-    case "l" => new MoveRightCommand(state).eval
-    case _ => None
+
+  val commandMap: Map[String, State => Command] = Map(
+    "h" -> MoveLeftCommand,
+    "j" -> MoveDownCommand,
+    "k" -> MoveUpCommand,
+    "l" -> MoveRightCommand
+  )
+
+  def processKey(key: String, state: State) : Option[State] = {
+    if (commandMap.contains(key)) {
+      commandMap(key)(state).eval
+    } else {
+      Some(state)
+    }
   }
 }
 
-abstract  class Command(state: State) {
+abstract class Command(state: State) {
   def eval: Option[State]
 }
 
