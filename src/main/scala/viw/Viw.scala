@@ -24,7 +24,9 @@ object Viw {
     "J" -> JoinLineCommand,
     "i" -> InsertCommand,
     "a" -> AppendCommand,
-    "o" -> OpenCommand
+    "o" -> OpenCommand,
+    "s" -> SubstituteCommand,
+    "G" -> GoCommand
   )
 
   def processKey(key: String, state: State) : Option[State] = {
@@ -156,9 +158,22 @@ case class AppendCommand(state: State) extends Command(state) {
 
 case class OpenCommand(state: State) extends Command(state) {
   def eval: Option[State] = Some(state.copy(
-    content = (contentLines.slice(0, line + 1).flatten
-      ++ Vector("\n")
-      ++ contentLines.slice(line + 1, contentLines.length)).mkString(""),
+    content = (contentLines.slice(0, line + 1) ++
+      Vector("\n") ++
+      contentLines.slice(line + 1, contentLines.length)).mkString(""),
     Position(line + 1, 0),
     mode = false))
+}
+
+case class SubstituteCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(
+    content = (contentLines.slice(0, line) ++
+      contentLines(line).slice(0, char) ++
+      contentLines(line).slice(char + 1, contentLines(line).length) ++
+      contentLines.slice(line + 1, contentLines.length)).mkString(""),
+    mode = false))
+}
+
+case class GoCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(position = Position(contentLines.length - 1, 0)))
 }
