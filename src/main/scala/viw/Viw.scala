@@ -16,7 +16,15 @@ object Viw {
     "b" -> BackWordCommand,
     "e" -> EndWordCommand,
     "$" -> EndLineCommand,
-    "0" -> StartLineCommand
+    "0" -> StartLineCommand,
+    "%" -> MatchBracketCommand,
+    "x" -> DeleteCommand,
+    "X" -> DeleteBackCommand,
+    "D" -> DeleteLineCommand,
+    "J" -> JoinLineCommand,
+    "i" -> InsertCommand,
+    "a" -> AppendCommand,
+    "o" -> OpenCommand
   )
 
   def processKey(key: String, state: State) : Option[State] = {
@@ -30,14 +38,14 @@ object Viw {
 
 abstract class Command(state: State) {
   def eval: Option[State]
-}
 
-abstract class MoveCommand(state: State) extends Command(state) {
   val line = state.position.line
   val char = state.position.character
   val contentLines = state.contentLines
   val position = state.position
 }
+
+abstract class MoveCommand(state: State) extends Command(state) {}
 
 case class MoveLeftCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
@@ -72,13 +80,12 @@ case class MoveRightCommand(state: State) extends MoveCommand(state) {
 }
 
 abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
-  def words(line: String): Array[String] = {
-    line.split(' ')
-  }
+  def words(line: String): Array[String] = line.split(' ')
 }
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
+    // TODO: implement
     val whitespace = contentLines(line).indexOf(' ', char)
     val character = contentLines(line).indexOf(' ', char)
     Some(state)
@@ -98,13 +105,60 @@ case class EndWordCommand(state: State) extends MoveWordCommand(state) {
 }
 
 case class EndLineCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
-    Some(state.copy(position = position.copy(character = contentLines(line).length - 1)))
-  }
+  def eval: Option[State] = Some(state.copy(position = position.copy(character = contentLines(line).length - 1)))
 }
 
 case class StartLineCommand(state: State) extends MoveCommand(state) {
+  def eval: Option[State] = Some(state.copy(position = position.copy(character = 0)))
+}
+
+case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
-    Some(state.copy(position = position.copy(character = 0)))
+    // TODO: implement
+    Some(state)
   }
+}
+
+case class DeleteCommand(state: State) extends Command(state) {
+  def eval: Option[State] = {
+    Some(state)
+  }
+}
+
+case class DeleteBackCommand(state: State) extends Command(state) {
+  def eval: Option[State] = {
+    // TODO: implement
+    Some(state)
+  }
+}
+
+case class DeleteLineCommand(state: State) extends Command(state) {
+  def eval: Option[State] = {
+    // TODO: implement
+    Some(state)
+  }
+}
+
+case class JoinLineCommand(state: State) extends Command(state) {
+  def eval: Option[State] = {
+    // TODO: implement
+    Some(state)
+  }
+}
+
+case class InsertCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(mode = false))
+}
+
+case class AppendCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(position = position.copy(line, char + 1), mode = false))
+}
+
+case class OpenCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(
+    content = (contentLines.slice(0, line + 1).flatten
+      ++ Vector("\n")
+      ++ contentLines.slice(line + 1, contentLines.length)).mkString(""),
+    Position(line + 1, 0),
+    mode = false))
 }
