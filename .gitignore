@@ -1,8 +1,0 @@
-target
-project
-.idea
-*.class
-out
-*.iml
-*.ipr
-*.iws
