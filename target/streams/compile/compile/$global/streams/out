@@ -1,10 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:97:9: local val whitespace in method eval is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val whitespace = contentLines(line).indexOf(' ', char)[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:121:9: local val characterPos in method eval is never used[0m
+[0m[[0m[33mwarn[0m] [0m[0m    val characterPos = contentLines(line).slice(whitespace, lineLength(line)).indexWhere(c => c != ' ')[0m
 [0m[[0m[33mwarn[0m] [0m[0m        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:98:9: local val character in method eval is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val character = contentLines(line).indexOf(' ', char)[0m
-[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\internals\Runner.scala:18:28: Unused import[0m
-[0m[[0m[33mwarn[0m] [0m[0m    import js.JSConverters._[0m
-[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

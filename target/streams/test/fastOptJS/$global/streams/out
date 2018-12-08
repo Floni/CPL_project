@@ -1,16 +1,16 @@
 [0m[[0m[0minfo[0m] [0m[0mFast optimizing E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\viw-test-fastopt.js[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 412924 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 546212 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 967051 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: true[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 159877 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 12080 methods.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 1681271 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 1935307 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 106839 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 16521 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: 124965 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 994 -- invalidated: 998[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 0 -- invalidated: 5670[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 890010 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 69 -- trees read: 1170[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 176949 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 46830 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 226784 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: false[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 39427 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 241 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 7487 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 52208 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 132235 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 6211 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 138525 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 1944 -- invalidated: 48[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 5477 -- invalidated: 193[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 110932 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 21 -- invalidated: 48 -- trees read: 48[0m

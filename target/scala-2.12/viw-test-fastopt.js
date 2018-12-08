@@ -44491,12 +44491,12 @@ $c_Lviw_AppendCommand.prototype.toString__T = (function() {
 $c_Lviw_AppendCommand.prototype.eval__s_Option = (function() {
   var line = this.line$1;
   var character = ((1 + this.char$1) | 0);
-  var x$33 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
+  var x$55 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
   var this$2 = this.state$2;
-  var x$35 = this$2.content$1;
+  var x$57 = this$2.content$1;
   var this$3 = this.state$2;
-  var x$36 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$35, x$33, x$36, false))
+  var x$58 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$57, x$55, x$58, false))
 });
 $c_Lviw_AppendCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44583,12 +44583,12 @@ $c_Lviw_ChangeLineCommand.prototype.eval__s_Option = (function() {
   var jsx$1 = $m_sci_StringOps$();
   var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
   var x$1 = jsx$1.slice$extension__T__I__I__T(x, 0, this.char$1);
-  var x$61 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lineLength__I__I(this.line$1)), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$83 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lineLength__I__I(this.line$1)), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
   var this$5 = this.state$2;
-  var x$63 = this$5.position$1;
+  var x$85 = this$5.position$1;
   var this$6 = this.state$2;
-  var x$64 = this$6.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$61, x$63, x$64, false))
+  var x$86 = this$6.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$83, x$85, x$86, false))
 });
 $c_Lviw_ChangeLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44920,12 +44920,12 @@ $c_Lviw_GoCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_GoCommand.prototype.eval__s_Option = (function() {
-  var x$45 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
+  var x$67 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
   var this$1 = this.state$2;
-  var x$47 = this$1.content$1;
+  var x$69 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$48 = this$2.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$47, x$45, x$48, false))
+  var x$70 = this$2.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$69, x$67, x$70, false))
 });
 $c_Lviw_GoCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45008,15 +45008,15 @@ $c_Lviw_InsertAfterLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_InsertAfterLineCommand.prototype.eval__s_Option = (function() {
-  var x$55 = this.lineLength__I__I(this.line$1);
+  var x$77 = this.lineLength__I__I(this.line$1);
   var this$1 = this.position$1;
-  var x$56 = this$1.line$1;
-  var x$57 = new $c_Lviw_internals_State$Position().init___I__I(x$56, x$55);
+  var x$78 = this$1.line$1;
+  var x$79 = new $c_Lviw_internals_State$Position().init___I__I(x$78, x$77);
   var this$3 = this.state$2;
-  var x$59 = this$3.content$1;
+  var x$81 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$60 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$59, x$57, x$60, false))
+  var x$82 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$81, x$79, x$82, false))
 });
 $c_Lviw_InsertAfterLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45100,12 +45100,12 @@ $c_Lviw_InsertCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.state$2;
-  var x$30 = this$1.content$1;
+  var x$52 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$31 = this$2.position$1;
+  var x$53 = this$2.position$1;
   var this$3 = this.state$2;
-  var x$32 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$30, x$31, x$32, false))
+  var x$54 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$52, x$53, x$54, false))
 });
 $c_Lviw_InsertCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45189,13 +45189,13 @@ $c_Lviw_InsertInLineCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertInLineCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.position$1;
-  var x$50 = this$1.line$1;
-  var x$51 = new $c_Lviw_internals_State$Position().init___I__I(x$50, 0);
+  var x$72 = this$1.line$1;
+  var x$73 = new $c_Lviw_internals_State$Position().init___I__I(x$72, 0);
   var this$3 = this.state$2;
-  var x$53 = this$3.content$1;
+  var x$75 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$54 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$53, x$51, x$54, false))
+  var x$76 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$75, x$73, x$76, false))
 });
 $c_Lviw_InsertInLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45378,11 +45378,11 @@ $c_Lviw_OpenCommand.prototype.eval__s_Option = (function() {
     };
     var jsx$1 = b.result__sci_Vector()
   };
-  var x$37 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$1, ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
-  var x$38 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
+  var x$59 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$1, ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$60 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
   var this$6 = this.state$2;
-  var x$40 = this$6.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$37, x$38, x$40, false))
+  var x$62 = this$6.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$59, x$60, x$62, false))
 });
 $c_Lviw_OpenCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45475,12 +45475,12 @@ $c_Lviw_SubstituteCommand.prototype.eval__s_Option = (function() {
   var jsx$1 = this.char$1;
   var thiz = $as_T(this.contentLines$1.apply__I__O(this.line$1));
   var x$3 = jsx$2.slice$extension__T__I__I__T(x$2, ((1 + jsx$1) | 0), $uI(thiz.length));
-  var x$41 = $as_sc_TraversableOnce($as_sci_Vector(jsx$3.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$3), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$63 = $as_sc_TraversableOnce($as_sci_Vector(jsx$3.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$3), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
   var this$9 = this.state$2;
-  var x$43 = this$9.position$1;
+  var x$65 = this$9.position$1;
   var this$10 = this.state$2;
-  var x$44 = this$10.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$41, x$43, x$44, false))
+  var x$66 = this$10.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$63, x$65, x$66, false))
 });
 $c_Lviw_SubstituteCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -49190,17 +49190,17 @@ $c_Lviw_EndLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_EndLineCommand.prototype.eval__s_Option = (function() {
-  var x$17 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
+  var x$39 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
   var this$1 = this.position$1;
-  var x$18 = this$1.line$1;
-  var x$19 = new $c_Lviw_internals_State$Position().init___I__I(x$18, x$17);
+  var x$40 = this$1.line$1;
+  var x$41 = new $c_Lviw_internals_State$Position().init___I__I(x$40, x$39);
   var this$3 = this.state$3;
-  var x$20 = this$3.content$1;
+  var x$42 = this$3.content$1;
   var this$4 = this.state$3;
-  var x$21 = this$4.selection$1;
+  var x$43 = this$4.selection$1;
   var this$5 = this.state$3;
-  var x$22 = this$5.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$20, x$19, x$21, x$22))
+  var x$44 = this$5.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$42, x$41, x$43, x$44))
 });
 $c_Lviw_EndLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
@@ -49752,15 +49752,15 @@ $c_Lviw_StartLineCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_StartLineCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.position$1;
-  var x$24 = this$1.line$1;
-  var x$25 = new $c_Lviw_internals_State$Position().init___I__I(x$24, 0);
+  var x$46 = this$1.line$1;
+  var x$47 = new $c_Lviw_internals_State$Position().init___I__I(x$46, 0);
   var this$3 = this.state$3;
-  var x$26 = this$3.content$1;
+  var x$48 = this$3.content$1;
   var this$4 = this.state$3;
-  var x$27 = this$4.selection$1;
+  var x$49 = this$4.selection$1;
   var this$5 = this.state$3;
-  var x$28 = this$5.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$26, x$25, x$27, x$28))
+  var x$50 = this$5.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$48, x$47, x$49, x$50))
 });
 $c_Lviw_StartLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
@@ -52885,7 +52885,31 @@ $c_Lviw_EndWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_EndWordCommand.prototype.eval__s_Option = (function() {
-  return new $c_s_Some().init___O(this.state$4)
+  var whitespace = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
+  if ((whitespace === (-1))) {
+    var x$27 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
+    var this$1 = this.position$1;
+    var x$28 = this$1.line$1;
+    var x$29 = new $c_Lviw_internals_State$Position().init___I__I(x$28, x$27);
+    var this$3 = this.state$4;
+    var x$30 = this$3.content$1;
+    var this$4 = this.state$4;
+    var x$31 = this$4.selection$1;
+    var this$5 = this.state$4;
+    var x$32 = this$5.mode$1;
+    new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$30, x$29, x$31, x$32))
+  };
+  var x$33 = (((-1) + whitespace) | 0);
+  var this$7 = this.position$1;
+  var x$34 = this$7.line$1;
+  var x$35 = new $c_Lviw_internals_State$Position().init___I__I(x$34, x$33);
+  var this$9 = this.state$4;
+  var x$36 = this$9.content$1;
+  var this$10 = this.state$4;
+  var x$37 = this$10.selection$1;
+  var this$11 = this.state$4;
+  var x$38 = this$11.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$36, x$35, x$37, x$38))
 });
 $c_Lviw_EndWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
@@ -52970,9 +52994,60 @@ $c_Lviw_NextWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_NextWordCommand.prototype.eval__s_Option = (function() {
-  $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
-  $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
-  return new $c_s_Some().init___O(this.state$4)
+  var whitespace = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
+  var jsx$1 = $m_sci_StringOps$();
+  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$1 = jsx$1.slice$extension__T__I__I__T(x, whitespace, this.lineLength__I__I(this.line$1));
+  var this$3 = new $c_sci_StringOps().init___T(x$1);
+  var $$this = this$3.repr$1;
+  var len = $uI($$this.length);
+  var i = 0;
+  while (true) {
+    if ((i < len)) {
+      var arg1 = this$3.apply__I__O(i);
+      if ((arg1 === null)) {
+        var c = 0
+      } else {
+        var this$9 = $as_jl_Character(arg1);
+        var c = this$9.value$1
+      };
+      var jsx$2 = (!(c !== 32))
+    } else {
+      var jsx$2 = false
+    };
+    if (jsx$2) {
+      i = ((1 + i) | 0)
+    } else {
+      break
+    }
+  };
+  var n = i;
+  var characterPos = (($f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n) + whitespace) | 0);
+  if (((whitespace === (-1)) || (characterPos === (-1)))) {
+    if ((this.line$1 === (((-1) + this.lines$1) | 0))) {
+      new $c_s_Some().init___O(this.state$4)
+    } else {
+      var line = ((1 + this.line$1) | 0);
+      var x$17 = new $c_Lviw_internals_State$Position().init___I__I(line, 0);
+      var this$11 = this.state$4;
+      var x$18 = this$11.content$1;
+      var this$12 = this.state$4;
+      var x$19 = this$12.selection$1;
+      var this$13 = this.state$4;
+      var x$20 = this$13.mode$1;
+      new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$18, x$17, x$19, x$20))
+    }
+  };
+  var this$15 = this.position$1;
+  var x$22 = this$15.line$1;
+  var x$23 = new $c_Lviw_internals_State$Position().init___I__I(x$22, characterPos);
+  var this$17 = this.state$4;
+  var x$24 = this$17.content$1;
+  var this$18 = this.state$4;
+  var x$25 = this$18.selection$1;
+  var this$19 = this.state$4;
+  var x$26 = this$19.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$24, x$23, x$25, x$26))
 });
 $c_Lviw_NextWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
@@ -62089,14 +62164,14 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   })(this));
   var pos$1 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 11);
   $f_Lorg_scalatest_BeforeAndAfter__after__F0__Lorg_scalactic_source_Position__V(this, fun$1, pos$1);
-  var this$3 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\r\n      |Cras quis massa eu ex commodo imperdiet.\r\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+  var this$3 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\n      |Cras quis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
   this.sourceText$2 = $f_sci_StringLike__stripMargin__C__T(this$3, 124);
   var array = [];
   var testTags = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
   var testFun = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$3$1) {
     return (function() {
       var $in = this$3$1.sourceText$2;
-      var this$7 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit am#e#t, consectetur adipiscing elit.\r\n        |Cras quis massa eu ex commodo imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$7 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit am#e#t, consectetur adipiscing elit.\n        |Cras quis massa eu ex commodo imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected = $f_sci_StringLike__stripMargin__C__T(this$7, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$3$1, "hhhll", $in, expected, true)
     })
@@ -62108,7 +62183,7 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testFun$1 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$4$1) {
     return (function() {
       var $in$1 = this$4$1.sourceText$2;
-      var this$11 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit am#e#t, consectetur adipiscing elit.\r\n        |Cras quis massa eu ex commodo imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$11 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit am#e#t, consectetur adipiscing elit.\n        |Cras quis massa eu ex commodo imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$1 = $f_sci_StringLike__stripMargin__C__T(this$11, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$4$1, "h", $in$1, expected$1, true)
     })
@@ -62119,9 +62194,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$2 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$2);
   var testFun$2 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$5$1) {
     return (function() {
-      var this$15 = new $c_sci_StringOps().init___T("abc\r\n        |#a#b");
+      var this$15 = new $c_sci_StringOps().init___T("abc\n        |#a#b");
       var $in$2 = $f_sci_StringLike__stripMargin__C__T(this$15, 124);
-      var this$17 = new $c_sci_StringOps().init___T("abc\r\n        |#a#b");
+      var this$17 = new $c_sci_StringOps().init___T("abc\n        |#a#b");
       var expected$2 = $f_sci_StringLike__stripMargin__C__T(this$17, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$5$1, "h", $in$2, expected$2, true)
     })
@@ -62132,9 +62207,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$3 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$3);
   var testFun$3 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$6$1) {
     return (function() {
-      var this$21 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n        |Cras quis massa eu ex commod#o# imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$21 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        |Cras quis massa eu ex commod#o# imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var $in$3 = $f_sci_StringLike__stripMargin__C__T(this$21, 124);
-      var this$23 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, #c#onsectetur adipiscing elit.\r\n        |Cras quis massa eu ex commodo imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$23 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, #c#onsectetur adipiscing elit.\n        |Cras quis massa eu ex commodo imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$3 = $f_sci_StringLike__stripMargin__C__T(this$23, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$6$1, "k", $in$3, expected$3, true)
     })
@@ -62145,9 +62220,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$4 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$4);
   var testFun$4 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$7$1) {
     return (function() {
-      var this$27 = new $c_sci_StringOps().init___T("a#b#c\r\n        |abc");
+      var this$27 = new $c_sci_StringOps().init___T("a#b#c\n        |abc");
       var $in$4 = $f_sci_StringLike__stripMargin__C__T(this$27, 124);
-      var this$29 = new $c_sci_StringOps().init___T("a#b#c\r\n        |abc");
+      var this$29 = new $c_sci_StringOps().init___T("a#b#c\n        |abc");
       var expected$4 = $f_sci_StringLike__stripMargin__C__T(this$29, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$7$1, "k", $in$4, expected$4, true)
     })
@@ -62159,7 +62234,7 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testFun$5 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$8$1) {
     return (function() {
       var $in$5 = this$8$1.sourceText$2;
-      var this$33 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n        |Cras quis massa eu ex com#m#odo imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$33 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n        |Cras quis massa eu ex com#m#odo imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$5 = $f_sci_StringLike__stripMargin__C__T(this$33, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$8$1, "j", $in$5, expected$5, true)
     })
@@ -62170,9 +62245,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$6 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$6);
   var testFun$6 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$9$1) {
     return (function() {
-      var this$37 = new $c_sci_StringOps().init___T("abc\r\n        |a#b#c");
+      var this$37 = new $c_sci_StringOps().init___T("abc\n        |a#b#c");
       var $in$6 = $f_sci_StringLike__stripMargin__C__T(this$37, 124);
-      var this$39 = new $c_sci_StringOps().init___T("abc\r\n        |a#b#c");
+      var this$39 = new $c_sci_StringOps().init___T("abc\n        |a#b#c");
       var expected$6 = $f_sci_StringLike__stripMargin__C__T(this$39, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$9$1, "j", $in$6, expected$6, true)
     })
@@ -62184,7 +62259,7 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testFun$7 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$10$1) {
     return (function() {
       var $in$7 = this$10$1.sourceText$2;
-      var this$43 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet#,# consectetur adipiscing elit.\r\n        |Cras quis massa eu ex commodo imperdiet.\r\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$43 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet#,# consectetur adipiscing elit.\n        |Cras quis massa eu ex commodo imperdiet.\n        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$7 = $f_sci_StringLike__stripMargin__C__T(this$43, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$10$1, "l", $in$7, expected$7, true)
     })
@@ -62195,9 +62270,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$8 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$8);
   var testFun$8 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$11$1) {
     return (function() {
-      var this$47 = new $c_sci_StringOps().init___T("ab#c#\r\n        |abc\r\n      ");
+      var this$47 = new $c_sci_StringOps().init___T("ab#c#\n        |abc\n      ");
       var $in$8 = $f_sci_StringLike__stripMargin__C__T(this$47, 124);
-      var this$49 = new $c_sci_StringOps().init___T("ab#c#\r\n        |abc\r\n      ");
+      var this$49 = new $c_sci_StringOps().init___T("ab#c#\n        |abc\n      ");
       var expected$8 = $f_sci_StringLike__stripMargin__C__T(this$49, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$11$1, "l", $in$8, expected$8, true)
     })
@@ -62289,9 +62364,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$18 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$18);
   var testFun$18 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$21$1) {
     return (function() {
-      var this$71 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\r\n      |Cras quis massa eu ex commodo imperdiet.\r\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$71 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\n      |Cras quis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var $in$9 = $f_sci_StringLike__stripMargin__C__T(this$71, 124);
-      var this$73 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Crasquis massa eu ex commodo imperdiet.\r\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$73 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Crasquis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$9 = $f_sci_StringLike__stripMargin__C__T(this$73, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$21$1, "J", $in$9, expected$9, true)
     })
@@ -62338,9 +62413,9 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$23 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$23);
   var testFun$23 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$26$1) {
     return (function() {
-      var this$85 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\r\n      |Cras quis massa eu ex commodo imperdiet.\r\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$85 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\n      |Cras quis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var $in$10 = $f_sci_StringLike__stripMargin__C__T(this$85, 124);
-      var this$87 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\n      |Cras quis massa eu ex commodo imperdiet.\r\n      |#C#urabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$87 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n      |Cras quis massa eu ex commodo imperdiet.\n      |#C#urabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$10 = $f_sci_StringLike__stripMargin__C__T(this$87, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$26$1, "G", $in$10, expected$10, false)
     })
