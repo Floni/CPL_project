@@ -14,3 +14,4 @@ testOnly -- StateTest
 testOnly -- *StateTest
 testOnly *StateTest
 ~testOnly *StateTest
+test

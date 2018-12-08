@@ -1,0 +1,42 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving left and right moves the cursor (example for multiple commands)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving left moves the cursor[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving left at start of the line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving up moves the cursor[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving up on first line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving down moves the cursor[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving down on last line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Moving right moves the cursor [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Moving right at end of the line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "ab[c##][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  abc[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m        " did not equal "ab[#c#][0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  abc[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m        " (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Next word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "Lorem [#i#psum d]olor sit amet, conse..." did not equal "Lorem [ipsum #d#]olor sit amet, conse..." (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Back word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "[Lorem #i#]psum dolor sit amet,..." did not equal "[#L#orem i]psum dolor sit amet,..." (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- End of word *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "Lorem ipsum [#d#olor] sit amet, consectet..." did not equal "Lorem ipsum [dolo#r#] sit amet, consectet..." (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- End of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Start of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Match brackets *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "function(test) [#{# return 'hello'; }]" did not equal "function(test) [{ return 'hello'; #}#]" (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "function(test) #[{# ]return 'hello'; }" did not equal "function(test) #[ #]return 'hello'; }" (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete backwards *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "function(test)[ #{]# return 'hello'; }" did not equal "function(test)[# ]# return 'hello'; }" (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Delete line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "function(test)[ #{# return 'hello'; }]" did not equal "function(test)[# #]" (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- Join line *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "... ipsum dolor sit ame[#t#, consectetur adipiscing elit.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  Cras ]quis massa eu ex com..." did not equal "... ipsum dolor sit ame[t, consectetur adipiscing elit.# #Cras]quis massa eu ex com..." (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert into normal mode[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert after character[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Open newline[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Substitute[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Go[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert in line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert after line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Change to the end of the line[0m[0m

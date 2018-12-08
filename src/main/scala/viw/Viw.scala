@@ -87,9 +87,7 @@ case class MoveRightCommand(state: State) extends MoveCommand(state) {
   }
 }
 
-abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
-  def words(line: String): Array[String] = line.split(' ')
-}
+abstract class MoveWordCommand(state: State) extends MoveCommand(state) {}
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
@@ -102,12 +100,14 @@ case class NextWordCommand(state: State) extends MoveWordCommand(state) {
 
 case class BackWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
+    // TODO: implement
     Some(state)
   }
 }
 
 case class EndWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
+    // TODO: implement
     Some(state)
   }
 }
@@ -129,6 +129,7 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
 
 case class DeleteCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
+    // TODO: implement
     Some(state)
   }
 }
