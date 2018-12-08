@@ -189,7 +189,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.
       |Cras quis massa eu ex commodo imperdiet.
       |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
-      """Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Crasquis massa eu ex commodo imperdiet.
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Cras quis massa eu ex commodo imperdiet.
       |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
     )
   }

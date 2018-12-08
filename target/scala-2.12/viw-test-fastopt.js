@@ -44526,12 +44526,12 @@ $c_Lviw_AppendCommand.prototype.toString__T = (function() {
 $c_Lviw_AppendCommand.prototype.eval__s_Option = (function() {
   var line = this.line$1;
   var character = ((1 + this.char$1) | 0);
-  var x$55 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
+  var x$57 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
   var this$2 = this.state$2;
-  var x$57 = this$2.content$1;
+  var x$59 = this$2.content$1;
   var this$3 = this.state$2;
-  var x$58 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$57, x$55, x$58, false))
+  var x$60 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$59, x$57, x$60, false))
 });
 $c_Lviw_AppendCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44618,12 +44618,12 @@ $c_Lviw_ChangeLineCommand.prototype.eval__s_Option = (function() {
   var jsx$1 = $m_sci_StringOps$();
   var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
   var x$1 = jsx$1.slice$extension__T__I__I__T(x, 0, this.char$1);
-  var x$83 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lineLength__I__I(this.line$1)), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$85 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lineLength__I__I(this.line$1)), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
   var this$5 = this.state$2;
-  var x$85 = this$5.position$1;
+  var x$87 = this$5.position$1;
   var this$6 = this.state$2;
-  var x$86 = this$6.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$83, x$85, x$86, false))
+  var x$88 = this$6.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$85, x$87, x$88, false))
 });
 $c_Lviw_ChangeLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44789,7 +44789,35 @@ $c_Lviw_DeleteCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_DeleteCommand.prototype.eval__s_Option = (function() {
-  return new $c_s_Some().init___O(this.state$2)
+  var this$1 = this.contentLines$1.slice__I__I__sci_Vector(0, this.line$1);
+  var x = $f_sc_TraversableOnce__mkString__T__T__T__T(this$1, "", "", "");
+  var this$5 = new $c_sci_StringOps().init___T(x);
+  var jsx$1 = $m_sci_StringOps$();
+  var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, this.char$1);
+  var that = new $c_sci_StringOps().init___T(x$2);
+  var bf = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$5, that, bf));
+  var this$9 = new $c_sci_StringOps().init___T(x$3);
+  var jsx$2 = $m_sci_StringOps$();
+  var x$4 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$5 = jsx$2.slice$extension__T__I__I__T(x$4, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
+  var that$1 = new $c_sci_StringOps().init___T(x$5);
+  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$6 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$9, that$1, bf$1));
+  var this$13 = new $c_sci_StringOps().init___T(x$6);
+  var this$11 = this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1);
+  var x$7 = $f_sc_TraversableOnce__mkString__T__T__T__T(this$11, "", "", "");
+  var that$2 = new $c_sci_StringOps().init___T(x$7);
+  var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$13, that$2, bf$2));
+  var this$14 = this.state$2;
+  var position = this$14.position$1;
+  var this$15 = this.state$2;
+  var selection = this$15.selection$1;
+  var this$16 = this.state$2;
+  var mode = this$16.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
 });
 $c_Lviw_DeleteCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44955,12 +44983,12 @@ $c_Lviw_GoCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_GoCommand.prototype.eval__s_Option = (function() {
-  var x$67 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
+  var x$69 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
   var this$1 = this.state$2;
-  var x$69 = this$1.content$1;
+  var x$71 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$70 = this$2.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$69, x$67, x$70, false))
+  var x$72 = this$2.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$71, x$69, x$72, false))
 });
 $c_Lviw_GoCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45043,15 +45071,15 @@ $c_Lviw_InsertAfterLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_InsertAfterLineCommand.prototype.eval__s_Option = (function() {
-  var x$77 = this.lineLength__I__I(this.line$1);
+  var x$79 = this.lineLength__I__I(this.line$1);
   var this$1 = this.position$1;
-  var x$78 = this$1.line$1;
-  var x$79 = new $c_Lviw_internals_State$Position().init___I__I(x$78, x$77);
+  var x$80 = this$1.line$1;
+  var x$81 = new $c_Lviw_internals_State$Position().init___I__I(x$80, x$79);
   var this$3 = this.state$2;
-  var x$81 = this$3.content$1;
+  var x$83 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$82 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$81, x$79, x$82, false))
+  var x$84 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$83, x$81, x$84, false))
 });
 $c_Lviw_InsertAfterLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45135,12 +45163,12 @@ $c_Lviw_InsertCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.state$2;
-  var x$52 = this$1.content$1;
+  var x$54 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$53 = this$2.position$1;
+  var x$55 = this$2.position$1;
   var this$3 = this.state$2;
-  var x$54 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$52, x$53, x$54, false))
+  var x$56 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$54, x$55, x$56, false))
 });
 $c_Lviw_InsertCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45224,13 +45252,13 @@ $c_Lviw_InsertInLineCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertInLineCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.position$1;
-  var x$72 = this$1.line$1;
-  var x$73 = new $c_Lviw_internals_State$Position().init___I__I(x$72, 0);
+  var x$74 = this$1.line$1;
+  var x$75 = new $c_Lviw_internals_State$Position().init___I__I(x$74, 0);
   var this$3 = this.state$2;
-  var x$75 = this$3.content$1;
+  var x$77 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$76 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$75, x$73, x$76, false))
+  var x$78 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$77, x$75, x$78, false))
 });
 $c_Lviw_InsertInLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45313,7 +45341,45 @@ $c_Lviw_JoinLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_JoinLineCommand.prototype.eval__s_Option = (function() {
-  return new $c_s_Some().init___O(this.state$2)
+  if ((this.line$1 < this.lines$1)) {
+    var this$1 = this.contentLines$1.slice__I__I__sci_Vector(0, this.line$1);
+    var x = $f_sc_TraversableOnce__mkString__T__T__T__T(this$1, "", "\n", "");
+    var this$4 = new $c_sci_StringOps().init___T(x);
+    var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+    var that = new $c_sci_StringOps().init___T(x$1);
+    var bf = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$2 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$4, that, bf));
+    var this$7 = new $c_sci_StringOps().init___T(x$2);
+    var that$1 = new $c_sci_StringOps().init___T(" ");
+    var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$7, that$1, bf$1));
+    var this$10 = new $c_sci_StringOps().init___T(x$3);
+    var x$4 = $as_T(this.contentLines$1.apply__I__O(((1 + this.line$1) | 0)));
+    var that$2 = new $c_sci_StringOps().init___T(x$4);
+    var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$5 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$10, that$2, bf$2));
+    var this$13 = new $c_sci_StringOps().init___T(x$5);
+    var that$3 = new $c_sci_StringOps().init___T("\n");
+    var bf$3 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$6 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$13, that$3, bf$3));
+    var this$17 = new $c_sci_StringOps().init___T(x$6);
+    var this$15 = this.contentLines$1.slice__I__I__sci_Vector(((2 + this.line$1) | 0), this.lines$1);
+    var x$7 = $f_sc_TraversableOnce__mkString__T__T__T__T(this$15, "", "", "");
+    var that$4 = new $c_sci_StringOps().init___T(x$7);
+    var bf$4 = $m_s_Predef$().StringCanBuildFrom$2;
+    var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$17, that$4, bf$4));
+    var x$51 = this.lineLength__I__I(this.line$1);
+    var this$18 = this.position$1;
+    var x$52 = this$18.line$1;
+    var position = new $c_Lviw_internals_State$Position().init___I__I(x$52, x$51);
+    var this$20 = this.state$2;
+    var selection = this$20.selection$1;
+    var this$21 = this.state$2;
+    var mode = this$21.mode$1;
+    return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+  } else {
+    return new $c_s_Some().init___O(this.state$2)
+  }
 });
 $c_Lviw_JoinLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45413,11 +45479,11 @@ $c_Lviw_OpenCommand.prototype.eval__s_Option = (function() {
     };
     var jsx$1 = b.result__sci_Vector()
   };
-  var x$59 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$1, ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
-  var x$60 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
+  var x$61 = $as_sc_TraversableOnce($as_sci_Vector(jsx$2.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(jsx$1, ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$62 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
   var this$6 = this.state$2;
-  var x$62 = this$6.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$59, x$60, x$62, false))
+  var x$64 = this$6.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$61, x$62, x$64, false))
 });
 $c_Lviw_OpenCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45510,12 +45576,12 @@ $c_Lviw_SubstituteCommand.prototype.eval__s_Option = (function() {
   var jsx$1 = this.char$1;
   var thiz = $as_T(this.contentLines$1.apply__I__O(this.line$1));
   var x$3 = jsx$2.slice$extension__T__I__I__T(x$2, ((1 + jsx$1) | 0), $uI(thiz.length));
-  var x$63 = $as_sc_TraversableOnce($as_sci_Vector(jsx$3.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$3), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
+  var x$65 = $as_sc_TraversableOnce($as_sci_Vector(jsx$3.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(new $c_sci_StringOps().init___T(x$3), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this.contentLines$1.slice__I__I__sci_Vector(((1 + this.line$1) | 0), this.lines$1), ($m_sci_Vector$(), $m_sc_IndexedSeq$().ReusableCBF$6))).mkString__T__T("");
   var this$9 = this.state$2;
-  var x$65 = this$9.position$1;
+  var x$67 = this$9.position$1;
   var this$10 = this.state$2;
-  var x$66 = this$10.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$63, x$65, x$66, false))
+  var x$68 = this$10.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$65, x$67, x$68, false))
 });
 $c_Lviw_SubstituteCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -62372,7 +62438,7 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
     return (function() {
       var this$71 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.\n      |Cras quis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var $in$9 = $f_sci_StringLike__stripMargin__C__T(this$71, 124);
-      var this$73 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Crasquis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
+      var this$73 = new $c_sci_StringOps().init___T("Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Cras quis massa eu ex commodo imperdiet.\n      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.");
       var expected$9 = $f_sci_StringLike__stripMargin__C__T(this$73, 124);
       return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$21$1, "J", $in$9, expected$9, true)
     })

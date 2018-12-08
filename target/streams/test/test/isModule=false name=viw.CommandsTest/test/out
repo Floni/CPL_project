@@ -16,15 +16,12 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Start of line[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- Match brackets *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  "function(test) [#{# return 'hello'; }]" did not equal "function(test) [{ return 'hello'; #}#]" (ViwTest.scala:79)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- Delete *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  "function(test) #[{# ]return 'hello'; }" did not equal "function(test) #[ #]return 'hello'; }" (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- Delete backwards *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  "function(test)[ #{]# return 'hello'; }" did not equal "function(test)[# ]# return 'hello'; }" (ViwTest.scala:79)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- Delete line *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  "function(test)[ #{# return 'hello'; }]" did not equal "function(test)[# #]" (ViwTest.scala:79)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- Join line *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  "... ipsum dolor sit ame[#t#, consectetur adipiscing elit.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  Cras ]quis massa eu ex com..." did not equal "... ipsum dolor sit ame[t, consectetur adipiscing elit.# #Cras]quis massa eu ex com..." (ViwTest.scala:79)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Join line[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Insert into normal mode[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Insert after character[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Open newline[0m[0m

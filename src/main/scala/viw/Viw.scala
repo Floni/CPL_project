@@ -138,8 +138,12 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
 
 case class DeleteCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
+    Some(state.copy(content =
+      contentLines.slice(0, line).mkString("") ++
+      contentLines(line).slice(0, char) ++
+      contentLines(line).slice(char + 1, lineLength(line)) ++
+      contentLines.slice(line + 1, lines).mkString("")
+    ))
   }
 }
 
@@ -159,8 +163,18 @@ case class DeleteLineCommand(state: State) extends Command(state) {
 
 case class JoinLineCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
+    if (line < lines) {
+      Some(state.copy(content =
+        contentLines.slice(0, line).mkString("\n") ++
+          contentLines(line) ++
+          " " ++
+          contentLines(line + 1) ++
+          "\n" ++
+          contentLines.slice(line + 2, lines).mkString(""),
+        position = position.copy(character = lineLength(line))))
+    } else {
+      Some(state)
+    }
   }
 }
 
