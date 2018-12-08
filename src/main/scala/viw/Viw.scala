@@ -87,13 +87,14 @@ case class MoveRightCommand(state: State) extends MoveCommand(state) {
   }
 }
 
-abstract class MoveWordCommand(state: State) extends MoveCommand(state) {}
+abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
+  val whitespacePos = contentLines(line).indexOf(' ', char)
+  val characterPos = contentLines(line).slice(whitespacePos, lineLength(line)).indexWhere(c => c != ' ') + whitespacePos
+}
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
-    val whitespace = contentLines(line).indexOf(' ', char)
-    val characterPos = contentLines(line).slice(whitespace, lineLength(line)).indexWhere(c => c != ' ') + whitespace
-    if (whitespace == -1 || characterPos == -1) {
+    if (whitespacePos == -1 || characterPos == -1) {
       if (line == lines - 1) {
         Some(state)
       } else {
@@ -113,11 +114,10 @@ case class BackWordCommand(state: State) extends MoveWordCommand(state) {
 
 case class EndWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
-    val whitespace = contentLines(line).indexOf(' ', char)
-    if (whitespace == -1) {
+    if (whitespacePos == -1) {
       Some(state.copy(position = position.copy(character = lineLength(line) - 1)))
     }
-    Some(state.copy(position = position.copy(character = whitespace - 1)))
+    Some(state.copy(position = position.copy(character = whitespacePos - 1)))
   }
 }
 

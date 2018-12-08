@@ -28390,7 +28390,9 @@ function $m_Lsbt_testing_Status$() {
 }
 /** @constructor */
 function $c_Lviw_MoveWordCommand() {
-  $c_Lviw_MoveCommand.call(this)
+  $c_Lviw_MoveCommand.call(this);
+  this.whitespacePos$3 = 0;
+  this.characterPos$3 = 0
 }
 $c_Lviw_MoveWordCommand.prototype = new $h_Lviw_MoveCommand();
 $c_Lviw_MoveWordCommand.prototype.constructor = $c_Lviw_MoveWordCommand;
@@ -28399,6 +28401,39 @@ function $h_Lviw_MoveWordCommand() {
   /*<skip>*/
 }
 $h_Lviw_MoveWordCommand.prototype = $c_Lviw_MoveWordCommand.prototype;
+$c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State = (function(state) {
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  this.whitespacePos$3 = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
+  var jsx$1 = $m_sci_StringOps$();
+  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$1 = jsx$1.slice$extension__T__I__I__T(x, this.whitespacePos$3, this.lineLength__I__I(this.line$1));
+  var this$3 = new $c_sci_StringOps().init___T(x$1);
+  var $$this = this$3.repr$1;
+  var len = $uI($$this.length);
+  var i = 0;
+  while (true) {
+    if ((i < len)) {
+      var arg1 = this$3.apply__I__O(i);
+      if ((arg1 === null)) {
+        var c = 0
+      } else {
+        var this$9 = $as_jl_Character(arg1);
+        var c = this$9.value$1
+      };
+      var jsx$2 = (!(c !== 32))
+    } else {
+      var jsx$2 = false
+    };
+    if (jsx$2) {
+      i = ((1 + i) | 0)
+    } else {
+      break
+    }
+  };
+  var n = i;
+  this.characterPos$3 = (($f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n) + this.whitespacePos$3) | 0);
+  return this
+});
 function $f_Lviw_ViwTest__viwTest__T__Lviw_ViwTest$TestData__Lviw_ViwTest$TestData__Lorg_scalatest_compatible_Assertion($thiz, commandStack, $in, expected) {
   var this$2 = new $c_sci_StringOps().init___T(commandStack);
   var z = $in.state$1;
@@ -52804,7 +52839,7 @@ $c_Lviw_BackWordCommand.prototype.eval__s_Option = (function() {
 });
 $c_Lviw_BackWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_BackWordCommand.prototype.hashCode__I = (function() {
@@ -52885,8 +52920,7 @@ $c_Lviw_EndWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_EndWordCommand.prototype.eval__s_Option = (function() {
-  var whitespace = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
-  if ((whitespace === (-1))) {
+  if ((this.whitespacePos$3 === (-1))) {
     var x$27 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
     var this$1 = this.position$1;
     var x$28 = this$1.line$1;
@@ -52899,7 +52933,7 @@ $c_Lviw_EndWordCommand.prototype.eval__s_Option = (function() {
     var x$32 = this$5.mode$1;
     new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$30, x$29, x$31, x$32))
   };
-  var x$33 = (((-1) + whitespace) | 0);
+  var x$33 = (((-1) + this.whitespacePos$3) | 0);
   var this$7 = this.position$1;
   var x$34 = this$7.line$1;
   var x$35 = new $c_Lviw_internals_State$Position().init___I__I(x$34, x$33);
@@ -52913,7 +52947,7 @@ $c_Lviw_EndWordCommand.prototype.eval__s_Option = (function() {
 });
 $c_Lviw_EndWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_EndWordCommand.prototype.hashCode__I = (function() {
@@ -52994,64 +53028,36 @@ $c_Lviw_NextWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_NextWordCommand.prototype.eval__s_Option = (function() {
-  var whitespace = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
-  var jsx$1 = $m_sci_StringOps$();
-  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$1 = jsx$1.slice$extension__T__I__I__T(x, whitespace, this.lineLength__I__I(this.line$1));
-  var this$3 = new $c_sci_StringOps().init___T(x$1);
-  var $$this = this$3.repr$1;
-  var len = $uI($$this.length);
-  var i = 0;
-  while (true) {
-    if ((i < len)) {
-      var arg1 = this$3.apply__I__O(i);
-      if ((arg1 === null)) {
-        var c = 0
-      } else {
-        var this$9 = $as_jl_Character(arg1);
-        var c = this$9.value$1
-      };
-      var jsx$2 = (!(c !== 32))
-    } else {
-      var jsx$2 = false
-    };
-    if (jsx$2) {
-      i = ((1 + i) | 0)
-    } else {
-      break
-    }
-  };
-  var n = i;
-  var characterPos = (($f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n) + whitespace) | 0);
-  if (((whitespace === (-1)) || (characterPos === (-1)))) {
+  if (((this.whitespacePos$3 === (-1)) || (this.characterPos$3 === (-1)))) {
     if ((this.line$1 === (((-1) + this.lines$1) | 0))) {
       new $c_s_Some().init___O(this.state$4)
     } else {
       var line = ((1 + this.line$1) | 0);
       var x$17 = new $c_Lviw_internals_State$Position().init___I__I(line, 0);
-      var this$11 = this.state$4;
-      var x$18 = this$11.content$1;
-      var this$12 = this.state$4;
-      var x$19 = this$12.selection$1;
-      var this$13 = this.state$4;
-      var x$20 = this$13.mode$1;
+      var this$2 = this.state$4;
+      var x$18 = this$2.content$1;
+      var this$3 = this.state$4;
+      var x$19 = this$3.selection$1;
+      var this$4 = this.state$4;
+      var x$20 = this$4.mode$1;
       new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$18, x$17, x$19, x$20))
     }
   };
-  var this$15 = this.position$1;
-  var x$22 = this$15.line$1;
-  var x$23 = new $c_Lviw_internals_State$Position().init___I__I(x$22, characterPos);
-  var this$17 = this.state$4;
-  var x$24 = this$17.content$1;
-  var this$18 = this.state$4;
-  var x$25 = this$18.selection$1;
-  var this$19 = this.state$4;
-  var x$26 = this$19.mode$1;
+  var x$21 = this.characterPos$3;
+  var this$6 = this.position$1;
+  var x$22 = this$6.line$1;
+  var x$23 = new $c_Lviw_internals_State$Position().init___I__I(x$22, x$21);
+  var this$8 = this.state$4;
+  var x$24 = this$8.content$1;
+  var this$9 = this.state$4;
+  var x$25 = this$9.selection$1;
+  var this$10 = this.state$4;
+  var x$26 = this$10.mode$1;
   return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$24, x$23, x$25, x$26))
 });
 $c_Lviw_NextWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_NextWordCommand.prototype.hashCode__I = (function() {
