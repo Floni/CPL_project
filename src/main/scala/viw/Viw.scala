@@ -6,6 +6,7 @@ import viw.internals.State.Position
 import Math.min, Math.max
 
 object Viw {
+  var prevCommand : Option[State => Command] = None
 
   val commandMap: Map[String, State => Command] = Map(
     "h" -> MoveLeftCommand,
@@ -29,12 +30,24 @@ object Viw {
     "G" -> GoCommand,
     "I" -> InsertInLineCommand,
     "A" -> InsertAfterLineCommand,
-    "C" -> ChangeLineCommand
+    "C" -> ChangeLineCommand,
+    "." -> RepeatCommand
   )
+
+  def updatePrevCommand(command: Option[State => Command]): Unit = command match {
+    case Some(DeleteCommand) => prevCommand = Some(DeleteCommand)
+    case Some(DeleteLineCommand) => prevCommand = Some(DeleteLineCommand)
+    case Some(DeleteBackCommand) => prevCommand = Some(DeleteBackCommand)
+    case Some(JoinLineCommand) => prevCommand = Some(JoinLineCommand)
+    case _ =>
+  }
 
   def processKey(key: String, state: State) : Option[State] = {
     if (commandMap.contains(key)) {
-      commandMap(key)(state).eval
+      println(prevCommand.toString)
+      val command = commandMap(key)
+      updatePrevCommand(Some(command))
+      command(state).eval
     } else {
       Some(state)
     }
@@ -42,15 +55,22 @@ object Viw {
 }
 
 abstract class Command(state: State) {
-  val line = state.position.line
-  val char = state.position.character
-  val contentLines = state.contentLines
-  val position = state.position
-  val lines = contentLines.length
+  val line : Int = state.position.line
+  val char : Int = state.position.character
+  val contentLines : Vector[String] = state.contentLines
+  val position : Position = state.position
+  val lines : Int = contentLines.length
 
   def eval: Option[State]
 
   def lineLength(line: Int) : Int = contentLines(line).length
+
+  def getLines(start: Int, until: Int) : String = {
+    if (start >= lines || until > lines) ""
+    else {
+      contentLines.slice(start, until).mkString("\n")
+    }
+  }
 }
 
 abstract class MoveCommand(state: State) extends Command(state) {}
@@ -88,17 +108,17 @@ case class MoveRightCommand(state: State) extends MoveCommand(state) {
 }
 
 abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
-  val whitespacePos = contentLines(line).indexOf(' ', char)
-  val characterPos = contentLines(line).slice(whitespacePos, lineLength(line)).indexWhere(c => c != ' ') + whitespacePos
+  val whitespacePos : Int = contentLines(line).indexOf(' ', char)
+  val characterPos : Int = contentLines(line).slice(whitespacePos, lineLength(line)).indexWhere(c => c != ' ') + whitespacePos
 }
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
     if (whitespacePos == -1 || characterPos == -1) {
       if (line == lines - 1) {
-        Some(state)
+        return Some(state)
       } else {
-        Some(state.copy(position = position.copy(line = line + 1, character = 0)))
+        return Some(state.copy(position = Position(line + 1, 0)))
       }
     }
     Some(state.copy(position = position.copy(character = characterPos)))
@@ -107,8 +127,25 @@ case class NextWordCommand(state: State) extends MoveWordCommand(state) {
 
 case class BackWordCommand(state: State) extends MoveWordCommand(state) {
   def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
+    val prevWhitespace = contentLines(line).slice(0, char).lastIndexOf(' ')
+    val wordStart = if (prevWhitespace > 0) prevWhitespace + 1 else 0
+    if (char == wordStart) {
+      if (char == 0) {
+        if (line == 0) return Some(state)
+        val lastWordEnd = contentLines(line - 1).lastIndexWhere(c => c != ' ')
+        val lastWordWhitespace = contentLines(line - 1).slice(0, lastWordEnd).lastIndexOf(' ')
+        val lastWordStart = if (lastWordWhitespace > 0) lastWordWhitespace + 1 else 0
+        return Some(state.copy(position = position.copy(line = line - 1, character = lastWordStart)))
+      }
+      val prevWordEnd = contentLines(line).slice(0, prevWhitespace).lastIndexWhere(c => c != ' ')
+      val prevWordWhitespace = contentLines(line).slice(0, prevWordEnd).lastIndexOf(' ')
+      val prevWordStart = if (prevWordWhitespace > 0) prevWordWhitespace + 1 else 0
+      Some(state.copy(position = position.copy(character = prevWordStart)))
+    }
+    else {
+      // Go to the start of the current word
+      Some(state.copy(position = position.copy(character = wordStart)))
+    }
   }
 }
 
@@ -131,46 +168,126 @@ case class StartLineCommand(state: State) extends MoveCommand(state) {
 
 case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
+    val openBrackets = List('[', '(', '{')
+    val closeBrackets = List(']', ')', '}')
+    val brackets = openBrackets ++ closeBrackets
+
+    if (!brackets.contains(contentLines(line)(char))) {
+      if (!brackets.exists(c => contentLines(line).contains(c))) {
+        // Current char not bracket and no brackets in line
+        Some(state)
+      } else {
+        // Go to first bracket in the current line
+        Some(state.copy(position = position.copy(character = contentLines(line).indexWhere(c => brackets.contains(c)))))
+      }
+    }
+    else {
+      val bracket = contentLines(line)(char) // Bracket char
+      val openBracket = openBrackets.contains(bracket) // Bool indicating whether it's an open bracket
+      // Get the matching bracket character
+      val mBracket = if (openBracket) closeBrackets(openBrackets.indexOf(bracket))
+        else openBrackets(closeBrackets.indexOf(bracket))
+      var cPos = Option((line, char)) // Position of the current character that is being checked
+      var counter = 1 // Counter for the amount of brackets that still have to be closed
+
+      while(counter > 0) {
+        cPos = if (openBracket) nextPos(cPos) else prevPos(cPos)
+        cPos match {
+          case Some((l : Int, c : Int)) => {
+            if (contentLines(l)(c) == bracket) counter += 1
+            else if (contentLines(l)(c) == mBracket) {
+              counter -= 1
+            }
+          }
+          case None => return Some(state)
+        }
+      }
+
+      cPos match {
+        case Some((l : Int, c : Int)) => Some(state.copy(position = position.copy(l, c)))
+        case None => Some(state)
+      }
+    }
+  }
+
+  // Returns the next position after the given position, returns None if there is no position after the current position
+  def nextPos(pos: Option[(Int, Int)]) : Option[(Int, Int)] = {
+    pos match {
+      case Some((l, c)) => {
+        if (c < lineLength(l) - 1) Some((l, c + 1))
+        else if (l < lines - 1) Some((l + 1, 0))
+        else None
+      }
+      case _ => None
+    }
+  }
+
+  // Returns the position before the given position, returns None if there is no position before the current position
+  def prevPos(pos: Option[(Int, Int)]) : Option[(Int, Int)] = {
+    pos match {
+      case Some((l, c)) => {
+        if (char > 0) Some((line, char - 1))
+        else if (line > 0) Some((line - 1, lineLength(line - 1) - 1))
+        else None
+      }
+      case _ => None
+    }
   }
 }
 
-case class DeleteCommand(state: State) extends Command(state) {
+abstract class DeletionCommand(state: State) extends Command(state) {
+  def updatePreviousCommand(command : State => Command) : Unit = Viw.prevCommand = Some(command)
+}
+
+case class DeleteCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
+    updatePreviousCommand(DeleteCommand)
     Some(state.copy(content =
-      contentLines.slice(0, line).mkString("") ++
-      contentLines(line).slice(0, char) ++
-      contentLines(line).slice(char + 1, lineLength(line)) ++
-      contentLines.slice(line + 1, lines).mkString("")
+      getLines(0, line) ++
+        contentLines(line).slice(0, char) ++
+        contentLines(line).slice(char + 1, lineLength(line)) ++
+        getLines(line + 1, lines),
+      position = Position(line, if (char == lineLength(line) - 1) char - 1 else char)
     ))
   }
 }
 
-case class DeleteBackCommand(state: State) extends Command(state) {
+case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
-  }
-}
-
-case class DeleteLineCommand(state: State) extends Command(state) {
-  def eval: Option[State] = {
-    // TODO: implement
-    Some(state)
-  }
-}
-
-case class JoinLineCommand(state: State) extends Command(state) {
-  def eval: Option[State] = {
-    if (line < lines) {
+    updatePreviousCommand(DeleteBackCommand)
       Some(state.copy(content =
-        contentLines.slice(0, line).mkString("\n") ++
+        getLines(0, line) ++
+          contentLines(line).slice(0, char) ++
+          contentLines(line).slice(char + 1, lineLength(line)) ++
+          getLines(line + 1, lines),
+        position = position.copy(character = if (char > 0) char - 1 else 0)
+      ))
+  }
+}
+
+case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
+  def eval: Option[State] = {
+    updatePreviousCommand(DeleteLineCommand)
+    Some(state.copy(content =
+      getLines(0, line) ++
+        (if (char > 0) contentLines(line).slice(0, char) else "") ++
+        getLines(line + 1, lines),
+      position = position.copy(character = if (char > 0) char - 1 else 0)
+    ))
+  }
+}
+
+case class JoinLineCommand(state: State) extends DeletionCommand(state) {
+  def eval: Option[State] = {
+    updatePreviousCommand(JoinLineCommand)
+    if (line < lines - 1) {
+      Some(state.copy(content =
+        getLines(0, line) ++
           contentLines(line) ++
           " " ++
           contentLines(line + 1) ++
           "\n" ++
-          contentLines.slice(line + 2, lines).mkString(""),
+          getLines(line + 2, lines),
         position = position.copy(character = lineLength(line))))
     } else {
       Some(state)
@@ -188,19 +305,20 @@ case class AppendCommand(state: State) extends Command(state) {
 
 case class OpenCommand(state: State) extends Command(state) {
   def eval: Option[State] = Some(state.copy(
-    content = (contentLines.slice(0, line + 1) ++
-      Vector("\n") ++
-      contentLines.slice(line + 1, lines)).mkString(""),
+    content = getLines(0, line + 1) ++
+      "\n" * 2 ++
+      getLines(line + 1, lines),
     Position(line + 1, 0),
     mode = false))
 }
 
 case class SubstituteCommand(state: State) extends Command(state) {
   def eval: Option[State] = Some(state.copy(
-    content = (contentLines.slice(0, line) ++
+    content = getLines(0, line) ++
       contentLines(line).slice(0, char) ++
       contentLines(line).slice(char + 1, contentLines(line).length) ++
-      contentLines.slice(line + 1, lines)).mkString(""),
+      getLines(line + 1, lines),
+    position = position.copy(character = if (char == lineLength(line) - 1) char - 1 else char),
     mode = false))
 }
 
@@ -217,9 +335,18 @@ case class InsertAfterLineCommand(state: State) extends Command(state) {
 }
 
 case class ChangeLineCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Some(state.copy(
-    content = (contentLines.slice(0, line) ++
+  def eval: Option[State] = Some(state.copy( content =
+      getLines(0, line) ++
       contentLines(line).slice(0, char) ++
-      contentLines.slice(line + 1, lineLength(line))).mkString(""),
+      getLines(line + 1, lineLength(line)),
     mode = false))
+}
+
+case class RepeatCommand(state: State) extends Command(state) {
+  def eval: Option[State] = {
+    Viw.prevCommand match {
+      case Some(command) => command(state).eval
+      case _ => Some(state)
+    }
+  }
 }
