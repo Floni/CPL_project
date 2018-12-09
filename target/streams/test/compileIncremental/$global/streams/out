@@ -1,1 +1,52 @@
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe viw.Viw$ has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(prevCommand,[Default]), UsedName(updatePrevCommand,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0m[0mdebug[0m] [0m[0mFiles invalidated by inheriting from (external) viw.Viw$: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting direct dependencies of all classes transitively invalidated by inheritance.[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting classes that directly depend on (external) viw.Viw$.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of viw.ViwTest. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(E:\Documents\Studies\CPL\CPL_project\src\test\scala\viw\CommandsTest.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set(NamesChange(viw.Viw$,ModifiedNames(changes = UsedName(prevCommand,[Default]), UsedName(updatePrevCommand,[Default]))))[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(viw.CommandsTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(viw.CommandsTest)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(E:\Documents\Studies\CPL\CPL_project\src\test\scala\viw\CommandsTest.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\test-classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 12e54044 for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-encoding[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UTF-8[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-feature[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xlint[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Yno-adapted-args[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Ywarn-dead-code[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Ywarn-numeric-widen[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Ywarn-value-discard[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xfuture[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Ypartial-unification[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xplugin:C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-compiler_2.12.4\jars\scalajs-compiler_2.12.4-0.6.25.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Flori\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\test-classes;E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-library_2.12\jars\scalajs-library_2.12-0.6.25.jar;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-dom_sjs0.6_2.12\jars\scalajs-dom_sjs0.6_2.12-0.9.2.jar;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-test-interface_2.12\jars\scalajs-test-interface_2.12-0.6.25.jar;C:\Users\Flori\.ivy2\cache\org.scalatest\scalatest_sjs0.6_2.12\bundles\scalatest_sjs0.6_2.12-3.0.1.jar;C:\Users\Flori\.ivy2\cache\org.scalactic\scalactic_sjs0.6_2.12\bundles\scalactic_sjs0.6_2.12-3.0.1.jar;C:\Users\Flori\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.12.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.4239348 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

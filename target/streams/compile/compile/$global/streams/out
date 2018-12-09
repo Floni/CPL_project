@@ -1,4 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:121:9: local val characterPos in method eval is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m    val characterPos = contentLines(line).slice(whitespace, lineLength(line)).indexWhere(c => c != ' ')[0m
-[0m[[0m[33mwarn[0m] [0m[0m        ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:338:12: patterns after a variable pattern cannot match (SLS 8.1.1)[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case _ => {[0m
+[0m[[0m[33mwarn[0m] [0m[0m           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:342:21: unreachable code due to variable pattern on line 338[0m
+[0m[[0m[33mwarn[0m] [0m[0m      case _ => Some(state)[0m
+[0m[[0m[33mwarn[0m] [0m[0m                    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
