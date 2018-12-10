@@ -139,6 +139,18 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Next work on next line indented") {
+    viwTrue(
+      "w",
+      """Lorem ipsum dolor sit amet, consectetur adipiscing e#l#it.
+        |  Cras quis massa eu ex commodo imperdiet.
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        |  #C#ras quis massa eu ex commodo imperdiet.
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+    )
+  }
+
   test("Next word last word") {
     viwTrue(
       "w",

@@ -108,13 +108,15 @@ case class NextWordCommand(state: State) extends MoveWordCommand(state) {
       if (line == lines - 1) {
         return position
       } else {
-        return Position(line + 1, 0)
+        val nextLine = Position(line + 1, 0)
+        return if (contentLines(line + 1)(0) != ' ') nextLine else NextWordCommand(state.copy(position = nextLine)).getNewPos
       }
     }
     Position(line, characterPos)
   }
 }
 
+// TODO: cleaner implementation using help functions?
 case class BackWordCommand(state: State) extends MoveWordCommand(state) {
   def getNewPos: Position = {
     val prevWhitespace = contentLines(line).slice(0, char).lastIndexOf(' ')

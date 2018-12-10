@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:340:39: fruitless type test: a value of type viw.DeleteCommand.type cannot also be a viw.DeletionCommand[0m
-[0m[[0m[33mwarn[0m] [0m[0m    println(DeleteCommand.isInstanceOf[DeletionCommand])[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:340:12: DeleteCommand is already defined as case class DeleteCommand[0m
+[0m[[0m[31merror[0m] [0m[0mcase class DeleteCommand(state: State) extends Command(state) {[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
