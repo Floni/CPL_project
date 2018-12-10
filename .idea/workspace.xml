@@ -1,122 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala" line="283" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala" line="275" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="585eefff-6d01-4a14-b9bd-42456cfaa2e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/AppendCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/BackWordCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/ChangeLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Command.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteBackCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/DeleteLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/EndWordCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/GoCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertAfterLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/InsertInLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/JoinLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MatchBracketCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveDownCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveLeftCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveRightCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveUpCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveWordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveWordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/MoveWordCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/NextWordCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/OpenCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/StartLineCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/SubstituteCommand.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Viw$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Viw$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/viw/Viw$.sjsir" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/viw-test-fastopt.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/viw-test-fastopt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/viw-test-fastopt.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/viw-test-fastopt.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compile/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.12.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/fastOptJS/$global/streams/in-cache" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/fastOptJS/$global/streams/in-cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/fastOptJS/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/fastOptJS/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=viw.CommandsTest/test/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=viw.CommandsTest/test/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-reports/viw.CommandsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-reports/viw.CommandsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-reports/viw.internals.StateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-reports/viw.internals.StateTest.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -134,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="281" column="42" lean-forward="true" selection-start-line="281" selection-start-column="42" selection-end-line="281" selection-end-column="42" />
+            <state relative-caret-position="701">
+              <caret line="342" column="3" lean-forward="true" selection-start-line="342" selection-start-column="3" selection-end-line="342" selection-end-column="3" />
               <folding>
                 <element signature="e#13#39#0" expanded="true" />
               </folding>
@@ -146,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="525" column="25" selection-start-line="525" selection-start-column="25" selection-end-line="525" selection-end-column="25" />
+            <state relative-caret-position="837">
+              <caret line="517" column="27" lean-forward="true" selection-start-line="517" selection-start-column="27" selection-end-line="517" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -164,8 +54,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/viw/ViwTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" />
       </list>
     </option>
   </component>
@@ -182,6 +72,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,13 +110,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544397427227" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544397459861" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -298,18 +188,19 @@
       <workItem from="1544290120038" duration="8166000" />
       <workItem from="1544360782044" duration="1267000" />
       <workItem from="1544362066011" duration="3909000" />
-      <workItem from="1544370788778" duration="13321000" />
+      <workItem from="1544370788778" duration="13580000" />
+      <workItem from="1544459586316" duration="2042000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28329000" />
+    <option name="totallyTimeSpent" value="30630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14666137" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14785373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -361,20 +252,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
+    <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="281" column="42" lean-forward="true" selection-start-line="281" selection-start-column="42" selection-end-line="281" selection-end-column="42" />
-          <folding>
-            <element signature="e#13#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="837">
+          <caret line="517" column="27" lean-forward="true" selection-start-line="517" selection-start-column="27" selection-end-line="517" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="525" column="25" selection-start-line="525" selection-start-column="25" selection-end-line="525" selection-end-column="25" />
+        <state relative-caret-position="701">
+          <caret line="342" column="3" lean-forward="true" selection-start-line="342" selection-start-column="3" selection-end-line="342" selection-end-column="3" />
+          <folding>
+            <element signature="e#13#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

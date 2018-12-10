@@ -2,11 +2,13 @@ package viw
 
 import viw.internals.State
 import viw.internals.State.Position
+import Math.min
+import Math.max
 
-import Math.min, Math.max
+import scala.collection.mutable.ListBuffer
 
 object Viw {
-  var prevCommand : Option[State => Command] = None
+  var history : ListBuffer[State => Command] = new ListBuffer[State => Command]()
 
   val commandMap: Map[String, State => Command] = Map(
     "h" -> MoveLeftCommand,
@@ -34,19 +36,15 @@ object Viw {
     "." -> RepeatCommand
   )
 
-  def updatePrevCommand(command: Option[State => Command]): Unit = command match {
-    case Some(DeleteCommand) => prevCommand = Some(DeleteCommand)
-    case Some(DeleteLineCommand) => prevCommand = Some(DeleteLineCommand)
-    case Some(DeleteBackCommand) => prevCommand = Some(DeleteBackCommand)
-    case Some(JoinLineCommand) => prevCommand = Some(JoinLineCommand)
-    case _ =>
+  def updateHistory(command: State => Command): Unit = {
+    history += command
+    ()
   }
 
   def processKey(key: String, state: State) : Option[State] = {
     if (commandMap.contains(key)) {
-      println(prevCommand.toString)
       val command = commandMap(key)
-      updatePrevCommand(Some(command))
+      updateHistory(command)
       command(state).eval
     } else {
       Some(state)
@@ -235,13 +233,10 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   }
 }
 
-abstract class DeletionCommand(state: State) extends Command(state) {
-  def updatePreviousCommand(command : State => Command) : Unit = Viw.prevCommand = Some(command)
-}
+abstract class DeletionCommand(state: State) extends Command(state) {}
 
 case class DeleteCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    updatePreviousCommand(DeleteCommand)
     Some(state.copy(content =
       getLines(0, line) ++
         contentLines(line).slice(0, char) ++
@@ -254,7 +249,6 @@ case class DeleteCommand(state: State) extends DeletionCommand(state) {
 
 case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    updatePreviousCommand(DeleteBackCommand)
       Some(state.copy(content =
         getLines(0, line) ++
           contentLines(line).slice(0, char) ++
@@ -267,7 +261,6 @@ case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
 
 case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    updatePreviousCommand(DeleteLineCommand)
     Some(state.copy(content =
       getLines(0, line) ++
         (if (char > 0) contentLines(line).slice(0, char) else "") ++
@@ -279,7 +272,6 @@ case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
 
 case class JoinLineCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    updatePreviousCommand(JoinLineCommand)
     if (line < lines - 1) {
       Some(state.copy(content =
         getLines(0, line) ++
@@ -344,8 +336,8 @@ case class ChangeLineCommand(state: State) extends Command(state) {
 
 case class RepeatCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
-    Viw.prevCommand match {
-      case Some(command) => command(state).eval
+    Viw.history.reverseIterator.find(_(state).isInstanceOf[DeletionCommand]) match {
+      case Some(cmd) => cmd(state).eval
       case _ => Some(state)
     }
   }
