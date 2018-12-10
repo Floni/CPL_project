@@ -71,38 +71,30 @@ abstract class Command(state: State) {
   }
 }
 
-abstract class MoveCommand(state: State) extends Command(state) {}
+abstract class MoveCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Some(state.copy(position = getNewPos))
+
+  def getNewPos: Position
+}
 
 case class MoveLeftCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
-    val newPos = Position(state.position.line, max(0, char - 1))
-    Some(state.copy(position = newPos))
-  }
+  def getNewPos: Position = Position(state.position.line, max(0, char - 1))
 }
 
 case class MoveDownCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
-    val newPos = if (line < lines - 1) {
-      Position(line + 1, min(lineLength(line + 1), char))
-    } else position
-    Some(state.copy(position = newPos))
-  }
+  def getNewPos: Position = if (line < lines - 1)
+    Position(line + 1, min(lineLength(line + 1), char))
+    else position
 }
 
 case class MoveUpCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
-    val newPos = if (line> 0) {
-      Position(line - 1, min(lineLength(line - 1), char))
-    } else position
-    Some(state.copy(position = newPos))
-  }
+  def getNewPos: Position = if (line> 0)
+    Position(line - 1, min(lineLength(line - 1), char))
+    else position
 }
 
 case class MoveRightCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
-    val newPos = Position(line, min(lineLength(line) - 1, char + 1))
-    Some(state.copy(position = newPos))
-  }
+  def getNewPos: Position = Position(line, min(lineLength(line) - 1, char + 1))
 }
 
 abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
@@ -111,61 +103,62 @@ abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
 }
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
-  def eval: Option[State] = {
+  def getNewPos: Position = {
     if (whitespacePos == -1 || characterPos == -1) {
       if (line == lines - 1) {
-        return Some(state)
+        return position
       } else {
-        return Some(state.copy(position = Position(line + 1, 0)))
+        return Position(line + 1, 0)
       }
     }
-    Some(state.copy(position = position.copy(character = characterPos)))
+    Position(line, characterPos)
   }
 }
 
 case class BackWordCommand(state: State) extends MoveWordCommand(state) {
-  def eval: Option[State] = {
+  def getNewPos: Position = {
     val prevWhitespace = contentLines(line).slice(0, char).lastIndexOf(' ')
     val wordStart = if (prevWhitespace > 0) prevWhitespace + 1 else 0
     if (char == wordStart) {
       if (char == 0) {
-        if (line == 0) return Some(state)
+        if (line == 0) return position
         val lastWordEnd = contentLines(line - 1).lastIndexWhere(c => c != ' ')
         val lastWordWhitespace = contentLines(line - 1).slice(0, lastWordEnd).lastIndexOf(' ')
         val lastWordStart = if (lastWordWhitespace > 0) lastWordWhitespace + 1 else 0
-        return Some(state.copy(position = position.copy(line = line - 1, character = lastWordStart)))
+        return Position(line - 1, lastWordStart)
       }
       val prevWordEnd = contentLines(line).slice(0, prevWhitespace).lastIndexWhere(c => c != ' ')
       val prevWordWhitespace = contentLines(line).slice(0, prevWordEnd).lastIndexOf(' ')
       val prevWordStart = if (prevWordWhitespace > 0) prevWordWhitespace + 1 else 0
-      Some(state.copy(position = position.copy(character = prevWordStart)))
+      Position(line, prevWordStart)
     }
     else {
       // Go to the start of the current word
-      Some(state.copy(position = position.copy(character = wordStart)))
+      position.copy(character = wordStart)
     }
   }
 }
 
 case class EndWordCommand(state: State) extends MoveWordCommand(state) {
-  def eval: Option[State] = {
+  def getNewPos: Position = {
     if (whitespacePos == -1) {
-      Some(state.copy(position = position.copy(character = lineLength(line) - 1)))
+      return Position(line, lineLength(line) - 1)
     }
-    Some(state.copy(position = position.copy(character = whitespacePos - 1)))
+    Position(line, whitespacePos - 1)
   }
 }
 
 case class EndLineCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = Some(state.copy(position = position.copy(character = lineLength(line) - 1)))
+  def getNewPos: Position = Position(line, lineLength(line) - 1)
 }
 
 case class StartLineCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = Some(state.copy(position = position.copy(character = 0)))
+  def getNewPos: Position = Position(line, 0)
 }
 
+// TODO: make recursive to remove usage of variables
 case class MatchBracketCommand(state: State) extends MoveCommand(state) {
-  def eval: Option[State] = {
+  def getNewPos: Position = {
     val openBrackets = List('[', '(', '{')
     val closeBrackets = List(']', ')', '}')
     val brackets = openBrackets ++ closeBrackets
@@ -173,10 +166,10 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
     if (!brackets.contains(contentLines(line)(char))) {
       if (!brackets.exists(c => contentLines(line).contains(c))) {
         // Current char not bracket and no brackets in line
-        Some(state)
+        position
       } else {
         // Go to first bracket in the current line
-        Some(state.copy(position = position.copy(character = contentLines(line).indexWhere(c => brackets.contains(c)))))
+        Position(line, contentLines(line).indexWhere(c => brackets.contains(c)))
       }
     }
     else {
@@ -197,13 +190,13 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
               counter -= 1
             }
           }
-          case None => return Some(state)
+          case None => return position
         }
       }
 
       cPos match {
-        case Some((l : Int, c : Int)) => Some(state.copy(position = position.copy(l, c)))
-        case None => Some(state)
+        case Some((l : Int, c : Int)) => Position(l, c)
+        case None => position
       }
     }
   }

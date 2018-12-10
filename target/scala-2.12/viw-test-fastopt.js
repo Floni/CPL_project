@@ -23247,7 +23247,8 @@ function $asArrayOf_Lviw_DeletionCommand(obj, depth) {
 }
 /** @constructor */
 function $c_Lviw_MoveCommand() {
-  $c_Lviw_Command.call(this)
+  $c_Lviw_Command.call(this);
+  this.state$2 = null
 }
 $c_Lviw_MoveCommand.prototype = new $h_Lviw_Command();
 $c_Lviw_MoveCommand.prototype.constructor = $c_Lviw_MoveCommand;
@@ -23256,6 +23257,21 @@ function $h_Lviw_MoveCommand() {
   /*<skip>*/
 }
 $h_Lviw_MoveCommand.prototype = $c_Lviw_MoveCommand.prototype;
+$c_Lviw_MoveCommand.prototype.eval__s_Option = (function() {
+  var x$2 = this.getNewPos__Lviw_internals_State$Position();
+  var this$1 = this.state$2;
+  var x$3 = this$1.content$1;
+  var this$2 = this.state$2;
+  var x$4 = this$2.selection$1;
+  var this$3 = this.state$2;
+  var x$5 = this$3.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$3, x$2, x$4, x$5))
+});
+$c_Lviw_MoveCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$2 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
 /** @constructor */
 function $c_jl_Number() {
   $c_O.call(this)
@@ -28447,7 +28463,7 @@ function $h_Lviw_MoveWordCommand() {
 }
 $h_Lviw_MoveWordCommand.prototype = $c_Lviw_MoveWordCommand.prototype;
 $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State = (function(state) {
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   this.whitespacePos$3 = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
   var jsx$1 = $m_sci_StringOps$();
   var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
@@ -44651,12 +44667,12 @@ $c_Lviw_AppendCommand.prototype.toString__T = (function() {
 $c_Lviw_AppendCommand.prototype.eval__s_Option = (function() {
   var line = this.line$1;
   var character = ((1 + this.char$1) | 0);
-  var x$88 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
+  var x$18 = new $c_Lviw_internals_State$Position().init___I__I(line, character);
   var this$2 = this.state$2;
-  var x$90 = this$2.content$1;
+  var x$20 = this$2.content$1;
   var this$3 = this.state$2;
-  var x$91 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$90, x$88, x$91, false))
+  var x$21 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$20, x$18, x$21, false))
 });
 $c_Lviw_AppendCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44751,12 +44767,12 @@ $c_Lviw_ChangeLineCommand.prototype.eval__s_Option = (function() {
   var x$4 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lineLength__I__I(this.line$1));
   var that$1 = new $c_sci_StringOps().init___T(x$4);
   var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$118 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$7, that$1, bf$1));
+  var x$48 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$7, that$1, bf$1));
   var this$8 = this.state$2;
-  var x$120 = this$8.position$1;
+  var x$50 = this$8.position$1;
   var this$9 = this.state$2;
-  var x$121 = this$9.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$118, x$120, x$121, false))
+  var x$51 = this$9.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$48, x$50, x$51, false))
 });
 $c_Lviw_ChangeLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44839,12 +44855,12 @@ $c_Lviw_GoCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_GoCommand.prototype.eval__s_Option = (function() {
-  var x$102 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
+  var x$32 = new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.lines$1) | 0), 0);
   var this$1 = this.state$2;
-  var x$104 = this$1.content$1;
+  var x$34 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$105 = this$2.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$104, x$102, x$105, false))
+  var x$35 = this$2.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$34, x$32, x$35, false))
 });
 $c_Lviw_GoCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -44927,15 +44943,15 @@ $c_Lviw_InsertAfterLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_InsertAfterLineCommand.prototype.eval__s_Option = (function() {
-  var x$112 = this.lineLength__I__I(this.line$1);
+  var x$42 = this.lineLength__I__I(this.line$1);
   var this$1 = this.position$1;
-  var x$113 = this$1.line$1;
-  var x$114 = new $c_Lviw_internals_State$Position().init___I__I(x$113, x$112);
+  var x$43 = this$1.line$1;
+  var x$44 = new $c_Lviw_internals_State$Position().init___I__I(x$43, x$42);
   var this$3 = this.state$2;
-  var x$116 = this$3.content$1;
+  var x$46 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$117 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$116, x$114, x$117, false))
+  var x$47 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$46, x$44, x$47, false))
 });
 $c_Lviw_InsertAfterLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45019,12 +45035,12 @@ $c_Lviw_InsertCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.state$2;
-  var x$85 = this$1.content$1;
+  var x$15 = this$1.content$1;
   var this$2 = this.state$2;
-  var x$86 = this$2.position$1;
+  var x$16 = this$2.position$1;
   var this$3 = this.state$2;
-  var x$87 = this$3.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$85, x$86, x$87, false))
+  var x$17 = this$3.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$15, x$16, x$17, false))
 });
 $c_Lviw_InsertCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45108,13 +45124,13 @@ $c_Lviw_InsertInLineCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_InsertInLineCommand.prototype.eval__s_Option = (function() {
   var this$1 = this.position$1;
-  var x$107 = this$1.line$1;
-  var x$108 = new $c_Lviw_internals_State$Position().init___I__I(x$107, 0);
+  var x$37 = this$1.line$1;
+  var x$38 = new $c_Lviw_internals_State$Position().init___I__I(x$37, 0);
   var this$3 = this.state$2;
-  var x$110 = this$3.content$1;
+  var x$40 = this$3.content$1;
   var this$4 = this.state$2;
-  var x$111 = this$4.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$110, x$108, x$111, false))
+  var x$41 = this$4.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$40, x$38, x$41, false))
 });
 $c_Lviw_InsertInLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45208,11 +45224,11 @@ $c_Lviw_OpenCommand.prototype.eval__s_Option = (function() {
   var x$3 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
   var that$1 = new $c_sci_StringOps().init___T(x$3);
   var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$92 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
-  var x$93 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
+  var x$22 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
+  var x$23 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
   var this$9 = this.state$2;
-  var x$95 = this$9.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$92, x$93, x$95, false))
+  var x$25 = this$9.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$22, x$23, x$25, false))
 });
 $c_Lviw_OpenCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -45419,14 +45435,14 @@ $c_Lviw_SubstituteCommand.prototype.eval__s_Option = (function() {
   var x$7 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
   var that$2 = new $c_sci_StringOps().init___T(x$7);
   var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$98 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$12, that$2, bf$2));
-  var x$96 = ((this.char$1 === (((-1) + this.lineLength__I__I(this.line$1)) | 0)) ? (((-1) + this.char$1) | 0) : this.char$1);
+  var x$28 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$12, that$2, bf$2));
+  var x$26 = ((this.char$1 === (((-1) + this.lineLength__I__I(this.line$1)) | 0)) ? (((-1) + this.char$1) | 0) : this.char$1);
   var this$13 = this.position$1;
-  var x$97 = this$13.line$1;
-  var x$99 = new $c_Lviw_internals_State$Position().init___I__I(x$97, x$96);
+  var x$27 = this$13.line$1;
+  var x$29 = new $c_Lviw_internals_State$Position().init___I__I(x$27, x$26);
   var this$15 = this.state$2;
-  var x$101 = this$15.selection$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$98, x$99, x$101, false))
+  var x$31 = this$15.selection$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$28, x$29, x$31, false))
 });
 $c_Lviw_SubstituteCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$2 = state;
@@ -49156,10 +49172,10 @@ $c_Lviw_DeleteBackCommand.prototype.eval__s_Option = (function() {
   var that$2 = new $c_sci_StringOps().init___T(x$7);
   var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
   var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$11, that$2, bf$2));
-  var x$78 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
+  var x$8 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
   var this$12 = this.position$1;
-  var x$79 = this$12.line$1;
-  var position = new $c_Lviw_internals_State$Position().init___I__I(x$79, x$78);
+  var x$9 = this$12.line$1;
+  var position = new $c_Lviw_internals_State$Position().init___I__I(x$9, x$8);
   var this$14 = this.state$3;
   var selection = this$14.selection$1;
   var this$15 = this.state$3;
@@ -49374,10 +49390,10 @@ $c_Lviw_DeleteLineCommand.prototype.eval__s_Option = (function() {
   var that$1 = new $c_sci_StringOps().init___T(x$4);
   var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
   var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
-  var x$80 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
+  var x$10 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
   var this$9 = this.position$1;
-  var x$81 = this$9.line$1;
-  var position = new $c_Lviw_internals_State$Position().init___I__I(x$81, x$80);
+  var x$11 = this$9.line$1;
+  var position = new $c_Lviw_internals_State$Position().init___I__I(x$11, x$10);
   var this$11 = this.state$3;
   var selection = this$11.selection$1;
   var this$12 = this.state$3;
@@ -49439,6 +49455,9 @@ $c_Lviw_EndLineCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_EndLineCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_EndLineCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.lineLength__I__I(this.line$1)) | 0))
+});
 $c_Lviw_EndLineCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -49465,22 +49484,9 @@ $c_Lviw_EndLineCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_EndLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_EndLineCommand.prototype.eval__s_Option = (function() {
-  var x$56 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
-  var this$1 = this.position$1;
-  var x$57 = this$1.line$1;
-  var x$58 = new $c_Lviw_internals_State$Position().init___I__I(x$57, x$56);
-  var this$3 = this.state$3;
-  var x$59 = this$3.content$1;
-  var this$4 = this.state$3;
-  var x$60 = this$4.selection$1;
-  var this$5 = this.state$3;
-  var x$61 = this$5.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$59, x$58, x$60, x$61))
-});
 $c_Lviw_EndLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_EndLineCommand.prototype.hashCode__I = (function() {
@@ -49585,10 +49591,10 @@ $c_Lviw_JoinLineCommand.prototype.eval__s_Option = (function() {
     var that$4 = new $c_sci_StringOps().init___T(x$7);
     var bf$4 = $m_s_Predef$().StringCanBuildFrom$2;
     var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$15, that$4, bf$4));
-    var x$82 = this.lineLength__I__I(this.line$1);
+    var x$12 = this.lineLength__I__I(this.line$1);
     var this$16 = this.position$1;
-    var x$83 = this$16.line$1;
-    var position = new $c_Lviw_internals_State$Position().init___I__I(x$83, x$82);
+    var x$13 = this$16.line$1;
+    var position = new $c_Lviw_internals_State$Position().init___I__I(x$13, x$12);
     var this$18 = this.state$3;
     var selection = this$18.selection$1;
     var this$19 = this.state$3;
@@ -49650,36 +49656,7 @@ $h_Lviw_MatchBracketCommand.prototype = $c_Lviw_MatchBracketCommand.prototype;
 $c_Lviw_MatchBracketCommand.prototype.productPrefix__T = (function() {
   return "MatchBracketCommand"
 });
-$c_Lviw_MatchBracketCommand.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lviw_MatchBracketCommand.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lviw_MatchBracketCommand(x$1)) {
-    var MatchBracketCommand$1 = $as_Lviw_MatchBracketCommand(x$1);
-    var x = this.state$3;
-    var x$2 = MatchBracketCommand$1.state$3;
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
-});
-$c_Lviw_MatchBracketCommand.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.state$3;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lviw_MatchBracketCommand.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
+$c_Lviw_MatchBracketCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
   $m_sci_List$();
   var array = [new $c_jl_Character().init___C(91), new $c_jl_Character().init___C(40), new $c_jl_Character().init___C(123)];
   var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
@@ -49721,8 +49698,9 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
       var jsx$1 = false
     };
     if ((!jsx$1)) {
-      return new $c_s_Some().init___O(this.state$3)
+      return this.position$1
     } else {
+      var jsx$3 = this.line$1;
       var x$2 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
       var this$34 = new $c_sci_StringOps().init___T(x$2);
       var $$this = this$34.repr$1;
@@ -49749,17 +49727,7 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
         }
       };
       var n = i;
-      var x$68 = $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$34, n);
-      var this$43 = this.position$1;
-      var x$69 = this$43.line$1;
-      var x$70 = new $c_Lviw_internals_State$Position().init___I__I(x$69, x$68);
-      var this$45 = this.state$3;
-      var x$71 = this$45.content$1;
-      var this$46 = this.state$3;
-      var x$72 = this$46.selection$1;
-      var this$47 = this.state$3;
-      var x$73 = this$47.mode$1;
-      return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$71, x$70, x$72, x$73))
+      return new $c_Lviw_internals_State$Position().init___I__I(jsx$3, $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$34, n))
     }
   } else {
     var x$3 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
@@ -49774,8 +49742,8 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
       if ((c$2 === null)) {
         var mBracket = 0
       } else {
-        var this$57 = $as_jl_Character(c$2);
-        var mBracket = this$57.value$1
+        var this$51 = $as_jl_Character(c$2);
+        var mBracket = this$51.value$1
       }
     } else {
       var elem$5 = new $c_jl_Character().init___C(bracket);
@@ -49784,8 +49752,8 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
       if ((c$4 === null)) {
         var mBracket = 0
       } else {
-        var this$61 = $as_jl_Character(c$4);
-        var mBracket = this$61.value$1
+        var this$55 = $as_jl_Character(c$4);
+        var mBracket = this$55.value$1
       }
     };
     var cPos = $m_s_Option$().apply__O__s_Option(new $c_s_Tuple2$mcII$sp().init___I__I(this.line$1, this.char$1));
@@ -49817,7 +49785,7 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
         };
         var x$6 = $m_s_None$();
         if ((x$6 === x1)) {
-          return new $c_s_Some().init___O(this.state$3)
+          return this.position$1
         };
         throw new $c_s_MatchError().init___O(x1)
       }
@@ -49829,26 +49797,48 @@ $c_Lviw_MatchBracketCommand.prototype.eval__s_Option = (function() {
       if ((p3$2 !== null)) {
         var l$2 = p3$2.$$und1$mcI$sp__I();
         var c$5 = p3$2.$$und2$mcI$sp__I();
-        var x$74 = new $c_Lviw_internals_State$Position().init___I__I(l$2, c$5);
-        var this$69 = this.state$3;
-        var x$75 = this$69.content$1;
-        var this$70 = this.state$3;
-        var x$76 = this$70.selection$1;
-        var this$71 = this.state$3;
-        var x$77 = this$71.mode$1;
-        return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$75, x$74, x$76, x$77))
+        return new $c_Lviw_internals_State$Position().init___I__I(l$2, c$5)
       }
     };
     var x$3$1 = $m_s_None$();
     if ((x$3$1 === x1$2)) {
-      return new $c_s_Some().init___O(this.state$3)
+      return this.position$1
     };
     throw new $c_s_MatchError().init___O(x1$2)
   }
 });
+$c_Lviw_MatchBracketCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_MatchBracketCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_MatchBracketCommand(x$1)) {
+    var MatchBracketCommand$1 = $as_Lviw_MatchBracketCommand(x$1);
+    var x = this.state$3;
+    var x$2 = MatchBracketCommand$1.state$3;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_MatchBracketCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$3;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_MatchBracketCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
 $c_Lviw_MatchBracketCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_MatchBracketCommand.prototype.prevPos__s_Option__s_Option = (function(pos) {
@@ -49923,6 +49913,16 @@ $c_Lviw_MoveDownCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveDownCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_MoveDownCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  if ((this.line$1 < (((-1) + this.lines$1) | 0))) {
+    var jsx$1 = this.line$1;
+    var a = this.lineLength__I__I(((1 + this.line$1) | 0));
+    var b = this.char$1;
+    return new $c_Lviw_internals_State$Position().init___I__I(((1 + jsx$1) | 0), ((a < b) ? a : b))
+  } else {
+    return this.position$1
+  }
+});
 $c_Lviw_MoveDownCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -49949,26 +49949,9 @@ $c_Lviw_MoveDownCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_MoveDownCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_MoveDownCommand.prototype.eval__s_Option = (function() {
-  if ((this.line$1 < (((-1) + this.lines$1) | 0))) {
-    var jsx$1 = this.line$1;
-    var a = this.lineLength__I__I(((1 + this.line$1) | 0));
-    var b = this.char$1;
-    var newPos = new $c_Lviw_internals_State$Position().init___I__I(((1 + jsx$1) | 0), ((a < b) ? a : b))
-  } else {
-    var newPos = this.position$1
-  };
-  var this$2 = this.state$3;
-  var x$7 = this$2.content$1;
-  var this$3 = this.state$3;
-  var x$8 = this$3.selection$1;
-  var this$4 = this.state$3;
-  var x$9 = this$4.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$7, newPos, x$8, x$9))
-});
 $c_Lviw_MoveDownCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_MoveDownCommand.prototype.hashCode__I = (function() {
@@ -50021,6 +50004,11 @@ $c_Lviw_MoveLeftCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveLeftCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_MoveLeftCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  var jsx$1 = this.state$3.position$1.line$1;
+  var b = (((-1) + this.char$1) | 0);
+  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((b < 0) ? 0 : b))
+});
 $c_Lviw_MoveLeftCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50047,21 +50035,9 @@ $c_Lviw_MoveLeftCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_MoveLeftCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_MoveLeftCommand.prototype.eval__s_Option = (function() {
-  var jsx$1 = this.state$3.position$1.line$1;
-  var b = (((-1) + this.char$1) | 0);
-  var newPos = new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((b < 0) ? 0 : b));
-  var this$2 = this.state$3;
-  var x$3 = this$2.content$1;
-  var this$3 = this.state$3;
-  var x$4 = this$3.selection$1;
-  var this$4 = this.state$3;
-  var x$5 = this$4.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$3, newPos, x$4, x$5))
-});
 $c_Lviw_MoveLeftCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_MoveLeftCommand.prototype.hashCode__I = (function() {
@@ -50114,6 +50090,12 @@ $c_Lviw_MoveRightCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveRightCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_MoveRightCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  var jsx$1 = this.line$1;
+  var a = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
+  var b = ((1 + this.char$1) | 0);
+  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((a < b) ? a : b))
+});
 $c_Lviw_MoveRightCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50140,22 +50122,9 @@ $c_Lviw_MoveRightCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_MoveRightCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_MoveRightCommand.prototype.eval__s_Option = (function() {
-  var jsx$1 = this.line$1;
-  var a = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
-  var b = ((1 + this.char$1) | 0);
-  var newPos = new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((a < b) ? a : b));
-  var this$2 = this.state$3;
-  var x$15 = this$2.content$1;
-  var this$3 = this.state$3;
-  var x$16 = this$3.selection$1;
-  var this$4 = this.state$3;
-  var x$17 = this$4.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$15, newPos, x$16, x$17))
-});
 $c_Lviw_MoveRightCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_MoveRightCommand.prototype.hashCode__I = (function() {
@@ -50208,6 +50177,16 @@ $c_Lviw_MoveUpCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveUpCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_MoveUpCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  if ((this.line$1 > 0)) {
+    var jsx$1 = this.line$1;
+    var a = this.lineLength__I__I((((-1) + this.line$1) | 0));
+    var b = this.char$1;
+    return new $c_Lviw_internals_State$Position().init___I__I((((-1) + jsx$1) | 0), ((a < b) ? a : b))
+  } else {
+    return this.position$1
+  }
+});
 $c_Lviw_MoveUpCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50234,26 +50213,9 @@ $c_Lviw_MoveUpCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_MoveUpCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_MoveUpCommand.prototype.eval__s_Option = (function() {
-  if ((this.line$1 > 0)) {
-    var jsx$1 = this.line$1;
-    var a = this.lineLength__I__I((((-1) + this.line$1) | 0));
-    var b = this.char$1;
-    var newPos = new $c_Lviw_internals_State$Position().init___I__I((((-1) + jsx$1) | 0), ((a < b) ? a : b))
-  } else {
-    var newPos = this.position$1
-  };
-  var this$2 = this.state$3;
-  var x$11 = this$2.content$1;
-  var this$3 = this.state$3;
-  var x$12 = this$3.selection$1;
-  var this$4 = this.state$3;
-  var x$13 = this$4.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$11, newPos, x$12, x$13))
-});
 $c_Lviw_MoveUpCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_MoveUpCommand.prototype.hashCode__I = (function() {
@@ -50306,6 +50268,9 @@ $c_Lviw_StartLineCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_StartLineCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_StartLineCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, 0)
+});
 $c_Lviw_StartLineCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50332,21 +50297,9 @@ $c_Lviw_StartLineCommand.prototype.productElement__I__O = (function(x$1) {
 $c_Lviw_StartLineCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
-$c_Lviw_StartLineCommand.prototype.eval__s_Option = (function() {
-  var this$1 = this.position$1;
-  var x$63 = this$1.line$1;
-  var x$64 = new $c_Lviw_internals_State$Position().init___I__I(x$63, 0);
-  var this$3 = this.state$3;
-  var x$65 = this$3.content$1;
-  var this$4 = this.state$3;
-  var x$66 = this$4.selection$1;
-  var this$5 = this.state$3;
-  var x$67 = this$5.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$65, x$64, x$66, x$67))
-});
 $c_Lviw_StartLineCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
 });
 $c_Lviw_StartLineCommand.prototype.hashCode__I = (function() {
@@ -53352,36 +53305,7 @@ $h_Lviw_BackWordCommand.prototype = $c_Lviw_BackWordCommand.prototype;
 $c_Lviw_BackWordCommand.prototype.productPrefix__T = (function() {
   return "BackWordCommand"
 });
-$c_Lviw_BackWordCommand.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lviw_BackWordCommand.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lviw_BackWordCommand(x$1)) {
-    var BackWordCommand$1 = $as_Lviw_BackWordCommand(x$1);
-    var x = this.state$4;
-    var x$2 = BackWordCommand$1.state$4;
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
-});
-$c_Lviw_BackWordCommand.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.state$4;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lviw_BackWordCommand.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_BackWordCommand.prototype.eval__s_Option = (function() {
+$c_Lviw_BackWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
   var jsx$2 = $m_sjsr_RuntimeString$();
   var jsx$1 = $m_sci_StringOps$();
   var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
@@ -53390,7 +53314,7 @@ $c_Lviw_BackWordCommand.prototype.eval__s_Option = (function() {
   if ((this.char$1 === wordStart)) {
     if ((this.char$1 === 0)) {
       if ((this.line$1 === 0)) {
-        return new $c_s_Some().init___O(this.state$4)
+        return this.position$1
       };
       var x$1 = $as_T(this.contentLines$1.apply__I__O((((-1) + this.line$1) | 0)));
       var this$3 = new $c_sci_StringOps().init___T(x$1);
@@ -53424,33 +53348,25 @@ $c_Lviw_BackWordCommand.prototype.eval__s_Option = (function() {
       var x$2 = $as_T(this.contentLines$1.apply__I__O((((-1) + this.line$1) | 0)));
       var lastWordWhitespace = jsx$5.lastIndexOf__T__I__I(jsx$4.slice$extension__T__I__I__T(x$2, 0, lastWordEnd), 32);
       var lastWordStart = ((lastWordWhitespace > 0) ? ((1 + lastWordWhitespace) | 0) : 0);
-      var line = (((-1) + this.line$1) | 0);
-      var x$28 = new $c_Lviw_internals_State$Position().init___I__I(line, lastWordStart);
-      var this$14 = this.state$4;
-      var x$29 = this$14.content$1;
-      var this$15 = this.state$4;
-      var x$30 = this$15.selection$1;
-      var this$16 = this.state$4;
-      var x$31 = this$16.mode$1;
-      return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$29, x$28, x$30, x$31))
+      return new $c_Lviw_internals_State$Position().init___I__I((((-1) + this.line$1) | 0), lastWordStart)
     };
     var jsx$6 = $m_sci_StringOps$();
     var x$3 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
     var x$4 = jsx$6.slice$extension__T__I__I__T(x$3, 0, prevWhitespace);
-    var this$20 = new $c_sci_StringOps().init___T(x$4);
-    var $$this$2 = this$20.repr$1;
+    var this$15 = new $c_sci_StringOps().init___T(x$4);
+    var $$this$2 = this$15.repr$1;
     var end$1 = (((-1) + $uI($$this$2.length)) | 0);
-    var $$this$3 = this$20.repr$1;
+    var $$this$3 = this$15.repr$1;
     var y$1 = (((-1) + $uI($$this$3.length)) | 0);
     var i$1 = ((end$1 < y$1) ? end$1 : y$1);
     while (true) {
       if ((i$1 >= 0)) {
-        var arg1$1 = this$20.apply__I__O(i$1);
+        var arg1$1 = this$15.apply__I__O(i$1);
         if ((arg1$1 === null)) {
           var c$3 = 0
         } else {
-          var this$28 = $as_jl_Character(arg1$1);
-          var c$3 = this$28.value$1
+          var this$23 = $as_jl_Character(arg1$1);
+          var c$3 = this$23.value$1
         };
         var jsx$7 = (!(c$3 !== 32))
       } else {
@@ -53468,28 +53384,41 @@ $c_Lviw_BackWordCommand.prototype.eval__s_Option = (function() {
     var x$5 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
     var prevWordWhitespace = jsx$9.lastIndexOf__T__I__I(jsx$8.slice$extension__T__I__I__T(x$5, 0, prevWordEnd), 32);
     var prevWordStart = ((prevWordWhitespace > 0) ? ((1 + prevWordWhitespace) | 0) : 0);
-    var this$30 = this.position$1;
-    var x$33 = this$30.line$1;
-    var x$34 = new $c_Lviw_internals_State$Position().init___I__I(x$33, prevWordStart);
-    var this$32 = this.state$4;
-    var x$35 = this$32.content$1;
-    var this$33 = this.state$4;
-    var x$36 = this$33.selection$1;
-    var this$34 = this.state$4;
-    var x$37 = this$34.mode$1;
-    return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$35, x$34, x$36, x$37))
+    return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, prevWordStart)
   } else {
-    var this$36 = this.position$1;
-    var x$39 = this$36.line$1;
-    var x$40 = new $c_Lviw_internals_State$Position().init___I__I(x$39, wordStart);
-    var this$38 = this.state$4;
-    var x$41 = this$38.content$1;
-    var this$39 = this.state$4;
-    var x$42 = this$39.selection$1;
-    var this$40 = this.state$4;
-    var x$43 = this$40.mode$1;
-    return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$41, x$40, x$42, x$43))
+    var this$25 = this.position$1;
+    var x$7 = this$25.line$1;
+    return new $c_Lviw_internals_State$Position().init___I__I(x$7, wordStart)
   }
+});
+$c_Lviw_BackWordCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_BackWordCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_BackWordCommand(x$1)) {
+    var BackWordCommand$1 = $as_Lviw_BackWordCommand(x$1);
+    var x = this.state$4;
+    var x$2 = BackWordCommand$1.state$4;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_BackWordCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$4;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_BackWordCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
 });
 $c_Lviw_BackWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
@@ -53547,6 +53476,12 @@ $c_Lviw_EndWordCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_EndWordCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_EndWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  if ((this.whitespacePos$3 === (-1))) {
+    return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.lineLength__I__I(this.line$1)) | 0))
+  };
+  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.whitespacePos$3) | 0))
+});
 $c_Lviw_EndWordCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -53572,32 +53507,6 @@ $c_Lviw_EndWordCommand.prototype.productElement__I__O = (function(x$1) {
 });
 $c_Lviw_EndWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_EndWordCommand.prototype.eval__s_Option = (function() {
-  if ((this.whitespacePos$3 === (-1))) {
-    var x$44 = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
-    var this$1 = this.position$1;
-    var x$45 = this$1.line$1;
-    var x$46 = new $c_Lviw_internals_State$Position().init___I__I(x$45, x$44);
-    var this$3 = this.state$4;
-    var x$47 = this$3.content$1;
-    var this$4 = this.state$4;
-    var x$48 = this$4.selection$1;
-    var this$5 = this.state$4;
-    var x$49 = this$5.mode$1;
-    new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$47, x$46, x$48, x$49))
-  };
-  var x$50 = (((-1) + this.whitespacePos$3) | 0);
-  var this$7 = this.position$1;
-  var x$51 = this$7.line$1;
-  var x$52 = new $c_Lviw_internals_State$Position().init___I__I(x$51, x$50);
-  var this$9 = this.state$4;
-  var x$53 = this$9.content$1;
-  var this$10 = this.state$4;
-  var x$54 = this$10.selection$1;
-  var this$11 = this.state$4;
-  var x$55 = this$11.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$53, x$52, x$54, x$55))
 });
 $c_Lviw_EndWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
@@ -53655,6 +53564,16 @@ $c_Lviw_NextWordCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_NextWordCommand.prototype.productArity__I = (function() {
   return 1
 });
+$c_Lviw_NextWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
+  if (((this.whitespacePos$3 === (-1)) || (this.characterPos$3 === (-1)))) {
+    if ((this.line$1 === (((-1) + this.lines$1) | 0))) {
+      return this.position$1
+    } else {
+      return new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0)
+    }
+  };
+  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, this.characterPos$3)
+});
 $c_Lviw_NextWordCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -53680,33 +53599,6 @@ $c_Lviw_NextWordCommand.prototype.productElement__I__O = (function(x$1) {
 });
 $c_Lviw_NextWordCommand.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_NextWordCommand.prototype.eval__s_Option = (function() {
-  if (((this.whitespacePos$3 === (-1)) || (this.characterPos$3 === (-1)))) {
-    if ((this.line$1 === (((-1) + this.lines$1) | 0))) {
-      return new $c_s_Some().init___O(this.state$4)
-    } else {
-      var x$18 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
-      var this$1 = this.state$4;
-      var x$19 = this$1.content$1;
-      var this$2 = this.state$4;
-      var x$20 = this$2.selection$1;
-      var this$3 = this.state$4;
-      var x$21 = this$3.mode$1;
-      return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$19, x$18, x$20, x$21))
-    }
-  };
-  var x$22 = this.characterPos$3;
-  var this$5 = this.position$1;
-  var x$23 = this$5.line$1;
-  var x$24 = new $c_Lviw_internals_State$Position().init___I__I(x$23, x$22);
-  var this$7 = this.state$4;
-  var x$25 = this$7.content$1;
-  var this$8 = this.state$4;
-  var x$26 = this$8.selection$1;
-  var this$9 = this.state$4;
-  var x$27 = this$9.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$25, x$24, x$26, x$27))
 });
 $c_Lviw_NextWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;

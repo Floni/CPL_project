@@ -1,16 +1,16 @@
 [0m[[0m[0minfo[0m] [0m[0mFast optimizing E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\viw-test-fastopt.js[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 91470 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 40393 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 134046 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 89294 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 42512 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 134055 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: false[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 8738 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 2 methods.[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 978 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 13834 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 86094 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 6139 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: 92321 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 31009 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 1 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 329 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 34871 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 71830 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 7099 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 79031 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 1949 -- invalidated: 51[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 5770 -- invalidated: 1[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 107475 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 5772 -- invalidated: 1[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 134776 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 21 -- invalidated: 51 -- trees read: 51[0m
