@@ -15,7 +15,9 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Next word last word[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Back word[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Back word in middle of word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Back word in spaces[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Back word on previous line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Back word indented[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Back word first word[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- End of word[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- End of word on the end of a word[0m[0m

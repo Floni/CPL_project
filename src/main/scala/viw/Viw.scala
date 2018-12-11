@@ -109,35 +109,37 @@ case class NextWordCommand(state: State) extends MoveWordCommand(state) {
         return position
       } else {
         val nextLine = Position(line + 1, 0)
-        return if (contentLines(line + 1)(0) != ' ') nextLine else NextWordCommand(state.copy(position = nextLine)).getNewPos
+        return if (contentLines(line + 1)(0) != ' ')
+          nextLine
+        else NextWordCommand(state.copy(position = nextLine)).getNewPos
       }
     }
     Position(line, characterPos)
   }
 }
 
-// TODO: cleaner implementation using help functions?
 case class BackWordCommand(state: State) extends MoveWordCommand(state) {
   def getNewPos: Position = {
     val prevWhitespace = contentLines(line).slice(0, char).lastIndexOf(' ')
     val wordStart = if (prevWhitespace > 0) prevWhitespace + 1 else 0
+    val firstChar = contentLines(line).indexWhere(c => c != ' ')
     if (char == wordStart) {
-      if (char == 0) {
+      if (char == firstChar) {
         if (line == 0) return position
-        val lastWordEnd = contentLines(line - 1).lastIndexWhere(c => c != ' ')
-        val lastWordWhitespace = contentLines(line - 1).slice(0, lastWordEnd).lastIndexOf(' ')
-        val lastWordStart = if (lastWordWhitespace > 0) lastWordWhitespace + 1 else 0
-        return Position(line - 1, lastWordStart)
+        return getPrevWordStart(line - 1, lineLength(line - 1)) // Start of last word on previous line
       }
-      val prevWordEnd = contentLines(line).slice(0, prevWhitespace).lastIndexWhere(c => c != ' ')
-      val prevWordWhitespace = contentLines(line).slice(0, prevWordEnd).lastIndexOf(' ')
-      val prevWordStart = if (prevWordWhitespace > 0) prevWordWhitespace + 1 else 0
-      Position(line, prevWordStart)
+      getPrevWordStart(line, wordStart) // Start of word before current word
     }
     else {
-      // Go to the start of the current word
-      position.copy(character = wordStart)
+      Position(line, wordStart) // Start of current word
     }
+  }
+
+  def getPrevWordStart(l: Int, c: Int): Position = {
+    val prevWordEnd = contentLines(l).slice(0, c).lastIndexWhere(c => c != ' ')
+    val prevWordWhitespace = contentLines(l).slice(0, prevWordEnd).lastIndexOf(' ')
+    val prevWordStart = if (prevWordWhitespace > 0) prevWordWhitespace + 1 else 0
+    Position(l, prevWordStart)
   }
 }
 
@@ -158,8 +160,21 @@ case class StartLineCommand(state: State) extends MoveCommand(state) {
   def getNewPos: Position = Position(line, 0)
 }
 
-// TODO: make recursive to remove usage of variables
 case class MatchBracketCommand(state: State) extends MoveCommand(state) {
+  // Recursive function to find matching bracket position
+  def iteratePos(cPos : Position, counter: Int, bracket: Char, mBracket: Char, openBracket: Boolean): Position = {
+    if (counter == 0) return cPos
+    val nPos = if (openBracket) nextPos(cPos) else prevPos(cPos)
+    nPos match {
+      case Some((l : Int, c : Int)) => {
+        if (contentLines(l)(c) == bracket) iteratePos(Position(l, c), counter + 1, bracket, mBracket, openBracket)
+        else if (contentLines(l)(c) == mBracket) iteratePos(Position(l, c), counter - 1, bracket, mBracket, openBracket)
+        else iteratePos(Position(l, c), counter, bracket, mBracket, openBracket)
+      }
+      case None => position
+    }
+  }
+
   def getNewPos: Position = {
     val openBrackets = List('[', '(', '{')
     val closeBrackets = List(']', ')', '}')
@@ -180,51 +195,22 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
       // Get the matching bracket character
       val mBracket = if (openBracket) closeBrackets(openBrackets.indexOf(bracket))
         else openBrackets(closeBrackets.indexOf(bracket))
-      var cPos = Option((line, char)) // Position of the current character that is being checked
-      var counter = 1 // Counter for the amount of brackets that still have to be closed
-
-      while(counter > 0) {
-        cPos = if (openBracket) nextPos(cPos) else prevPos(cPos)
-        cPos match {
-          case Some((l : Int, c : Int)) => {
-            if (contentLines(l)(c) == bracket) counter += 1
-            else if (contentLines(l)(c) == mBracket) {
-              counter -= 1
-            }
-          }
-          case None => return position
-        }
-      }
-
-      cPos match {
-        case Some((l : Int, c : Int)) => Position(l, c)
-        case None => position
-      }
+      iteratePos(position, 1, bracket, mBracket, openBracket)
     }
   }
 
   // Returns the next position after the given position, returns None if there is no position after the current position
-  def nextPos(pos: Option[(Int, Int)]) : Option[(Int, Int)] = {
-    pos match {
-      case Some((l, c)) => {
-        if (c < lineLength(l) - 1) Some((l, c + 1))
-        else if (l < lines - 1) Some((l + 1, 0))
-        else None
-      }
-      case _ => None
-    }
+  def nextPos(pos: Position) : Option[(Int, Int)] = {
+    if (pos.character < lineLength(pos.line) - 1) Some((pos.line, pos.character + 1))
+    else if (pos.line < lines - 1) Some((pos.line + 1, 0))
+    else None
   }
 
   // Returns the position before the given position, returns None if there is no position before the current position
-  def prevPos(pos: Option[(Int, Int)]) : Option[(Int, Int)] = {
-    pos match {
-      case Some((l, c)) => {
-        if (char > 0) Some((line, char - 1))
-        else if (line > 0) Some((line - 1, lineLength(line - 1) - 1))
-        else None
-      }
-      case _ => None
-    }
+  def prevPos(pos: Position) : Option[(Int, Int)] = {
+      if (pos.character > 0) Some((pos.line, pos.character - 1))
+      else if (pos.line > 0) Some((pos.line - 1, lineLength(pos.line - 1) - 1))
+      else None
   }
 }
 
