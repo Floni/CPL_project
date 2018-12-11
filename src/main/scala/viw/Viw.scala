@@ -9,7 +9,7 @@ import scala.collection.mutable.ListBuffer
 
 object Viw {
   var history : ListBuffer[State => Command] = new ListBuffer[State => Command]()
-
+  var suspended : ListBuffer[SuspendableCommand] = new ListBuffer[SuspendableCommand]()
   var pasteBuffer : Option[String] = None
 
   val commandMap: Map[String, State => Command] = Map(
@@ -36,6 +36,8 @@ object Viw {
     "A" -> InsertAfterLineCommand,
     "C" -> ChangeLineCommand,
     "." -> RepeatCommand,
+    "d" -> DeleteMovementCommand,
+    "c" -> ChangeMovementCommand,
     "p" -> PasteCommand,
     "P" -> PasteBehindCommand
   )
@@ -49,7 +51,24 @@ object Viw {
     if (commandMap.contains(key)) {
       val command = commandMap(key)
       updateHistory(command)
-      command(state).eval
+      command(state).eval match {
+        case None =>
+          if (suspended.nonEmpty && suspended.head == command(state)) {
+            val suspendedCmd = suspended.head
+            suspended.remove(0)
+            return suspendedCmd.wake(command(state))
+          }
+          else if (command(state).isInstanceOf[SuspendableCommand]) suspended += command(state).asInstanceOf[SuspendableCommand]
+          Some(state)
+        case Some(s) =>
+          // TODO: put this in recursive function for multiple suspended commands
+          if (suspended.nonEmpty) {
+            val suspendedCmd = suspended.head
+            suspended.remove(0)
+            suspendedCmd.wake(command(state))
+          }
+          else Some(s)
+      }
     } else {
       Some(state)
     }
@@ -68,7 +87,7 @@ abstract class Command(state: State) {
   def lineLength(line: Int) : Int = contentLines(line).length
 
   def getLines(start: Int, until: Int) : String = {
-    if (start >= lines || until > lines) ""
+    if (start >= lines || until > lines || start == until) ""
     else {
       contentLines.slice(start, until).mkString("\n")
     }
@@ -354,5 +373,42 @@ case class PasteBehindCommand(state: State) extends Command(state) {
         contentLines(line).slice(char, lineLength(line)) ++
         getLines(line + 1, lines)))
     case None => Some(state)
+  }
+}
+
+abstract class SuspendableCommand(state: State) extends Command(state) {
+  def eval: Option[State] = None
+
+  def wake(argument: Command) : Option[State]
+}
+
+case class DeleteMovementCommand(state: State) extends SuspendableCommand(state) {
+  def wake(argument: Command) : Option[State] = argument match {
+    case _: DeleteMovementCommand => Some(state.copy(content = getLines(0, line) ++ "\n" ++ getLines(line + 1, lines), position = Position(min(line, lines - 1), 0)))
+    case command: MoveCommand => Some(deleteContentBetween(command.getNewPos))
+  }
+
+  def deleteContentBetween(nPos: Position) : State = {
+    val nPosFirst = (nPos.line < line) || (nPos.line == line && nPos.character < char)
+    val fPos = if (nPosFirst) nPos else position
+    val ePos = if (nPosFirst) position else nPos
+    state.copy(content =
+      getLines(0, fPos.line) ++
+      (if (ePos.line > fPos.line && fPos.line > 0) "\n" else "") ++
+      contentLines(fPos.line).slice(0, fPos.character) ++
+      contentLines(line)(char).toString ++
+      contentLines(ePos.line).slice(ePos.character + 1, lineLength(ePos.line)) ++
+      (if (ePos.line > fPos.line) "\n" else "") ++
+      getLines(ePos.line + 1, lines),
+      position = fPos)
+  }
+}
+
+case class ChangeMovementCommand(state: State) extends SuspendableCommand(state) {
+  def wake(argument: Command) : Option[State] = {
+    DeleteMovementCommand(state).wake(argument) match {
+      case Some(s) => Some(s.copy(mode = false))
+      case _ => None
+    }
   }
 }

@@ -587,4 +587,56 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       "ab#c#d"
     )
   }
+
+  test("Delete movement right") {
+    viwTrue(
+      "dl",
+      "ab#c#d",
+      "ab#c#"
+    )
+  }
+
+  test("Delete movement left") {
+    viwTrue(
+      "dh",
+      "ab#c#d",
+      "a#c#d"
+    )
+  }
+
+  test("Delete movement down") {
+    viwTrue(
+      "dj",
+      """abc
+        |d#e#f
+        |ghi""".stripMargin,
+      """abc
+        |d#e#i""".stripMargin
+    )
+  }
+
+  test("Delete movement up") {
+    viwTrue(
+      "dk",
+      """abc
+        |d#e#f
+        |ghi""".stripMargin,
+      """a#e#f
+        |ghi""".stripMargin
+    )
+  }
+
+  test("Delete movement delete movement deletes line") {
+    viwTrue(
+      "dd",
+      """abc
+        |d#e#f
+        |ghi""".stripMargin,
+      """abc
+        |#g#hi""".stripMargin
+    )
+  }
+
+  //TODO: more test with more complicated movements (end line, bracket match etc)
+  //TODO: change tests
 }
