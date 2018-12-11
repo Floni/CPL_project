@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" description="&#10;" line="189" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="585eefff-6d01-4a14-b9bd-42456cfaa2e2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -28,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+            <state relative-caret-position="-2342">
+              <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
               <folding>
                 <element signature="e#13#39#0" expanded="true" />
               </folding>
@@ -40,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="187" column="5" lean-forward="true" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+            <state relative-caret-position="497">
+              <caret line="577" column="15" lean-forward="true" selection-start-line="577" selection-start-column="15" selection-end-line="577" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -72,7 +69,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,13 +107,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544461952505" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544559809534" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -193,18 +190,19 @@
       <workItem from="1544459586316" duration="2578000" />
       <workItem from="1544475345534" duration="1554000" />
       <workItem from="1544477190541" duration="706000" />
-      <workItem from="1544483553245" duration="3045000" />
+      <workItem from="1544483553245" duration="3774000" />
+      <workItem from="1544557280512" duration="2448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36471000" />
+    <option name="totallyTimeSpent" value="39648000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15222576" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15341812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -258,8 +256,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="-2342">
+          <caret line="177" column="5" lean-forward="true" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
           <folding>
             <element signature="e#13#39#0" expanded="true" />
           </folding>
@@ -268,8 +266,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="187" column="5" lean-forward="true" selection-start-line="187" selection-start-column="5" selection-end-line="187" selection-end-column="5" />
+        <state relative-caret-position="497">
+          <caret line="577" column="15" lean-forward="true" selection-start-line="577" selection-start-column="15" selection-end-line="577" selection-end-column="15" />
         </state>
       </provider>
     </entry>

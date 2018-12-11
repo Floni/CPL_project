@@ -56,3 +56,6 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Change to the end of the line at end of line[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Repeat delete[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Multiple repeats[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Repeat join line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete and paste behind[0m[0m

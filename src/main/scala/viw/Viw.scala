@@ -10,6 +10,8 @@ import scala.collection.mutable.ListBuffer
 object Viw {
   var history : ListBuffer[State => Command] = new ListBuffer[State => Command]()
 
+  var pasteBuffer : Option[String] = None
+
   val commandMap: Map[String, State => Command] = Map(
     "h" -> MoveLeftCommand,
     "j" -> MoveDownCommand,
@@ -33,7 +35,9 @@ object Viw {
     "I" -> InsertInLineCommand,
     "A" -> InsertAfterLineCommand,
     "C" -> ChangeLineCommand,
-    "." -> RepeatCommand
+    "." -> RepeatCommand,
+    "p" -> PasteCommand,
+    "P" -> PasteBehindCommand
   )
 
   def updateHistory(command: State => Command): Unit = {
@@ -166,11 +170,10 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
     if (counter == 0) return cPos
     val nPos = if (openBracket) nextPos(cPos) else prevPos(cPos)
     nPos match {
-      case Some((l : Int, c : Int)) => {
+      case Some((l : Int, c : Int)) =>
         if (contentLines(l)(c) == bracket) iteratePos(Position(l, c), counter + 1, bracket, mBracket, openBracket)
         else if (contentLines(l)(c) == mBracket) iteratePos(Position(l, c), counter - 1, bracket, mBracket, openBracket)
         else iteratePos(Position(l, c), counter, bracket, mBracket, openBracket)
-      }
       case None => position
     }
   }
@@ -214,10 +217,13 @@ case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   }
 }
 
-abstract class DeletionCommand(state: State) extends Command(state) {}
+abstract class ModifyTextCommand(state: State) extends Command(state)
+
+abstract class DeletionCommand(state: State) extends ModifyTextCommand(state)
 
 case class DeleteCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
+    Viw.pasteBuffer = Some(contentLines(line)(char).toString)
     Some(state.copy(content =
       getLines(0, line) ++
         contentLines(line).slice(0, char) ++
@@ -230,6 +236,7 @@ case class DeleteCommand(state: State) extends DeletionCommand(state) {
 
 case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
+      Viw.pasteBuffer = Some(contentLines(line)(char).toString)
       Some(state.copy(content =
         getLines(0, line) ++
           contentLines(line).slice(0, char) ++
@@ -242,6 +249,7 @@ case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
 
 case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
+    Viw.pasteBuffer = Some(contentLines(line).slice(char, lineLength(line)))
     Some(state.copy(content =
       getLines(0, line) ++
         (if (char > 0) contentLines(line).slice(0, char) else "") ++
@@ -251,7 +259,7 @@ case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
   }
 }
 
-case class JoinLineCommand(state: State) extends DeletionCommand(state) {
+case class JoinLineCommand(state: State) extends ModifyTextCommand(state) {
   def eval: Option[State] = {
     if (line < lines - 1) {
       Some(state.copy(content =
@@ -308,7 +316,7 @@ case class InsertAfterLineCommand(state: State) extends Command(state) {
 }
 
 case class ChangeLineCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Some(state.copy( content =
+  def eval: Option[State] = Some(state.copy(content =
       getLines(0, line) ++
       contentLines(line).slice(0, char) ++
       getLines(line + 1, lineLength(line)),
@@ -317,9 +325,34 @@ case class ChangeLineCommand(state: State) extends Command(state) {
 
 case class RepeatCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
-    Viw.history.reverseIterator.find(_(state).isInstanceOf[DeletionCommand]) match {
+    Viw.history.reverseIterator.find(_(state).isInstanceOf[ModifyTextCommand]) match {
       case Some(cmd) => cmd(state).eval
       case _ => Some(state)
     }
+  }
+}
+
+case class PasteCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Viw.pasteBuffer match {
+    case Some(s) => Some(state.copy(content =
+      getLines(0, line) ++
+      contentLines(line).slice(0, char + 1) ++
+      s ++
+      (if (lineLength(line) > char + 1) contentLines(line).slice(char + 1, lineLength(line)) else "") ++
+      getLines(line + 1, lines),
+      position = Position(line, char + 1)))
+    case None => Some(state)
+  }
+}
+
+case class PasteBehindCommand(state: State) extends Command(state) {
+  def eval: Option[State] = Viw.pasteBuffer match {
+    case Some(s) => Some(state.copy(content =
+      getLines(0, line) ++
+        contentLines(line).slice(0, char) ++
+        s ++
+        contentLines(line).slice(char, lineLength(line)) ++
+        getLines(line + 1, lines)))
+    case None => Some(state)
   }
 }

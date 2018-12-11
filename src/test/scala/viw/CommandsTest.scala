@@ -559,4 +559,32 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       "th#i#"
     )
   }
+
+  test("Repeat join line") {
+    viwTrue(
+      "J.",
+      """tes#t#
+        |test
+        |test
+        |test""".stripMargin,
+      """test test# #test
+        |test""".stripMargin
+    )
+  }
+
+  test("Delete and paste") {
+    viwTrue(
+      "xp",
+      "ab#c#d",
+      "abd#c#"
+    )
+  }
+
+  test("Delete and paste behind") {
+    viwTrue(
+      "xP",
+      "ab#c#d",
+      "ab#c#d"
+    )
+  }
 }

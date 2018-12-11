@@ -12228,6 +12228,7 @@ function $asArrayOf_Lviw_Command(obj, depth) {
 function $c_Lviw_Viw$() {
   $c_O.call(this);
   this.history$1 = null;
+  this.pasteBuffer$1 = null;
   this.commandMap$1 = null
 }
 $c_Lviw_Viw$.prototype = new $h_O();
@@ -12240,62 +12241,67 @@ $h_Lviw_Viw$.prototype = $c_Lviw_Viw$.prototype;
 $c_Lviw_Viw$.prototype.init___ = (function() {
   $n_Lviw_Viw$ = this;
   this.history$1 = new $c_scm_ListBuffer().init___();
+  this.pasteBuffer$1 = $m_s_None$();
   var y = $m_Lviw_MoveLeftCommand$();
-  var jsx$22 = new $c_T2().init___O__O("h", y);
+  var jsx$24 = new $c_T2().init___O__O("h", y);
   var y$1 = $m_Lviw_MoveDownCommand$();
-  var jsx$21 = new $c_T2().init___O__O("j", y$1);
+  var jsx$23 = new $c_T2().init___O__O("j", y$1);
   var y$2 = $m_Lviw_MoveUpCommand$();
-  var jsx$20 = new $c_T2().init___O__O("k", y$2);
+  var jsx$22 = new $c_T2().init___O__O("k", y$2);
   var y$3 = $m_Lviw_MoveRightCommand$();
-  var jsx$19 = new $c_T2().init___O__O("l", y$3);
+  var jsx$21 = new $c_T2().init___O__O("l", y$3);
   var y$4 = $m_Lviw_NextWordCommand$();
-  var jsx$18 = new $c_T2().init___O__O("w", y$4);
+  var jsx$20 = new $c_T2().init___O__O("w", y$4);
   var y$5 = $m_Lviw_BackWordCommand$();
-  var jsx$17 = new $c_T2().init___O__O("b", y$5);
+  var jsx$19 = new $c_T2().init___O__O("b", y$5);
   var y$6 = $m_Lviw_EndWordCommand$();
-  var jsx$16 = new $c_T2().init___O__O("e", y$6);
+  var jsx$18 = new $c_T2().init___O__O("e", y$6);
   var y$7 = $m_Lviw_EndLineCommand$();
-  var jsx$15 = new $c_T2().init___O__O("$", y$7);
+  var jsx$17 = new $c_T2().init___O__O("$", y$7);
   var y$8 = $m_Lviw_StartLineCommand$();
-  var jsx$14 = new $c_T2().init___O__O("0", y$8);
+  var jsx$16 = new $c_T2().init___O__O("0", y$8);
   var y$9 = $m_Lviw_MatchBracketCommand$();
-  var jsx$13 = new $c_T2().init___O__O("%", y$9);
+  var jsx$15 = new $c_T2().init___O__O("%", y$9);
   var y$10 = $m_Lviw_DeleteCommand$();
-  var jsx$12 = new $c_T2().init___O__O("x", y$10);
+  var jsx$14 = new $c_T2().init___O__O("x", y$10);
   var y$11 = $m_Lviw_DeleteBackCommand$();
-  var jsx$11 = new $c_T2().init___O__O("X", y$11);
+  var jsx$13 = new $c_T2().init___O__O("X", y$11);
   var y$12 = $m_Lviw_DeleteLineCommand$();
-  var jsx$10 = new $c_T2().init___O__O("D", y$12);
+  var jsx$12 = new $c_T2().init___O__O("D", y$12);
   var y$13 = $m_Lviw_JoinLineCommand$();
-  var jsx$9 = new $c_T2().init___O__O("J", y$13);
+  var jsx$11 = new $c_T2().init___O__O("J", y$13);
   var y$14 = $m_Lviw_InsertCommand$();
-  var jsx$8 = new $c_T2().init___O__O("i", y$14);
+  var jsx$10 = new $c_T2().init___O__O("i", y$14);
   var y$15 = $m_Lviw_AppendCommand$();
-  var jsx$7 = new $c_T2().init___O__O("a", y$15);
+  var jsx$9 = new $c_T2().init___O__O("a", y$15);
   var y$16 = $m_Lviw_OpenCommand$();
-  var jsx$6 = new $c_T2().init___O__O("o", y$16);
+  var jsx$8 = new $c_T2().init___O__O("o", y$16);
   var y$17 = $m_Lviw_SubstituteCommand$();
-  var jsx$5 = new $c_T2().init___O__O("s", y$17);
+  var jsx$7 = new $c_T2().init___O__O("s", y$17);
   var y$18 = $m_Lviw_GoCommand$();
-  var jsx$4 = new $c_T2().init___O__O("G", y$18);
+  var jsx$6 = new $c_T2().init___O__O("G", y$18);
   var y$19 = $m_Lviw_InsertInLineCommand$();
-  var jsx$3 = new $c_T2().init___O__O("I", y$19);
+  var jsx$5 = new $c_T2().init___O__O("I", y$19);
   var y$20 = $m_Lviw_InsertAfterLineCommand$();
-  var jsx$2 = new $c_T2().init___O__O("A", y$20);
+  var jsx$4 = new $c_T2().init___O__O("A", y$20);
   var y$21 = $m_Lviw_ChangeLineCommand$();
-  var jsx$1 = new $c_T2().init___O__O("C", y$21);
+  var jsx$3 = new $c_T2().init___O__O("C", y$21);
   var y$22 = $m_Lviw_RepeatCommand$();
-  var array = [jsx$22, jsx$21, jsx$20, jsx$19, jsx$18, jsx$17, jsx$16, jsx$15, jsx$14, jsx$13, jsx$12, jsx$11, jsx$10, jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O(".", y$22)];
-  var this$50 = new $c_scm_MapBuilder().init___sc_GenMap($m_sci_Map$EmptyMap$());
+  var jsx$2 = new $c_T2().init___O__O(".", y$22);
+  var y$23 = $m_Lviw_PasteCommand$();
+  var jsx$1 = new $c_T2().init___O__O("p", y$23);
+  var y$24 = $m_Lviw_PasteBehindCommand$();
+  var array = [jsx$24, jsx$23, jsx$22, jsx$21, jsx$20, jsx$19, jsx$18, jsx$17, jsx$16, jsx$15, jsx$14, jsx$13, jsx$12, jsx$11, jsx$10, jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O("P", y$24)];
+  var this$54 = new $c_scm_MapBuilder().init___sc_GenMap($m_sci_Map$EmptyMap$());
   var i = 0;
   var len = $uI(array.length);
   while ((i < len)) {
     var index = i;
     var arg1 = array[index];
-    this$50.$$plus$eq__T2__scm_MapBuilder($as_T2(arg1));
+    this$54.$$plus$eq__T2__scm_MapBuilder($as_T2(arg1));
     i = ((1 + i) | 0)
   };
-  this.commandMap$1 = $as_sci_Map(this$50.elems$1);
+  this.commandMap$1 = $as_sci_Map(this$54.elems$1);
   return this
 });
 $c_Lviw_Viw$.prototype.processKey__T__Lviw_internals_State__s_Option = (function(key, state) {
@@ -23223,27 +23229,27 @@ var $d_Lsbt_testing_TaskDef = new $TypeData().initClass({
 });
 $c_Lsbt_testing_TaskDef.prototype.$classData = $d_Lsbt_testing_TaskDef;
 /** @constructor */
-function $c_Lviw_DeletionCommand() {
+function $c_Lviw_ModifyTextCommand() {
   $c_Lviw_Command.call(this)
 }
-$c_Lviw_DeletionCommand.prototype = new $h_Lviw_Command();
-$c_Lviw_DeletionCommand.prototype.constructor = $c_Lviw_DeletionCommand;
+$c_Lviw_ModifyTextCommand.prototype = new $h_Lviw_Command();
+$c_Lviw_ModifyTextCommand.prototype.constructor = $c_Lviw_ModifyTextCommand;
 /** @constructor */
-function $h_Lviw_DeletionCommand() {
+function $h_Lviw_ModifyTextCommand() {
   /*<skip>*/
 }
-$h_Lviw_DeletionCommand.prototype = $c_Lviw_DeletionCommand.prototype;
-function $is_Lviw_DeletionCommand(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeletionCommand)))
+$h_Lviw_ModifyTextCommand.prototype = $c_Lviw_ModifyTextCommand.prototype;
+function $is_Lviw_ModifyTextCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_ModifyTextCommand)))
 }
-function $as_Lviw_DeletionCommand(obj) {
-  return (($is_Lviw_DeletionCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeletionCommand"))
+function $as_Lviw_ModifyTextCommand(obj) {
+  return (($is_Lviw_ModifyTextCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.ModifyTextCommand"))
 }
-function $isArrayOf_Lviw_DeletionCommand(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeletionCommand)))
+function $isArrayOf_Lviw_ModifyTextCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_ModifyTextCommand)))
 }
-function $asArrayOf_Lviw_DeletionCommand(obj, depth) {
-  return (($isArrayOf_Lviw_DeletionCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeletionCommand;", depth))
+function $asArrayOf_Lviw_ModifyTextCommand(obj, depth) {
+  return (($isArrayOf_Lviw_ModifyTextCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.ModifyTextCommand;", depth))
 }
 /** @constructor */
 function $c_Lviw_MoveCommand() {
@@ -28449,6 +28455,17 @@ function $m_Lsbt_testing_Status$() {
   };
   return $n_Lsbt_testing_Status$
 }
+/** @constructor */
+function $c_Lviw_DeletionCommand() {
+  $c_Lviw_ModifyTextCommand.call(this)
+}
+$c_Lviw_DeletionCommand.prototype = new $h_Lviw_ModifyTextCommand();
+$c_Lviw_DeletionCommand.prototype.constructor = $c_Lviw_DeletionCommand;
+/** @constructor */
+function $h_Lviw_DeletionCommand() {
+  /*<skip>*/
+}
+$h_Lviw_DeletionCommand.prototype = $c_Lviw_DeletionCommand.prototype;
 /** @constructor */
 function $c_Lviw_MoveWordCommand() {
   $c_Lviw_MoveCommand.call(this);
@@ -37487,6 +37504,84 @@ function $m_Lviw_OpenCommand$() {
   return $n_Lviw_OpenCommand$
 }
 /** @constructor */
+function $c_Lviw_PasteBehindCommand$() {
+  $c_sr_AbstractFunction1.call(this)
+}
+$c_Lviw_PasteBehindCommand$.prototype = new $h_sr_AbstractFunction1();
+$c_Lviw_PasteBehindCommand$.prototype.constructor = $c_Lviw_PasteBehindCommand$;
+/** @constructor */
+function $h_Lviw_PasteBehindCommand$() {
+  /*<skip>*/
+}
+$h_Lviw_PasteBehindCommand$.prototype = $c_Lviw_PasteBehindCommand$.prototype;
+$c_Lviw_PasteBehindCommand$.prototype.init___ = (function() {
+  return this
+});
+$c_Lviw_PasteBehindCommand$.prototype.apply__O__O = (function(v1) {
+  var state = $as_Lviw_internals_State(v1);
+  return new $c_Lviw_PasteBehindCommand().init___Lviw_internals_State(state)
+});
+$c_Lviw_PasteBehindCommand$.prototype.toString__T = (function() {
+  return "PasteBehindCommand"
+});
+var $d_Lviw_PasteBehindCommand$ = new $TypeData().initClass({
+  Lviw_PasteBehindCommand$: 0
+}, false, "viw.PasteBehindCommand$", {
+  Lviw_PasteBehindCommand$: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_PasteBehindCommand$.prototype.$classData = $d_Lviw_PasteBehindCommand$;
+var $n_Lviw_PasteBehindCommand$ = (void 0);
+function $m_Lviw_PasteBehindCommand$() {
+  if ((!$n_Lviw_PasteBehindCommand$)) {
+    $n_Lviw_PasteBehindCommand$ = new $c_Lviw_PasteBehindCommand$().init___()
+  };
+  return $n_Lviw_PasteBehindCommand$
+}
+/** @constructor */
+function $c_Lviw_PasteCommand$() {
+  $c_sr_AbstractFunction1.call(this)
+}
+$c_Lviw_PasteCommand$.prototype = new $h_sr_AbstractFunction1();
+$c_Lviw_PasteCommand$.prototype.constructor = $c_Lviw_PasteCommand$;
+/** @constructor */
+function $h_Lviw_PasteCommand$() {
+  /*<skip>*/
+}
+$h_Lviw_PasteCommand$.prototype = $c_Lviw_PasteCommand$.prototype;
+$c_Lviw_PasteCommand$.prototype.init___ = (function() {
+  return this
+});
+$c_Lviw_PasteCommand$.prototype.apply__O__O = (function(v1) {
+  var state = $as_Lviw_internals_State(v1);
+  return new $c_Lviw_PasteCommand().init___Lviw_internals_State(state)
+});
+$c_Lviw_PasteCommand$.prototype.toString__T = (function() {
+  return "PasteCommand"
+});
+var $d_Lviw_PasteCommand$ = new $TypeData().initClass({
+  Lviw_PasteCommand$: 0
+}, false, "viw.PasteCommand$", {
+  Lviw_PasteCommand$: 1,
+  sr_AbstractFunction1: 1,
+  O: 1,
+  F1: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_PasteCommand$.prototype.$classData = $d_Lviw_PasteCommand$;
+var $n_Lviw_PasteCommand$ = (void 0);
+function $m_Lviw_PasteCommand$() {
+  if ((!$n_Lviw_PasteCommand$)) {
+    $n_Lviw_PasteCommand$ = new $c_Lviw_PasteCommand$().init___()
+  };
+  return $n_Lviw_PasteCommand$
+}
+/** @constructor */
 function $c_Lviw_RepeatCommand$() {
   $c_sr_AbstractFunction1.call(this)
 }
@@ -45267,6 +45362,259 @@ var $d_Lviw_OpenCommand = new $TypeData().initClass({
 });
 $c_Lviw_OpenCommand.prototype.$classData = $d_Lviw_OpenCommand;
 /** @constructor */
+function $c_Lviw_PasteBehindCommand() {
+  $c_Lviw_Command.call(this);
+  this.state$2 = null
+}
+$c_Lviw_PasteBehindCommand.prototype = new $h_Lviw_Command();
+$c_Lviw_PasteBehindCommand.prototype.constructor = $c_Lviw_PasteBehindCommand;
+/** @constructor */
+function $h_Lviw_PasteBehindCommand() {
+  /*<skip>*/
+}
+$h_Lviw_PasteBehindCommand.prototype = $c_Lviw_PasteBehindCommand.prototype;
+$c_Lviw_PasteBehindCommand.prototype.productPrefix__T = (function() {
+  return "PasteBehindCommand"
+});
+$c_Lviw_PasteBehindCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_PasteBehindCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_PasteBehindCommand(x$1)) {
+    var PasteBehindCommand$1 = $as_Lviw_PasteBehindCommand(x$1);
+    var x = this.state$2;
+    var x$2 = PasteBehindCommand$1.state$2;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_PasteBehindCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$2;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_PasteBehindCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_PasteBehindCommand.prototype.eval__s_Option = (function() {
+  var x1 = $m_Lviw_Viw$().pasteBuffer$1;
+  if ($is_s_Some(x1)) {
+    var x2 = $as_s_Some(x1);
+    var s = $as_T(x2.value$2);
+    var x = this.getLines__I__I__T(0, this.line$1);
+    var this$4 = new $c_sci_StringOps().init___T(x);
+    var jsx$1 = $m_sci_StringOps$();
+    var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+    var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, this.char$1);
+    var that = new $c_sci_StringOps().init___T(x$2);
+    var bf = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$4, that, bf));
+    var this$7 = new $c_sci_StringOps().init___T(x$3);
+    var that$1 = new $c_sci_StringOps().init___T(s);
+    var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$4 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$7, that$1, bf$1));
+    var this$11 = new $c_sci_StringOps().init___T(x$4);
+    var jsx$2 = $m_sci_StringOps$();
+    var x$5 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+    var x$6 = jsx$2.slice$extension__T__I__I__T(x$5, this.char$1, this.lineLength__I__I(this.line$1));
+    var that$2 = new $c_sci_StringOps().init___T(x$6);
+    var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$7 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$11, that$2, bf$2));
+    var this$14 = new $c_sci_StringOps().init___T(x$7);
+    var x$8 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
+    var that$3 = new $c_sci_StringOps().init___T(x$8);
+    var bf$3 = $m_s_Predef$().StringCanBuildFrom$2;
+    var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$14, that$3, bf$3));
+    var this$15 = this.state$2;
+    var position = this$15.position$1;
+    var this$16 = this.state$2;
+    var selection = this$16.selection$1;
+    var this$17 = this.state$2;
+    var mode = this$17.mode$1;
+    return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+  } else {
+    var x$9 = $m_s_None$();
+    if ((x$9 === x1)) {
+      return new $c_s_Some().init___O(this.state$2)
+    } else {
+      throw new $c_s_MatchError().init___O(x1)
+    }
+  }
+});
+$c_Lviw_PasteBehindCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$2 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_PasteBehindCommand.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lviw_PasteBehindCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_PasteBehindCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_PasteBehindCommand)))
+}
+function $as_Lviw_PasteBehindCommand(obj) {
+  return (($is_Lviw_PasteBehindCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.PasteBehindCommand"))
+}
+function $isArrayOf_Lviw_PasteBehindCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_PasteBehindCommand)))
+}
+function $asArrayOf_Lviw_PasteBehindCommand(obj, depth) {
+  return (($isArrayOf_Lviw_PasteBehindCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.PasteBehindCommand;", depth))
+}
+var $d_Lviw_PasteBehindCommand = new $TypeData().initClass({
+  Lviw_PasteBehindCommand: 0
+}, false, "viw.PasteBehindCommand", {
+  Lviw_PasteBehindCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_PasteBehindCommand.prototype.$classData = $d_Lviw_PasteBehindCommand;
+/** @constructor */
+function $c_Lviw_PasteCommand() {
+  $c_Lviw_Command.call(this);
+  this.state$2 = null
+}
+$c_Lviw_PasteCommand.prototype = new $h_Lviw_Command();
+$c_Lviw_PasteCommand.prototype.constructor = $c_Lviw_PasteCommand;
+/** @constructor */
+function $h_Lviw_PasteCommand() {
+  /*<skip>*/
+}
+$h_Lviw_PasteCommand.prototype = $c_Lviw_PasteCommand.prototype;
+$c_Lviw_PasteCommand.prototype.productPrefix__T = (function() {
+  return "PasteCommand"
+});
+$c_Lviw_PasteCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_PasteCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_PasteCommand(x$1)) {
+    var PasteCommand$1 = $as_Lviw_PasteCommand(x$1);
+    var x = this.state$2;
+    var x$2 = PasteCommand$1.state$2;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_PasteCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$2;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_PasteCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_PasteCommand.prototype.eval__s_Option = (function() {
+  var x1 = $m_Lviw_Viw$().pasteBuffer$1;
+  if ($is_s_Some(x1)) {
+    var x2 = $as_s_Some(x1);
+    var s = $as_T(x2.value$2);
+    var x = this.getLines__I__I__T(0, this.line$1);
+    var this$4 = new $c_sci_StringOps().init___T(x);
+    var jsx$1 = $m_sci_StringOps$();
+    var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+    var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, ((1 + this.char$1) | 0));
+    var that = new $c_sci_StringOps().init___T(x$2);
+    var bf = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$4, that, bf));
+    var this$7 = new $c_sci_StringOps().init___T(x$3);
+    var that$1 = new $c_sci_StringOps().init___T(s);
+    var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$4 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$7, that$1, bf$1));
+    var this$12 = new $c_sci_StringOps().init___T(x$4);
+    if ((this.lineLength__I__I(this.line$1) > ((1 + this.char$1) | 0))) {
+      var jsx$2 = $m_sci_StringOps$();
+      var x$5 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+      var x$6 = jsx$2.slice$extension__T__I__I__T(x$5, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
+      var that$2 = new $c_sci_StringOps().init___T(x$6)
+    } else {
+      var that$2 = new $c_sci_StringOps().init___T("")
+    };
+    var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+    var x$7 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$12, that$2, bf$2));
+    var this$15 = new $c_sci_StringOps().init___T(x$7);
+    var x$8 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
+    var that$3 = new $c_sci_StringOps().init___T(x$8);
+    var bf$3 = $m_s_Predef$().StringCanBuildFrom$2;
+    var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$15, that$3, bf$3));
+    var position = new $c_Lviw_internals_State$Position().init___I__I(this.line$1, ((1 + this.char$1) | 0));
+    var this$16 = this.state$2;
+    var selection = this$16.selection$1;
+    var this$17 = this.state$2;
+    var mode = this$17.mode$1;
+    return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+  } else {
+    var x$9 = $m_s_None$();
+    if ((x$9 === x1)) {
+      return new $c_s_Some().init___O(this.state$2)
+    } else {
+      throw new $c_s_MatchError().init___O(x1)
+    }
+  }
+});
+$c_Lviw_PasteCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$2 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_PasteCommand.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lviw_PasteCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_PasteCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_PasteCommand)))
+}
+function $as_Lviw_PasteCommand(obj) {
+  return (($is_Lviw_PasteCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.PasteCommand"))
+}
+function $isArrayOf_Lviw_PasteCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_PasteCommand)))
+}
+function $asArrayOf_Lviw_PasteCommand(obj, depth) {
+  return (($isArrayOf_Lviw_PasteCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.PasteCommand;", depth))
+}
+var $d_Lviw_PasteCommand = new $TypeData().initClass({
+  Lviw_PasteCommand: 0
+}, false, "viw.PasteCommand", {
+  Lviw_PasteCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_PasteCommand.prototype.$classData = $d_Lviw_PasteCommand;
+/** @constructor */
 function $c_Lviw_RepeatCommand() {
   $c_Lviw_Command.call(this);
   this.state$2 = null
@@ -45318,7 +45666,7 @@ $c_Lviw_RepeatCommand.prototype.eval__s_Option = (function() {
     while (this$3.hasNext__Z()) {
       var a = this$3.next__O();
       var x$1 = $as_F1(a);
-      if ($is_Lviw_DeletionCommand(x$1.apply__O__O(this.state$2))) {
+      if ($is_Lviw_ModifyTextCommand(x$1.apply__O__O(this.state$2))) {
         var x1 = new $c_s_Some().init___O(a);
         break inlinereturn$6
       }
@@ -49108,336 +49456,6 @@ function $asArrayOf_Lorg_scalatest_tools_DistributedTestRunnerSuite(obj, depth) 
   return (($isArrayOf_Lorg_scalatest_tools_DistributedTestRunnerSuite(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lorg.scalatest.tools.DistributedTestRunnerSuite;", depth))
 }
 /** @constructor */
-function $c_Lviw_DeleteBackCommand() {
-  $c_Lviw_DeletionCommand.call(this);
-  this.state$3 = null
-}
-$c_Lviw_DeleteBackCommand.prototype = new $h_Lviw_DeletionCommand();
-$c_Lviw_DeleteBackCommand.prototype.constructor = $c_Lviw_DeleteBackCommand;
-/** @constructor */
-function $h_Lviw_DeleteBackCommand() {
-  /*<skip>*/
-}
-$h_Lviw_DeleteBackCommand.prototype = $c_Lviw_DeleteBackCommand.prototype;
-$c_Lviw_DeleteBackCommand.prototype.productPrefix__T = (function() {
-  return "DeleteBackCommand"
-});
-$c_Lviw_DeleteBackCommand.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lviw_DeleteBackCommand.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lviw_DeleteBackCommand(x$1)) {
-    var DeleteBackCommand$1 = $as_Lviw_DeleteBackCommand(x$1);
-    var x = this.state$3;
-    var x$2 = DeleteBackCommand$1.state$3;
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
-});
-$c_Lviw_DeleteBackCommand.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.state$3;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lviw_DeleteBackCommand.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_DeleteBackCommand.prototype.eval__s_Option = (function() {
-  var x = this.getLines__I__I__T(0, this.line$1);
-  var this$4 = new $c_sci_StringOps().init___T(x);
-  var jsx$1 = $m_sci_StringOps$();
-  var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, this.char$1);
-  var that = new $c_sci_StringOps().init___T(x$2);
-  var bf = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$4, that, bf));
-  var this$8 = new $c_sci_StringOps().init___T(x$3);
-  var jsx$2 = $m_sci_StringOps$();
-  var x$4 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$5 = jsx$2.slice$extension__T__I__I__T(x$4, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
-  var that$1 = new $c_sci_StringOps().init___T(x$5);
-  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$6 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
-  var this$11 = new $c_sci_StringOps().init___T(x$6);
-  var x$7 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
-  var that$2 = new $c_sci_StringOps().init___T(x$7);
-  var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
-  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$11, that$2, bf$2));
-  var x$10 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
-  var this$12 = this.position$1;
-  var x$11 = this$12.line$1;
-  var position = new $c_Lviw_internals_State$Position().init___I__I(x$11, x$10);
-  var this$14 = this.state$3;
-  var selection = this$14.selection$1;
-  var this$15 = this.state$3;
-  var mode = this$15.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
-});
-$c_Lviw_DeleteBackCommand.prototype.init___Lviw_internals_State = (function(state) {
-  this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
-  return this
-});
-$c_Lviw_DeleteBackCommand.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Lviw_DeleteBackCommand.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
-function $is_Lviw_DeleteBackCommand(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteBackCommand)))
-}
-function $as_Lviw_DeleteBackCommand(obj) {
-  return (($is_Lviw_DeleteBackCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteBackCommand"))
-}
-function $isArrayOf_Lviw_DeleteBackCommand(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteBackCommand)))
-}
-function $asArrayOf_Lviw_DeleteBackCommand(obj, depth) {
-  return (($isArrayOf_Lviw_DeleteBackCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteBackCommand;", depth))
-}
-var $d_Lviw_DeleteBackCommand = new $TypeData().initClass({
-  Lviw_DeleteBackCommand: 0
-}, false, "viw.DeleteBackCommand", {
-  Lviw_DeleteBackCommand: 1,
-  Lviw_DeletionCommand: 1,
-  Lviw_Command: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lviw_DeleteBackCommand.prototype.$classData = $d_Lviw_DeleteBackCommand;
-/** @constructor */
-function $c_Lviw_DeleteCommand() {
-  $c_Lviw_DeletionCommand.call(this);
-  this.state$3 = null
-}
-$c_Lviw_DeleteCommand.prototype = new $h_Lviw_DeletionCommand();
-$c_Lviw_DeleteCommand.prototype.constructor = $c_Lviw_DeleteCommand;
-/** @constructor */
-function $h_Lviw_DeleteCommand() {
-  /*<skip>*/
-}
-$h_Lviw_DeleteCommand.prototype = $c_Lviw_DeleteCommand.prototype;
-$c_Lviw_DeleteCommand.prototype.productPrefix__T = (function() {
-  return "DeleteCommand"
-});
-$c_Lviw_DeleteCommand.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lviw_DeleteCommand.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lviw_DeleteCommand(x$1)) {
-    var DeleteCommand$1 = $as_Lviw_DeleteCommand(x$1);
-    var x = this.state$3;
-    var x$2 = DeleteCommand$1.state$3;
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
-});
-$c_Lviw_DeleteCommand.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.state$3;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lviw_DeleteCommand.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_DeleteCommand.prototype.eval__s_Option = (function() {
-  var x = this.getLines__I__I__T(0, this.line$1);
-  var this$4 = new $c_sci_StringOps().init___T(x);
-  var jsx$1 = $m_sci_StringOps$();
-  var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, this.char$1);
-  var that = new $c_sci_StringOps().init___T(x$2);
-  var bf = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$4, that, bf));
-  var this$8 = new $c_sci_StringOps().init___T(x$3);
-  var jsx$2 = $m_sci_StringOps$();
-  var x$4 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$5 = jsx$2.slice$extension__T__I__I__T(x$4, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
-  var that$1 = new $c_sci_StringOps().init___T(x$5);
-  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$6 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
-  var this$11 = new $c_sci_StringOps().init___T(x$6);
-  var x$7 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
-  var that$2 = new $c_sci_StringOps().init___T(x$7);
-  var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
-  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$11, that$2, bf$2));
-  var position = new $c_Lviw_internals_State$Position().init___I__I(this.line$1, ((this.char$1 === (((-1) + this.lineLength__I__I(this.line$1)) | 0)) ? (((-1) + this.char$1) | 0) : this.char$1));
-  var this$12 = this.state$3;
-  var selection = this$12.selection$1;
-  var this$13 = this.state$3;
-  var mode = this$13.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
-});
-$c_Lviw_DeleteCommand.prototype.init___Lviw_internals_State = (function(state) {
-  this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
-  return this
-});
-$c_Lviw_DeleteCommand.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Lviw_DeleteCommand.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
-function $is_Lviw_DeleteCommand(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteCommand)))
-}
-function $as_Lviw_DeleteCommand(obj) {
-  return (($is_Lviw_DeleteCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteCommand"))
-}
-function $isArrayOf_Lviw_DeleteCommand(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteCommand)))
-}
-function $asArrayOf_Lviw_DeleteCommand(obj, depth) {
-  return (($isArrayOf_Lviw_DeleteCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteCommand;", depth))
-}
-var $d_Lviw_DeleteCommand = new $TypeData().initClass({
-  Lviw_DeleteCommand: 0
-}, false, "viw.DeleteCommand", {
-  Lviw_DeleteCommand: 1,
-  Lviw_DeletionCommand: 1,
-  Lviw_Command: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lviw_DeleteCommand.prototype.$classData = $d_Lviw_DeleteCommand;
-/** @constructor */
-function $c_Lviw_DeleteLineCommand() {
-  $c_Lviw_DeletionCommand.call(this);
-  this.state$3 = null
-}
-$c_Lviw_DeleteLineCommand.prototype = new $h_Lviw_DeletionCommand();
-$c_Lviw_DeleteLineCommand.prototype.constructor = $c_Lviw_DeleteLineCommand;
-/** @constructor */
-function $h_Lviw_DeleteLineCommand() {
-  /*<skip>*/
-}
-$h_Lviw_DeleteLineCommand.prototype = $c_Lviw_DeleteLineCommand.prototype;
-$c_Lviw_DeleteLineCommand.prototype.productPrefix__T = (function() {
-  return "DeleteLineCommand"
-});
-$c_Lviw_DeleteLineCommand.prototype.productArity__I = (function() {
-  return 1
-});
-$c_Lviw_DeleteLineCommand.prototype.equals__O__Z = (function(x$1) {
-  if ((this === x$1)) {
-    return true
-  } else if ($is_Lviw_DeleteLineCommand(x$1)) {
-    var DeleteLineCommand$1 = $as_Lviw_DeleteLineCommand(x$1);
-    var x = this.state$3;
-    var x$2 = DeleteLineCommand$1.state$3;
-    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
-  } else {
-    return false
-  }
-});
-$c_Lviw_DeleteLineCommand.prototype.productElement__I__O = (function(x$1) {
-  switch (x$1) {
-    case 0: {
-      return this.state$3;
-      break
-    }
-    default: {
-      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
-    }
-  }
-});
-$c_Lviw_DeleteLineCommand.prototype.toString__T = (function() {
-  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
-});
-$c_Lviw_DeleteLineCommand.prototype.eval__s_Option = (function() {
-  var x = this.getLines__I__I__T(0, this.line$1);
-  var this$5 = new $c_sci_StringOps().init___T(x);
-  if ((this.char$1 > 0)) {
-    var jsx$1 = $m_sci_StringOps$();
-    var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-    var x$2 = jsx$1.slice$extension__T__I__I__T(x$1, 0, this.char$1);
-    var that = new $c_sci_StringOps().init___T(x$2)
-  } else {
-    var that = new $c_sci_StringOps().init___T("")
-  };
-  var bf = $m_s_Predef$().StringCanBuildFrom$2;
-  var x$3 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$5, that, bf));
-  var this$8 = new $c_sci_StringOps().init___T(x$3);
-  var x$4 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
-  var that$1 = new $c_sci_StringOps().init___T(x$4);
-  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
-  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$8, that$1, bf$1));
-  var x$12 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
-  var this$9 = this.position$1;
-  var x$13 = this$9.line$1;
-  var position = new $c_Lviw_internals_State$Position().init___I__I(x$13, x$12);
-  var this$11 = this.state$3;
-  var selection = this$11.selection$1;
-  var this$12 = this.state$3;
-  var mode = this$12.mode$1;
-  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
-});
-$c_Lviw_DeleteLineCommand.prototype.init___Lviw_internals_State = (function(state) {
-  this.state$3 = state;
-  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
-  return this
-});
-$c_Lviw_DeleteLineCommand.prototype.hashCode__I = (function() {
-  var this$2 = $m_s_util_hashing_MurmurHash3$();
-  return this$2.productHash__s_Product__I__I(this, (-889275714))
-});
-$c_Lviw_DeleteLineCommand.prototype.productIterator__sc_Iterator = (function() {
-  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
-});
-function $is_Lviw_DeleteLineCommand(obj) {
-  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteLineCommand)))
-}
-function $as_Lviw_DeleteLineCommand(obj) {
-  return (($is_Lviw_DeleteLineCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteLineCommand"))
-}
-function $isArrayOf_Lviw_DeleteLineCommand(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteLineCommand)))
-}
-function $asArrayOf_Lviw_DeleteLineCommand(obj, depth) {
-  return (($isArrayOf_Lviw_DeleteLineCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteLineCommand;", depth))
-}
-var $d_Lviw_DeleteLineCommand = new $TypeData().initClass({
-  Lviw_DeleteLineCommand: 0
-}, false, "viw.DeleteLineCommand", {
-  Lviw_DeleteLineCommand: 1,
-  Lviw_DeletionCommand: 1,
-  Lviw_Command: 1,
-  O: 1,
-  s_Product: 1,
-  s_Equals: 1,
-  s_Serializable: 1,
-  Ljava_io_Serializable: 1
-});
-$c_Lviw_DeleteLineCommand.prototype.$classData = $d_Lviw_DeleteLineCommand;
-/** @constructor */
 function $c_Lviw_EndLineCommand() {
   $c_Lviw_MoveCommand.call(this);
   this.state$3 = null
@@ -49523,10 +49541,10 @@ var $d_Lviw_EndLineCommand = new $TypeData().initClass({
 $c_Lviw_EndLineCommand.prototype.$classData = $d_Lviw_EndLineCommand;
 /** @constructor */
 function $c_Lviw_JoinLineCommand() {
-  $c_Lviw_DeletionCommand.call(this);
+  $c_Lviw_ModifyTextCommand.call(this);
   this.state$3 = null
 }
-$c_Lviw_JoinLineCommand.prototype = new $h_Lviw_DeletionCommand();
+$c_Lviw_JoinLineCommand.prototype = new $h_Lviw_ModifyTextCommand();
 $c_Lviw_JoinLineCommand.prototype.constructor = $c_Lviw_JoinLineCommand;
 /** @constructor */
 function $h_Lviw_JoinLineCommand() {
@@ -49632,7 +49650,7 @@ var $d_Lviw_JoinLineCommand = new $TypeData().initClass({
   Lviw_JoinLineCommand: 0
 }, false, "viw.JoinLineCommand", {
   Lviw_JoinLineCommand: 1,
-  Lviw_DeletionCommand: 1,
+  Lviw_ModifyTextCommand: 1,
   Lviw_Command: 1,
   O: 1,
   s_Product: 1,
@@ -53419,6 +53437,353 @@ var $d_Lviw_BackWordCommand = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lviw_BackWordCommand.prototype.$classData = $d_Lviw_BackWordCommand;
+/** @constructor */
+function $c_Lviw_DeleteBackCommand() {
+  $c_Lviw_DeletionCommand.call(this);
+  this.state$4 = null
+}
+$c_Lviw_DeleteBackCommand.prototype = new $h_Lviw_DeletionCommand();
+$c_Lviw_DeleteBackCommand.prototype.constructor = $c_Lviw_DeleteBackCommand;
+/** @constructor */
+function $h_Lviw_DeleteBackCommand() {
+  /*<skip>*/
+}
+$h_Lviw_DeleteBackCommand.prototype = $c_Lviw_DeleteBackCommand.prototype;
+$c_Lviw_DeleteBackCommand.prototype.productPrefix__T = (function() {
+  return "DeleteBackCommand"
+});
+$c_Lviw_DeleteBackCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_DeleteBackCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_DeleteBackCommand(x$1)) {
+    var DeleteBackCommand$1 = $as_Lviw_DeleteBackCommand(x$1);
+    var x = this.state$4;
+    var x$2 = DeleteBackCommand$1.state$4;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_DeleteBackCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$4;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_DeleteBackCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_DeleteBackCommand.prototype.eval__s_Option = (function() {
+  var jsx$1 = $m_Lviw_Viw$();
+  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var index = this.char$1;
+  var c = (65535 & $uI(x.charCodeAt(index)));
+  jsx$1.pasteBuffer$1 = new $c_s_Some().init___O($as_T($g.String.fromCharCode(c)));
+  var x$1 = this.getLines__I__I__T(0, this.line$1);
+  var this$13 = new $c_sci_StringOps().init___T(x$1);
+  var jsx$2 = $m_sci_StringOps$();
+  var x$2 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$3 = jsx$2.slice$extension__T__I__I__T(x$2, 0, this.char$1);
+  var that = new $c_sci_StringOps().init___T(x$3);
+  var bf = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$4 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$13, that, bf));
+  var this$17 = new $c_sci_StringOps().init___T(x$4);
+  var jsx$3 = $m_sci_StringOps$();
+  var x$5 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$6 = jsx$3.slice$extension__T__I__I__T(x$5, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
+  var that$1 = new $c_sci_StringOps().init___T(x$6);
+  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$7 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$17, that$1, bf$1));
+  var this$20 = new $c_sci_StringOps().init___T(x$7);
+  var x$8 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
+  var that$2 = new $c_sci_StringOps().init___T(x$8);
+  var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$20, that$2, bf$2));
+  var x$10 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
+  var this$21 = this.position$1;
+  var x$11 = this$21.line$1;
+  var position = new $c_Lviw_internals_State$Position().init___I__I(x$11, x$10);
+  var this$23 = this.state$4;
+  var selection = this$23.selection$1;
+  var this$24 = this.state$4;
+  var mode = this$24.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+});
+$c_Lviw_DeleteBackCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$4 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_DeleteBackCommand.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lviw_DeleteBackCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_DeleteBackCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteBackCommand)))
+}
+function $as_Lviw_DeleteBackCommand(obj) {
+  return (($is_Lviw_DeleteBackCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteBackCommand"))
+}
+function $isArrayOf_Lviw_DeleteBackCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteBackCommand)))
+}
+function $asArrayOf_Lviw_DeleteBackCommand(obj, depth) {
+  return (($isArrayOf_Lviw_DeleteBackCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteBackCommand;", depth))
+}
+var $d_Lviw_DeleteBackCommand = new $TypeData().initClass({
+  Lviw_DeleteBackCommand: 0
+}, false, "viw.DeleteBackCommand", {
+  Lviw_DeleteBackCommand: 1,
+  Lviw_DeletionCommand: 1,
+  Lviw_ModifyTextCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_DeleteBackCommand.prototype.$classData = $d_Lviw_DeleteBackCommand;
+/** @constructor */
+function $c_Lviw_DeleteCommand() {
+  $c_Lviw_DeletionCommand.call(this);
+  this.state$4 = null
+}
+$c_Lviw_DeleteCommand.prototype = new $h_Lviw_DeletionCommand();
+$c_Lviw_DeleteCommand.prototype.constructor = $c_Lviw_DeleteCommand;
+/** @constructor */
+function $h_Lviw_DeleteCommand() {
+  /*<skip>*/
+}
+$h_Lviw_DeleteCommand.prototype = $c_Lviw_DeleteCommand.prototype;
+$c_Lviw_DeleteCommand.prototype.productPrefix__T = (function() {
+  return "DeleteCommand"
+});
+$c_Lviw_DeleteCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_DeleteCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_DeleteCommand(x$1)) {
+    var DeleteCommand$1 = $as_Lviw_DeleteCommand(x$1);
+    var x = this.state$4;
+    var x$2 = DeleteCommand$1.state$4;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_DeleteCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$4;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_DeleteCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_DeleteCommand.prototype.eval__s_Option = (function() {
+  var jsx$1 = $m_Lviw_Viw$();
+  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var index = this.char$1;
+  var c = (65535 & $uI(x.charCodeAt(index)));
+  jsx$1.pasteBuffer$1 = new $c_s_Some().init___O($as_T($g.String.fromCharCode(c)));
+  var x$1 = this.getLines__I__I__T(0, this.line$1);
+  var this$13 = new $c_sci_StringOps().init___T(x$1);
+  var jsx$2 = $m_sci_StringOps$();
+  var x$2 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$3 = jsx$2.slice$extension__T__I__I__T(x$2, 0, this.char$1);
+  var that = new $c_sci_StringOps().init___T(x$3);
+  var bf = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$4 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$13, that, bf));
+  var this$17 = new $c_sci_StringOps().init___T(x$4);
+  var jsx$3 = $m_sci_StringOps$();
+  var x$5 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  var x$6 = jsx$3.slice$extension__T__I__I__T(x$5, ((1 + this.char$1) | 0), this.lineLength__I__I(this.line$1));
+  var that$1 = new $c_sci_StringOps().init___T(x$6);
+  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$7 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$17, that$1, bf$1));
+  var this$20 = new $c_sci_StringOps().init___T(x$7);
+  var x$8 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
+  var that$2 = new $c_sci_StringOps().init___T(x$8);
+  var bf$2 = $m_s_Predef$().StringCanBuildFrom$2;
+  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$20, that$2, bf$2));
+  var position = new $c_Lviw_internals_State$Position().init___I__I(this.line$1, ((this.char$1 === (((-1) + this.lineLength__I__I(this.line$1)) | 0)) ? (((-1) + this.char$1) | 0) : this.char$1));
+  var this$21 = this.state$4;
+  var selection = this$21.selection$1;
+  var this$22 = this.state$4;
+  var mode = this$22.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+});
+$c_Lviw_DeleteCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$4 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_DeleteCommand.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lviw_DeleteCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_DeleteCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteCommand)))
+}
+function $as_Lviw_DeleteCommand(obj) {
+  return (($is_Lviw_DeleteCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteCommand"))
+}
+function $isArrayOf_Lviw_DeleteCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteCommand)))
+}
+function $asArrayOf_Lviw_DeleteCommand(obj, depth) {
+  return (($isArrayOf_Lviw_DeleteCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteCommand;", depth))
+}
+var $d_Lviw_DeleteCommand = new $TypeData().initClass({
+  Lviw_DeleteCommand: 0
+}, false, "viw.DeleteCommand", {
+  Lviw_DeleteCommand: 1,
+  Lviw_DeletionCommand: 1,
+  Lviw_ModifyTextCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_DeleteCommand.prototype.$classData = $d_Lviw_DeleteCommand;
+/** @constructor */
+function $c_Lviw_DeleteLineCommand() {
+  $c_Lviw_DeletionCommand.call(this);
+  this.state$4 = null
+}
+$c_Lviw_DeleteLineCommand.prototype = new $h_Lviw_DeletionCommand();
+$c_Lviw_DeleteLineCommand.prototype.constructor = $c_Lviw_DeleteLineCommand;
+/** @constructor */
+function $h_Lviw_DeleteLineCommand() {
+  /*<skip>*/
+}
+$h_Lviw_DeleteLineCommand.prototype = $c_Lviw_DeleteLineCommand.prototype;
+$c_Lviw_DeleteLineCommand.prototype.productPrefix__T = (function() {
+  return "DeleteLineCommand"
+});
+$c_Lviw_DeleteLineCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_DeleteLineCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_DeleteLineCommand(x$1)) {
+    var DeleteLineCommand$1 = $as_Lviw_DeleteLineCommand(x$1);
+    var x = this.state$4;
+    var x$2 = DeleteLineCommand$1.state$4;
+    return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
+  } else {
+    return false
+  }
+});
+$c_Lviw_DeleteLineCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.state$4;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_DeleteLineCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_DeleteLineCommand.prototype.eval__s_Option = (function() {
+  var jsx$2 = $m_Lviw_Viw$();
+  var jsx$1 = $m_sci_StringOps$();
+  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+  jsx$2.pasteBuffer$1 = new $c_s_Some().init___O(jsx$1.slice$extension__T__I__I__T(x, this.char$1, this.lineLength__I__I(this.line$1)));
+  var x$1 = this.getLines__I__I__T(0, this.line$1);
+  var this$6 = new $c_sci_StringOps().init___T(x$1);
+  if ((this.char$1 > 0)) {
+    var jsx$3 = $m_sci_StringOps$();
+    var x$2 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
+    var x$3 = jsx$3.slice$extension__T__I__I__T(x$2, 0, this.char$1);
+    var that = new $c_sci_StringOps().init___T(x$3)
+  } else {
+    var that = new $c_sci_StringOps().init___T("")
+  };
+  var bf = $m_s_Predef$().StringCanBuildFrom$2;
+  var x$4 = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$6, that, bf));
+  var this$9 = new $c_sci_StringOps().init___T(x$4);
+  var x$5 = this.getLines__I__I__T(((1 + this.line$1) | 0), this.lines$1);
+  var that$1 = new $c_sci_StringOps().init___T(x$5);
+  var bf$1 = $m_s_Predef$().StringCanBuildFrom$2;
+  var content = $as_T($f_sc_TraversableLike__$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(this$9, that$1, bf$1));
+  var x$12 = ((this.char$1 > 0) ? (((-1) + this.char$1) | 0) : 0);
+  var this$10 = this.position$1;
+  var x$13 = this$10.line$1;
+  var position = new $c_Lviw_internals_State$Position().init___I__I(x$13, x$12);
+  var this$12 = this.state$4;
+  var selection = this$12.selection$1;
+  var this$13 = this.state$4;
+  var mode = this$13.mode$1;
+  return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
+});
+$c_Lviw_DeleteLineCommand.prototype.init___Lviw_internals_State = (function(state) {
+  this.state$4 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_DeleteLineCommand.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__I(this, (-889275714))
+});
+$c_Lviw_DeleteLineCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_DeleteLineCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_DeleteLineCommand)))
+}
+function $as_Lviw_DeleteLineCommand(obj) {
+  return (($is_Lviw_DeleteLineCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.DeleteLineCommand"))
+}
+function $isArrayOf_Lviw_DeleteLineCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_DeleteLineCommand)))
+}
+function $asArrayOf_Lviw_DeleteLineCommand(obj, depth) {
+  return (($isArrayOf_Lviw_DeleteLineCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.DeleteLineCommand;", depth))
+}
+var $d_Lviw_DeleteLineCommand = new $TypeData().initClass({
+  Lviw_DeleteLineCommand: 0
+}, false, "viw.DeleteLineCommand", {
+  Lviw_DeleteLineCommand: 1,
+  Lviw_DeletionCommand: 1,
+  Lviw_ModifyTextCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_DeleteLineCommand.prototype.$classData = $d_Lviw_DeleteLineCommand;
 /** @constructor */
 function $c_Lviw_EndWordCommand() {
   $c_Lviw_MoveWordCommand.call(this);
@@ -63368,6 +63733,37 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   })(this));
   var pos$58 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 555);
   $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Multiple repeats", testTags$56, testFun$56, pos$58);
+  var array$57 = [];
+  var testTags$57 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$57);
+  var testFun$57 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$60$1) {
+    return (function() {
+      var this$217 = new $c_sci_StringOps().init___T("tes#t#\n        |test\n        |test\n        |test");
+      var $in$21 = $f_sci_StringLike__stripMargin__C__T(this$217, 124);
+      var this$219 = new $c_sci_StringOps().init___T("test test# #test\n        |test");
+      var expected$23 = $f_sci_StringLike__stripMargin__C__T(this$219, 124);
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$60$1, "J.", $in$21, expected$23, true)
+    })
+  })(this));
+  var pos$59 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 563);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Repeat join line", testTags$57, testFun$57, pos$59);
+  var array$58 = [];
+  var testTags$58 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$58);
+  var testFun$58 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$61$1) {
+    return (function() {
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$61$1, "xp", "ab#c#d", "abd#c#", true)
+    })
+  })(this));
+  var pos$60 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 575);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Delete and paste", testTags$58, testFun$58, pos$60);
+  var array$59 = [];
+  var testTags$59 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$59);
+  var testFun$59 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$62$1) {
+    return (function() {
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$62$1, "xP", "ab#c#d", "ab#c#d", true)
+    })
+  })(this));
+  var pos$61 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 583);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Delete and paste behind", testTags$59, testFun$59, pos$61);
   return this
 });
 $c_Lviw_CommandsTest.prototype.runTest__T__Lorg_scalatest_Args__Lorg_scalatest_Status = (function(testName, args) {
