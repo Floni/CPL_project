@@ -1,4 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:55:64: non-variable type argument viw.internals.State in type viw.internals.State => viw.Command (the underlying of command.type) is unchecked since it is eliminated by erasure[0m
-[0m[[0m[33mwarn[0m] [0m[0m          if (suspended.nonEmpty && suspended.head.isInstanceOf[command.type]) {[0m
-[0m[[0m[33mwarn[0m] [0m[0m                                                               ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:6:13: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport Math.min[0m
+[0m[[0m[33mwarn[0m] [0m[0m            ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

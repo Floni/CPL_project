@@ -1,23 +1,23 @@
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(D:\Dropbox\CPL\Scala\2018\project\project-template\src\main\scala\viw\internals\Runner.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(D:\Dropbox\CPL\Scala\2018\project\project-template\src\main\scala\viw\internals\Runner.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\ExitViwCommands.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\ExitViwCommand.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	modified: Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(viw.SubstituteCommand, viw.Command, viw.JoinLineCommand, viw.DeleteMovementCommand, viw.ModifyTextCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.ChangeLineCommand, viw.DeletionCommand, viw.BackWordCommand, viw.InsertCommand, viw.GoCommand, viw.DeleteLineCommand, viw.SuspendableCommand, viw.MoveLeftCommand, viw.MoveWordCommand, viw.MoveUpCommand, viw.StartLineCommand, viw.OpenCommand, viw.EndLineCommand, viw.InsertAfterLineCommand, viw.EndWordCommand, viw.MatchBracketCommand, viw.RepeatCommand, viw.MoveCommand, viw.MoveRightCommand, viw.DeleteCommand, viw.DeleteBackCommand, viw.AppendCommand, viw.InsertInLineCommand, viw.NextWordCommand, viw.MoveDownCommand, viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(viw.SubstituteCommand, viw.DeleteMovementCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.ChangeLineCommand, viw.InsertCommand, viw.GoCommand, viw.SuspendableCommand, viw.OpenCommand, viw.InsertAfterLineCommand, viw.RepeatCommand, viw.AppendCommand, viw.InsertInLineCommand, viw.ChangeMovementCommand, viw.Viw)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(viw.SubstituteCommand, viw.Command, viw.JoinLineCommand, viw.DeleteMovementCommand, viw.ModifyTextCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.ChangeLineCommand, viw.DeletionCommand, viw.BackWordCommand, viw.InsertCommand, viw.GoCommand, viw.DeleteLineCommand, viw.SuspendableCommand, viw.MoveLeftCommand, viw.MoveWordCommand, viw.MoveUpCommand, viw.StartLineCommand, viw.OpenCommand, viw.EndLineCommand, viw.InsertAfterLineCommand, viw.EndWordCommand, viw.MatchBracketCommand, viw.RepeatCommand, viw.MoveCommand, viw.MoveRightCommand, viw.DeleteCommand, viw.DeleteBackCommand, viw.AppendCommand, viw.InsertInLineCommand, viw.NextWordCommand, viw.MoveDownCommand, viw.Viw)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(viw.SubstituteCommand, viw.DeleteMovementCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.ChangeLineCommand, viw.InsertCommand, viw.GoCommand, viw.SuspendableCommand, viw.OpenCommand, viw.InsertAfterLineCommand, viw.RepeatCommand, viw.AppendCommand, viw.InsertInLineCommand, viw.ChangeMovementCommand, viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\ExitViwCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 3 Scala sources to E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 6499dc5c for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 4f3d0040 for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-encoding[0m
 [0m[[0m[0mdebug[0m] [0m[0m	UTF-8[0m
@@ -35,11 +35,120 @@
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Flori\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-library_2.12\jars\scalajs-library_2.12-0.6.25.jar;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-dom_sjs0.6_2.12\jars\scalajs-dom_sjs0.6_2.12-0.9.2.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 1.2181135 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 1.1049582 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.SubstituteCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.SubstituteCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.SubstituteCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(SubstituteCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.SubstituteCommand,ModifiedNames(changes = UsedName(SubstituteCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.SubstituteCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(SubstituteCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.SubstituteCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.ChangeLineCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.ChangeLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.ChangeLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(ChangeLineCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.ChangeLineCommand,ModifiedNames(changes = UsedName(ChangeLineCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.ChangeLineCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(ChangeLineCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.ChangeLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.AppendCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.AppendCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.AppendCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(AppendCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.AppendCommand,ModifiedNames(changes = UsedName(AppendCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.AppendCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(AppendCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.AppendCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.GoCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.GoCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.GoCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(GoCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.GoCommand,ModifiedNames(changes = UsedName(GoCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.GoCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(GoCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.GoCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.ExitViwCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.ExitViwCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.SubstituteCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.ChangeLineCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.InsertCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.GoCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.OpenCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.InsertAfterLineCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.AppendCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.InsertInLineCommand by viw.ExitViwCommand[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.SubstituteCommand, viw.ExitViwCommand, viw.ChangeLineCommand, viw.InsertCommand, viw.GoCommand, viw.OpenCommand, viw.InsertAfterLineCommand, viw.AppendCommand, viw.InsertInLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(asInstanceOf,[Default]), UsedName(isInstanceOf,[Default]), UsedName(eval,[Default]), UsedName(==,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.ExitViwCommand,ModifiedNames(changes = UsedName(!=,[Default]), UsedName($asInstanceOf,[Default]), UsedName(lineLength,[Default]), UsedName(##,[Default]), UsedName(hashCode,[Default]), UsedName(line,[Default]), UsedName(ExitViwCommand,[Default]), UsedName($isInstanceOf,[Default]), UsedName(clone,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(viw;ExitViwCommand;init;,[Default]), UsedName(notify,[Default]), UsedName(eq,[Default]), UsedName(ne,[Default]), UsedName(isInstanceOf,[Default]), UsedName(char,[Default]), UsedName(synchronized,[Default]), UsedName(contentLines,[Default]), UsedName(wait,[Default]), UsedName(finalize,[Default]), UsedName(getEffect,[Default]), UsedName(getClass,[Default]), UsedName(position,[Default]), UsedName(eval,[Default]), UsedName(lines,[Default]), UsedName(==,[Default]), UsedName(equals,[Default]), UsedName(getLines,[Default]), UsedName(toString,[Default]))) invalidates 10 classes due to The viw.ExitViwCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(!=,[Default]), UsedName($asInstanceOf,[Default]), UsedName(lineLength,[Default]), UsedName(##,[Default]), UsedName(hashCode,[Default]), UsedName(line,[Default]), UsedName(ExitViwCommand,[Default]), UsedName($isInstanceOf,[Default]), UsedName(clone,[Default]), UsedName(asInstanceOf,[Default]), UsedName(notifyAll,[Default]), UsedName(viw;ExitViwCommand;init;,[Default]), UsedName(notify,[Default]), UsedName(eq,[Default]), UsedName(ne,[Default]), UsedName(isInstanceOf,[Default]), UsedName(char,[Default]), UsedName(synchronized,[Default]), UsedName(contentLines,[Default]), UsedName(wait,[Default]), UsedName(finalize,[Default]), UsedName(getEffect,[Default]), UsedName(getClass,[Default]), UsedName(position,[Default]), UsedName(eval,[Default]), UsedName(lines,[Default]), UsedName(==,[Default]), UsedName(equals,[Default]), UsedName(getLines,[Default]), UsedName(toString,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.SubstituteCommand, viw.ExitViwCommand, viw.ChangeLineCommand, viw.InsertCommand, viw.GoCommand, viw.OpenCommand, viw.InsertAfterLineCommand, viw.AppendCommand, viw.InsertInLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.OpenCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.OpenCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.OpenCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(OpenCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.OpenCommand,ModifiedNames(changes = UsedName(OpenCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.OpenCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(OpenCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.OpenCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.InsertCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.InsertCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.InsertCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(InsertCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.InsertCommand,ModifiedNames(changes = UsedName(InsertCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.InsertCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(InsertCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.InsertCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.InsertInLineCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.InsertInLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.InsertInLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(InsertInLineCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.InsertInLineCommand,ModifiedNames(changes = UsedName(InsertInLineCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.InsertInLineCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(InsertInLineCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.InsertInLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from viw.InsertAfterLineCommand...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.InsertAfterLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(viw.InsertAfterLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0mThe following modified names cause invalidation of viw.Viw: Set(UsedName(InsertAfterLineCommand,[Default]))[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(viw.InsertAfterLineCommand,ModifiedNames(changes = UsedName(InsertAfterLineCommand,[Default]), UsedName(getEffect,[Default]))) invalidates 2 classes due to The viw.InsertAfterLineCommand has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(InsertAfterLineCommand,[Default]), UsedName(getEffect,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(viw.InsertAfterLineCommand)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by member reference: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.DeleteLineCommand by viw.Viw[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.DeleteBackCommand by viw.Viw[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.DeleteCommand by viw.Viw[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncluding viw.internals.Runner by viw.Viw[0m
 [0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
