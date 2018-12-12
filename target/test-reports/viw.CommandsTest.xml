@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<testsuite hostname="Neurosis" name="viw.CommandsTest" tests="65" errors="0" failures="0" skipped="0" time="0.053" timestamp="2018-12-12T20:08:36">
+<testsuite hostname="Neurosis" name="viw.CommandsTest" tests="82" errors="0" failures="0" skipped="0" time="0.073" timestamp="2018-12-12T23:31:18">
                      <properties>
       <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/><property name="java.specification.version" value="11"/><property name="sun.cpu.isalist" value="amd64"/><property name="sun.jnu.encoding" value="Cp1252"/><property name="sun.arch.data.model" value="64"/><property name="java.vendor.url" value="http://java.oracle.com/"/><property name="user.country.format" value="BE"/><property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.1\bin"/><property name="sun.java.command" value="C:\Users\Flori\.IntelliJIdea2018.3\config\plugins\Scala\launcher\sbt-launch.jar --addPluginSbtFile=C:\Users\Flori\AppData\Local\Temp\idea4.sbt idea-shell"/><property name="jdk.debug" value="release"/><property name="sun.stderr.encoding" value="cp437"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2018-10-16"/><property name="java.home" value="C:\Program Files\Java\jdk-11.0.1"/><property name="file.separator" value="\"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
 "/><property name="sun.stdout.encoding" value="cp437"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="user.script" value=""/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="11.0.1+13-LTS"/><property name="user.name" value="Florian"/><property name="file.encoding" value="UTF-8"/><property name="jnidispatch.path" value="C:\Users\Flori\AppData\Local\Temp\jna-898707565\jna18120827300821702383.dll"/><property name="java.vendor.version" value="18.9"/><property name="jna.loaded" value="true"/><property name="java.io.tmpdir" value="C:\Users\Flori\AppData\Local\Temp\"/><property name="java.version" value="11.0.1"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/><property name="sun.os.patch.level" value=""/><property name="java.library.path" value="C:\Program Files\Java\jdk-11.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Users\Flori\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Flori\AppData\Local\Programs\Python\Python37\;C:\Users\Flori\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Graphviz2.38\bin;C:\Users\Flori\AppData\Local\hyper\app-2.0.0\resources\bin;C:\Users\Flori\AppData\Roaming\npm;C:\Users\Flori\AppData\Local\atom\bin;."/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="windows"/><property name="java.class.path" value="C:\Users\Flori\.IntelliJIdea2018.3\config\plugins\Scala\launcher\sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="user.variant" value=""/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Europe/Paris"/><property name="os.name" value="Windows 10"/><property name="java.vm.specification.version" value="11"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="C:\Users\Flori"/><property name="user.language" value="en"/><property name="sbt.version" value="1.2.1"/><property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=";"/><property name="os.version" value="10.0"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/><property name="user.dir" value="E:\Documents\Studies\CPL\CPL_project"/><property name="os.arch" value="amd64"/><property name="idea.managed" value="true"/><property name="java.vm.info" value="mixed mode"/><property name="java.vm.version" value="11.0.1+13-LTS"/><property name="java.class.version" value="55.0"/>
@@ -10,37 +10,37 @@
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Moving left at start of the line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Moving up moves the cursor" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Moving up moves the cursor" time="0.002">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Moving up on first line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Moving down moves the cursor" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Moving down on last line" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Moving down on last line" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Moving right moves the cursor" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Moving right at end of the line" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Moving right at end of the line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Next word" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Next word middle word" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Next word middle word" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Next word on next line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Next work on next line indented" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Next word last word" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Next word last word" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Back word" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Back word in middle of word" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Back word in middle of word" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Back word in spaces" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Back word on previous line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Back word indented" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Back word indented" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Back word first word" time="0.001">
                                                  
@@ -48,43 +48,47 @@
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="End of word on the end of a word" time="0.001">
                                                  
+                                               </testcase><testcase classname="viw.CommandsTest" name="End of word on last word of line" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="End of word on last word last line" time="0.001">
+                                                 
                                                </testcase><testcase classname="viw.CommandsTest" name="End of line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="End of line at line end" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="End of line at line end" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Start of line" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Start of line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Start of line at line start" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Start of line at line start" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Match brackets" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Match brackets nested brackets" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Match brackets over multiple lines" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Match brackets over multiple lines" time="0.002">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete last character on line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete backwards" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete backwards" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete backwards start of line" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete backwards start of line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete line" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete full line" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete empty line" time="0.0">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete line from end of line" time="0.002">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete line from end of line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Join line" time="0.002">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Join line last line" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Join line last line" time="0.0">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Insert into normal mode" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Insert into normal mode" time="0.0">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Insert after character" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Insert after character" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Insert after character at last character of the line" time="0.001">
                                                  
@@ -100,39 +104,69 @@
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Substitute last char of line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Go" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Go" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Go single line" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Insert in line" time="0.0">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Insert in line empty line" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Insert in line empty line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Insert after line" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Change to the end of the line" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Change to the end of the line" time="0.0">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Change to the end of the line at end of line" time="0.001">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Change to the end of the line at end of line" time="0.0">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Repeat delete" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Multiple repeats" time="0.002">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Multiple repeats" time="0.003">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Repeat join line" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete and paste" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete and paste behind" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete and paste behind" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement right" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement right" time="0.002">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement left" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement left" time="0.001">
                                                  
-                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement down" time="0.0">
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement down" time="0.001">
                                                  
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete movement up" time="0.001">
                                                  
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement next word" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement end word" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete movement end word new word" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete back word same word" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete back word new word" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete to end of line" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete to start of line" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete match bracket to first bracket on line" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Delete match bracket on other line" time="0.001">
+                                                 
                                                </testcase><testcase classname="viw.CommandsTest" name="Delete movement delete movement deletes line" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Change command delete right" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Change command change command deletes line" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Yank right and paste" time="0.0">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Yank left and paste" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Yank down and paste" time="0.001">
+                                                 
+                                               </testcase><testcase classname="viw.CommandsTest" name="Yank up and paste" time="0.001">
                                                  
                                                </testcase>
                      <system-out><![CDATA[]]></system-out>

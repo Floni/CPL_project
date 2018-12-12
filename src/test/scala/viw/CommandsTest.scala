@@ -236,7 +236,25 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "e",
       """Lorem ipsum dolo#r# sit amet, consectetur adipiscing elit.""",
-      """Lorem ipsum dolo#r# sit amet, consectetur adipiscing elit."""
+      """Lorem ipsum dolor si#t# amet, consectetur adipiscing elit."""
+    )
+  }
+
+  test("End of word on last word of line") {
+    viwTrue(
+      "e",
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit#.#
+        |test test""".stripMargin,
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        |tes#t# test""".stripMargin
+    )
+  }
+
+  test("End of word on last word last line") {
+    viwTrue(
+      "e",
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit#.#""".stripMargin,
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit#.#""".stripMargin
     )
   }
 
@@ -592,7 +610,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "dl",
       "ab#c#d",
-      "ab#c#"
+      "ab#d#"
     )
   }
 
@@ -600,7 +618,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "dh",
       "ab#c#d",
-      "a#c#d"
+      "a#b#d"
     )
   }
 
@@ -611,7 +629,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
         |d#e#f
         |ghi""".stripMargin,
       """abc
-        |d#e#i""".stripMargin
+        |d#h#i""".stripMargin
     )
   }
 
@@ -621,8 +639,94 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """abc
         |d#e#f
         |ghi""".stripMargin,
-      """a#e#f
+      """a#b#f
         |ghi""".stripMargin
+    )
+  }
+
+  test("Delete movement next word") {
+    viwTrue(
+      "dw",
+      "abc d#e#f ghi",
+      "abc d#g#hi"
+    )
+  }
+
+  test("Delete movement end word") {
+    viwTrue(
+      "de",
+      "abc d#e#fghi",
+      "abc d#i#"
+    )
+  }
+
+  test("Delete movement end word new word") {
+    viwTrue(
+      "de",
+      "ab#c# defghi",
+      "ab#i#"
+    )
+  }
+
+  test("Delete back word same word") {
+    viwTrue(
+      "db",
+      "abc defg#h#i",
+      "abc #d#i"
+    )
+  }
+
+  test("Delete back word new word") {
+    viwTrue(
+      "db",
+      "abc #d#efghi",
+      "#a#efghi"
+    )
+  }
+
+  test("Delete to end of line") {
+    viwTrue(
+      "d$",
+      """ab#c# defghi
+        |test""".stripMargin,
+      """ab#i#
+        |test""".stripMargin
+    )
+  }
+
+  test("Delete to start of line") {
+    viwTrue(
+      "d0",
+      """abc defg#h#i
+        |test""".stripMargin,
+      """#a#i
+        |test""".stripMargin
+    )
+  }
+
+  test("Delete match bracket to first bracket on line") {
+    viwTrue(
+      "d%",
+      """ab(cd#e#
+        |test""".stripMargin,
+      """ab#(#
+        |test""".stripMargin
+    )
+  }
+
+  test("Delete match bracket on other line") {
+    viwTrue(
+      "d%",
+      """function() #{#
+        | {}
+        | ([])
+        | blabla {
+        | test
+        | }
+        |}
+        |test""".stripMargin,
+      """function() #}#
+        |test""".stripMargin
     )
   }
 
@@ -637,6 +741,65 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
-  //TODO: more test with more complicated movements (end line, bracket match etc)
-  //TODO: change tests
+  test("Change command delete right") {
+    viwFalse(
+      "cl",
+      "ab#c#d",
+      "ab#d#"
+    )
+  }
+
+  test("Change command change command deletes line") {
+    viwFalse(
+      "cc",
+      """abc
+        |d#e#f
+        |ghi""".stripMargin,
+      """abc
+        |#g#hi""".stripMargin
+    )
+  }
+
+  test("Yank right and paste") {
+    viwTrue(
+      "ylp",
+      "abcd#e#fghi",
+      "abcde#e#fghi"
+    )
+  }
+
+  test("Yank left and paste") {
+    viwTrue(
+      "yhp",
+      "abcd#e#fghi",
+      "abcde#d#fghi"
+    )
+  }
+
+  test("Yank down and paste") {
+    viwTrue(
+      "yjp",
+      """abc de#f# ghi
+        |test a test
+        |test""".stripMargin,
+      """abc deff ghi
+        |test #a# ghi
+        |test a test
+        |test""".stripMargin
+    )
+  }
+
+  test("Yank up and paste") {
+    viwTrue(
+      "ykp",
+      """abc def ghi
+        |test a test
+        |te#s#t""".stripMargin,
+      """abc def ghi
+        |test a test
+        |tesst a test
+        |t#e#t""".stripMargin
+    )
+  }
+
 }

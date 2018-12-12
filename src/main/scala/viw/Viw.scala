@@ -1,7 +1,6 @@
 package viw
 
 import viw.internals.State
-import viw.internals.State.Position
 
 import scala.collection.mutable.ListBuffer
 
@@ -37,18 +36,14 @@ object Viw {
     "d" -> DeleteMovementCommand,
     "c" -> ChangeMovementCommand,
     "p" -> PasteCommand,
-    "P" -> PasteBehindCommand
+    "P" -> PasteBehindCommand,
+    "y" -> YankCommand
   )
-
-  def updateHistory(command: State => Command): Unit = {
-    history += command
-    ()
-  }
 
   def processKey(key: String, state: State) : Option[State] = {
     if (commandMap.contains(key)) {
       val command = commandMap(key)
-      updateHistory(command)
+      history += command
       command(state).eval match {
         case None =>
           if (suspended.nonEmpty && suspended.head == command(state)) {
@@ -70,39 +65,5 @@ object Viw {
     } else {
       Some(state)
     }
-  }
-}
-
-case class RepeatCommand(state: State) extends Command(state) {
-  def eval: Option[State] = {
-    Viw.history.reverseIterator.find(_(state).isInstanceOf[ModifyTextCommand]) match {
-      case Some(cmd) => cmd(state).eval
-      case _ => Some(state)
-    }
-  }
-}
-
-case class PasteCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Viw.pasteBuffer match {
-    case Some(s) => Some(state.copy(content =
-      getLines(0, line) ++
-      contentLines(line).slice(0, char + 1) ++
-      s ++
-      (if (lineLength(line) > char + 1) contentLines(line).slice(char + 1, lineLength(line)) else "") ++
-      getLines(line + 1, lines),
-      position = Position(line, char + 1)))
-    case None => Some(state)
-  }
-}
-
-case class PasteBehindCommand(state: State) extends Command(state) {
-  def eval: Option[State] = Viw.pasteBuffer match {
-    case Some(s) => Some(state.copy(content =
-      getLines(0, line) ++
-        contentLines(line).slice(0, char) ++
-        s ++
-        contentLines(line).slice(char, lineLength(line)) ++
-        getLines(line + 1, lines)))
-    case None => Some(state)
   }
 }

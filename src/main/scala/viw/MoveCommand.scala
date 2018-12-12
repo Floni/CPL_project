@@ -80,9 +80,14 @@ case class BackWordCommand(state: State) extends MoveWordCommand(state) {
 case class EndWordCommand(state: State) extends MoveWordCommand(state) {
   def getNewPos: Position = {
     if (whitespacePos == -1) {
-      return Position(line, lineLength(line) - 1)
+      if (char != lineLength(line) - 1) Position(line, lineLength(line) - 1)
+      else if (line < lines - 1) EndWordCommand(state.copy(position = Position(line + 1, 0))).getNewPos
+      else position
+    } else {
+      if (whitespacePos - 1 == char)
+        EndWordCommand(state.copy(position = Position(line, characterPos))).getNewPos
+      else Position(line, whitespacePos - 1)
     }
-    Position(line, whitespacePos - 1)
   }
 }
 

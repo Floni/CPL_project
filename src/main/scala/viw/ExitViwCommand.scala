@@ -20,7 +20,7 @@ case class AppendCommand(state: State) extends ExitViwCommand(state) {
 case class OpenCommand(state: State) extends ExitViwCommand(state) {
   def getEffect: State = state.copy(content =
       getLines(0, line + 1) ++
-      "\n" * 2 ++
+      "\n" ++
       getLines(line + 1, lines),
     Position(line + 1, 0))
 }
