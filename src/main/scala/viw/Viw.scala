@@ -5,7 +5,8 @@ import viw.internals.State
 import scala.collection.mutable.ListBuffer
 
 object Viw {
-  var history : ListBuffer[State => Command] = new ListBuffer[State => Command]()
+  var history : ListBuffer[(Command, ListBuffer[String])] = new ListBuffer[(Command, ListBuffer[String])]()
+  var subHistory : ListBuffer[String] = new ListBuffer[String]()
   var suspended : ListBuffer[SuspendableCommand] = new ListBuffer[SuspendableCommand]()
   var pasteBuffer : Option[String] = None
 
@@ -46,33 +47,53 @@ object Viw {
     "6" -> CountCommand(6),
     "7" -> CountCommand(7),
     "8" -> CountCommand(8),
-    "9" -> CountCommand(9)
+    "9" -> CountCommand(9),
+    ">" -> IndentIncCommand,
+    "<" -> IndentDecCommand
   )
+
+  val repeatableCommand = ListBuffer(DeleteMovementCommand, ChangeMovementCommand, IndentIncCommand, IndentDecCommand)
 
   def processKey(key: String, state: State) : Option[State] = {
     if (commandMap.contains(key)) {
       val command = commandMap(key)
-      history += command
-      command(state).eval match {
+      subHistory += key
+
+      val result = command(state).eval
+      result match {
         case None =>
-          if (suspended.nonEmpty && suspended.head == command(state)) {
-            val suspendedCmd = suspended.head
-            suspended.remove(0)
-            return suspendedCmd.wake(command(state))
+          if (suspended.nonEmpty && suspended.last == command(state) && repeatableCommand.contains(command)) {
+            val suspendedCmd = suspended.last
+            suspended.clear()
+            val suspResult = suspendedCmd.wake(command(state))
+            history += ((suspResult, subHistory))
+            subHistory = ListBuffer()
+            return suspResult.eval
           }
-          else if (command(state).isInstanceOf[SuspendableCommand]) suspended += command(state).asInstanceOf[SuspendableCommand]
-          Some(state)
-        case Some(s) =>
-          // TODO: put this in recursive function for multiple suspended commands
-          if (suspended.nonEmpty) {
-            val suspendedCmd = suspended.head
-            suspended.remove(0)
-            suspendedCmd.wake(command(state))
+          if (command(state).isInstanceOf[SuspendableCommand]) {
+            suspended.append(command(state).asInstanceOf[SuspendableCommand])
           }
-          else Some(s)
+          return Some(state)
+        case Some(_) =>
+          if (suspended.nonEmpty) return foldSuspendedCommands(command(state))
       }
+      history += ((command(state), subHistory))
+      subHistory = ListBuffer()
+      return result
+    }
+    Some(state)
+  }
+
+  def foldSuspendedCommands(command: Command): Option[State] = {
+    val suspendedCmd = suspended.last
+    suspended.remove(suspended.length - 1)
+    if (suspended.nonEmpty) {
+      foldSuspendedCommands(suspendedCmd.wake(command))
     } else {
-      Some(state)
+      val resultCommand = suspendedCmd.wake(command)
+      history += ((resultCommand, subHistory))
+      subHistory = ListBuffer()
+      resultCommand.eval
     }
   }
 }

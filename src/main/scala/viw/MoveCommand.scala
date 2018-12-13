@@ -101,7 +101,6 @@ case class StartLineCommand(state: State) extends MoveCommand(state) {
   def getNewPos(pos : Position): Position = Position(pos.line, 0)
 }
 
-// TODO: replace line & char by pos.line & pos.character
 case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   // Recursive function to find matching bracket position
   def iteratePos(cPos : Position, counter: Int, bracket: Char, mBracket: Char, openBracket: Boolean): Position = {

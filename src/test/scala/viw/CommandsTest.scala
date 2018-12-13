@@ -133,9 +133,9 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """Lorem ipsum dolor sit amet, consectetur adipiscing e#l#it.
         |Cras quis massa eu ex commodo imperdiet.
         |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
-    """Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      |#C#ras quis massa eu ex commodo imperdiet.
-      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+      """Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        |#C#ras quis massa eu ex commodo imperdiet.
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
     )
   }
 
@@ -415,10 +415,10 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "J",
       """Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.
-      |Cras quis massa eu ex commodo imperdiet.
-      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
+        |Cras quis massa eu ex commodo imperdiet.
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
       """Lorem ipsum dolor sit amet, consectetur adipiscing elit.# #Cras quis massa eu ex commodo imperdiet.
-      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
     )
   }
 
@@ -514,11 +514,11 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwFalse(
       "G",
       """Lorem ipsum dolor sit ame#t#, consectetur adipiscing elit.
-      |Cras quis massa eu ex commodo imperdiet.
-      |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
+        |Cras quis massa eu ex commodo imperdiet.
+        |Curabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin,
       """Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      |Cras quis massa eu ex commodo imperdiet.
-      |#C#urabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
+        |Cras quis massa eu ex commodo imperdiet.
+        |#C#urabitur auctor tellus at justo malesuada, at ornare mi tincidunt.""".stripMargin
     )
   }
 
@@ -578,13 +578,13 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
-  test("Multiple repeats") {
-    viwTrue(
-      "x" ++ "." * 10,
-      "this is a tes#t#",
-      "th#i#"
-    )
-  }
+  //test("Multiple repeats") {
+  //  viwTrue(
+  //    "x" ++ "." * 10,
+  //    "this is a tes#t#",
+  //    "th#i#"
+  //  )
+  //}
 
   test("Repeat join line") {
     viwTrue(
@@ -810,11 +810,119 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
-  test("Count command") {
+  test("Count command move right") {
     viwTrue(
       "3l",
       "this is #a# test",
       "this is a t#e#st"
     )
   }
+
+  test("Count command move right more than length") {
+    viwTrue(
+      "9l",
+      "this is #a# test",
+      "this is a tes#t#"
+    )
+  }
+
+  test("Count command delete 3 to the right") {
+    viwTrue(
+      "d3l",
+      "this is #a# test",
+      "this is #e#st"
+    )
+  }
+
+  test("Repeat delete count command command 3 to the right") {
+    viwTrue(
+      "d3l.",
+      "thi#s# is a test",
+      "thi# #test"
+    )
+  }
+
+  test("Count delete 11 to the right") {
+    viwTrue(
+      "d11l",
+      "#t#his is a test",
+      "#e#st"
+    )
+  }
+
+  test("Count delete 123 to the right") {
+    viwTrue(
+      "d123l",
+      "this is a tes#t#" ++ "t" * 150,
+      "this is a tes#t#" ++ "t" * (150 - 123)
+    )
+  }
+
+  test("Indent current line") {
+    viwTrue(
+      ">>",
+      "this is a tes#t#",
+      "  this is a tes#t#"
+    )
+  }
+
+  test("Indent current line repeat") {
+    viwTrue(
+      ">>.",
+      "this is a tes#t#",
+      "    this is a tes#t#"
+    )
+  }
+
+
+  test("Indent up") {
+    viwTrue(
+      ">k",
+      """  test a test
+        |test #a# test
+        |test""".stripMargin,
+      """    test a test
+        |  test #a# test
+        |test""".stripMargin
+    )
+  }
+
+  test("Indent match brackets") {
+    viwTrue(
+      ">%",
+      """function(arg) {
+        |if(bla) #{#
+        |  qlzdqlzdqlz
+        |  lzqdqldlqd
+        |  qzdlqzldql
+        |  {}
+        |}
+        |}""".stripMargin,
+      """function(arg) {
+        |  if(bla) #{#
+        |    qlzdqlzdqlz
+        |    lzqdqldlqd
+        |    qzdlqzldql
+        |    {}
+        |  }
+        |}""".stripMargin
+    )
+  }
+
+  test("Dec indent line") {
+    viwTrue(
+      "<<",
+      "   test this lin#e#",
+      " test this lin#e#"
+    )
+  }
+
+  test("Dec indent line repeat") {
+    viwTrue(
+      "<<.",
+      "   test this lin#e#",
+      "test this lin#e#"
+    )
+  }
+
 }

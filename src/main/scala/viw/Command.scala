@@ -55,8 +55,9 @@ abstract class Command(state: State) {
 
 case class RepeatCommand(state: State) extends Command(state) {
   def eval: Option[State] = {
-    Viw.history.reverseIterator.find(_(state).isInstanceOf[ModifyTextCommand]) match {
-      case Some(cmd) => cmd(state).eval
+    Viw.history.reverseIterator.find(e => e._1.isInstanceOf[ModifyTextCommand]) match {
+      case Some(entry) =>
+        entry._2.foldLeft(Option(state)) {(s : Option[State], e : String) => Viw.processKey(e, s.getOrElse(state))}
       case _ => Some(state)
     }
   }
@@ -82,8 +83,8 @@ case class PasteBehindCommand(state: State) extends Command(state) {
   def eval: Option[State] = Viw.pasteBuffer match {
     case Some(s) => Some(state.copy(content =
       getContentUpto(position) ++
-      s ++
-      getContentFrom(position)))
+        s ++
+        getContentFrom(position)))
     case None => Some(state)
   }
 }
