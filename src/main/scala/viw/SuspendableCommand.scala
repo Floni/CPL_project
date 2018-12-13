@@ -17,7 +17,7 @@ case class DeleteMovementCommand(state: State) extends SuspendableCommand(state)
       getLines(0, line) ++
         getLines(line + 1, lines),
       position = Position(min(line, lines - 1), 0)))
-    case command: MoveCommand => Some(deleteContentBetween(command.getNewPos))
+    case command: MoveCommand => Some(deleteContentBetween(command.getNewPos(position)))
     case _ => Some(state)
   }
 
@@ -42,7 +42,7 @@ case class ChangeMovementCommand(state: State) extends SuspendableCommand(state)
       getLines(line + 1, lines),
       position = Position(min(line, lines - 1), 0),
       mode = false))
-    case command: MoveCommand => Some(DeleteMovementCommand(state).deleteContentBetween(command.getNewPos).copy(mode = false))
+    case command: MoveCommand => Some(DeleteMovementCommand(state).deleteContentBetween(command.getNewPos(position)).copy(mode = false))
     case _ => Some(state)
   }
 }
@@ -50,8 +50,18 @@ case class ChangeMovementCommand(state: State) extends SuspendableCommand(state)
 case class YankCommand(state: State) extends SuspendableCommand(state) {
   def wake(argument: Command) : Option[State] = argument match {
     case command: MoveCommand => {
-      Viw.pasteBuffer = Some(getContentBetween(command.getNewPos, position))
+      Viw.pasteBuffer = Some(getContentBetween(command.getNewPos(position), position))
       Some(state)
+    }
+    case _ => Some(state)
+  }
+}
+
+case class CountCommand(count : Int)(state: State) extends SuspendableCommand(state) {
+  def wake(argument: Command) : Option[State] = argument match {
+    case command: MoveCommand => {
+      if (count == 0) Some(state)
+      else CountCommand(count - 1)(state.copy(position = command.getNewPos(state.position))).wake(command)
     }
     case _ => Some(state)
   }

@@ -12305,71 +12305,134 @@ $c_Lviw_Viw$.prototype.init___ = (function() {
   this.suspended$1 = new $c_scm_ListBuffer().init___();
   this.pasteBuffer$1 = $m_s_None$();
   var y = $m_Lviw_MoveLeftCommand$();
-  var jsx$27 = new $c_T2().init___O__O("h", y);
+  var jsx$36 = new $c_T2().init___O__O("h", y);
   var y$1 = $m_Lviw_MoveDownCommand$();
-  var jsx$26 = new $c_T2().init___O__O("j", y$1);
+  var jsx$35 = new $c_T2().init___O__O("j", y$1);
   var y$2 = $m_Lviw_MoveUpCommand$();
-  var jsx$25 = new $c_T2().init___O__O("k", y$2);
+  var jsx$34 = new $c_T2().init___O__O("k", y$2);
   var y$3 = $m_Lviw_MoveRightCommand$();
-  var jsx$24 = new $c_T2().init___O__O("l", y$3);
+  var jsx$33 = new $c_T2().init___O__O("l", y$3);
   var y$4 = $m_Lviw_NextWordCommand$();
-  var jsx$23 = new $c_T2().init___O__O("w", y$4);
+  var jsx$32 = new $c_T2().init___O__O("w", y$4);
   var y$5 = $m_Lviw_BackWordCommand$();
-  var jsx$22 = new $c_T2().init___O__O("b", y$5);
+  var jsx$31 = new $c_T2().init___O__O("b", y$5);
   var y$6 = $m_Lviw_EndWordCommand$();
-  var jsx$21 = new $c_T2().init___O__O("e", y$6);
+  var jsx$30 = new $c_T2().init___O__O("e", y$6);
   var y$7 = $m_Lviw_EndLineCommand$();
-  var jsx$20 = new $c_T2().init___O__O("$", y$7);
+  var jsx$29 = new $c_T2().init___O__O("$", y$7);
   var y$8 = $m_Lviw_StartLineCommand$();
-  var jsx$19 = new $c_T2().init___O__O("0", y$8);
+  var jsx$28 = new $c_T2().init___O__O("0", y$8);
   var y$9 = $m_Lviw_MatchBracketCommand$();
-  var jsx$18 = new $c_T2().init___O__O("%", y$9);
+  var jsx$27 = new $c_T2().init___O__O("%", y$9);
   var y$10 = $m_Lviw_DeleteCommand$();
-  var jsx$17 = new $c_T2().init___O__O("x", y$10);
+  var jsx$26 = new $c_T2().init___O__O("x", y$10);
   var y$11 = $m_Lviw_DeleteBackCommand$();
-  var jsx$16 = new $c_T2().init___O__O("X", y$11);
+  var jsx$25 = new $c_T2().init___O__O("X", y$11);
   var y$12 = $m_Lviw_DeleteLineCommand$();
-  var jsx$15 = new $c_T2().init___O__O("D", y$12);
+  var jsx$24 = new $c_T2().init___O__O("D", y$12);
   var y$13 = $m_Lviw_JoinLineCommand$();
-  var jsx$14 = new $c_T2().init___O__O("J", y$13);
+  var jsx$23 = new $c_T2().init___O__O("J", y$13);
   var y$14 = $m_Lviw_InsertCommand$();
-  var jsx$13 = new $c_T2().init___O__O("i", y$14);
+  var jsx$22 = new $c_T2().init___O__O("i", y$14);
   var y$15 = $m_Lviw_AppendCommand$();
-  var jsx$12 = new $c_T2().init___O__O("a", y$15);
+  var jsx$21 = new $c_T2().init___O__O("a", y$15);
   var y$16 = $m_Lviw_OpenCommand$();
-  var jsx$11 = new $c_T2().init___O__O("o", y$16);
+  var jsx$20 = new $c_T2().init___O__O("o", y$16);
   var y$17 = $m_Lviw_SubstituteCommand$();
-  var jsx$10 = new $c_T2().init___O__O("s", y$17);
+  var jsx$19 = new $c_T2().init___O__O("s", y$17);
   var y$18 = $m_Lviw_GoCommand$();
-  var jsx$9 = new $c_T2().init___O__O("G", y$18);
+  var jsx$18 = new $c_T2().init___O__O("G", y$18);
   var y$19 = $m_Lviw_InsertInLineCommand$();
-  var jsx$8 = new $c_T2().init___O__O("I", y$19);
+  var jsx$17 = new $c_T2().init___O__O("I", y$19);
   var y$20 = $m_Lviw_InsertAfterLineCommand$();
-  var jsx$7 = new $c_T2().init___O__O("A", y$20);
+  var jsx$16 = new $c_T2().init___O__O("A", y$20);
   var y$21 = $m_Lviw_ChangeLineCommand$();
-  var jsx$6 = new $c_T2().init___O__O("C", y$21);
+  var jsx$15 = new $c_T2().init___O__O("C", y$21);
   var y$22 = $m_Lviw_RepeatCommand$();
-  var jsx$5 = new $c_T2().init___O__O(".", y$22);
+  var jsx$14 = new $c_T2().init___O__O(".", y$22);
   var y$23 = $m_Lviw_DeleteMovementCommand$();
-  var jsx$4 = new $c_T2().init___O__O("d", y$23);
+  var jsx$13 = new $c_T2().init___O__O("d", y$23);
   var y$24 = $m_Lviw_ChangeMovementCommand$();
-  var jsx$3 = new $c_T2().init___O__O("c", y$24);
+  var jsx$12 = new $c_T2().init___O__O("c", y$24);
   var y$25 = $m_Lviw_PasteCommand$();
-  var jsx$2 = new $c_T2().init___O__O("p", y$25);
+  var jsx$11 = new $c_T2().init___O__O("p", y$25);
   var y$26 = $m_Lviw_PasteBehindCommand$();
-  var jsx$1 = new $c_T2().init___O__O("P", y$26);
+  var jsx$10 = new $c_T2().init___O__O("P", y$26);
   var y$27 = $m_Lviw_YankCommand$();
-  var array = [jsx$27, jsx$26, jsx$25, jsx$24, jsx$23, jsx$22, jsx$21, jsx$20, jsx$19, jsx$18, jsx$17, jsx$16, jsx$15, jsx$14, jsx$13, jsx$12, jsx$11, jsx$10, jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O("y", y$27)];
-  var this$60 = new $c_scm_MapBuilder().init___sc_GenMap($m_sci_Map$EmptyMap$());
+  var jsx$9 = new $c_T2().init___O__O("y", y$27);
+  var y$28 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function($this) {
+    return (function(state$2) {
+      var state = $as_Lviw_internals_State(state$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(1, state)
+    })
+  })(this));
+  var jsx$8 = new $c_T2().init___O__O("1", y$28);
+  var y$29 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$2$1) {
+    return (function(state$3$2) {
+      var state$3 = $as_Lviw_internals_State(state$3$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(2, state$3)
+    })
+  })(this));
+  var jsx$7 = new $c_T2().init___O__O("2", y$29);
+  var y$30 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$3$1) {
+    return (function(state$4$2) {
+      var state$4 = $as_Lviw_internals_State(state$4$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(3, state$4)
+    })
+  })(this));
+  var jsx$6 = new $c_T2().init___O__O("3", y$30);
+  var y$31 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$4$1) {
+    return (function(state$5$2) {
+      var state$5 = $as_Lviw_internals_State(state$5$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(4, state$5)
+    })
+  })(this));
+  var jsx$5 = new $c_T2().init___O__O("4", y$31);
+  var y$32 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$5$1) {
+    return (function(state$6$2) {
+      var state$6 = $as_Lviw_internals_State(state$6$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(5, state$6)
+    })
+  })(this));
+  var jsx$4 = new $c_T2().init___O__O("5", y$32);
+  var y$33 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$6$1) {
+    return (function(state$7$2) {
+      var state$7 = $as_Lviw_internals_State(state$7$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(6, state$7)
+    })
+  })(this));
+  var jsx$3 = new $c_T2().init___O__O("6", y$33);
+  var y$34 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$7$1) {
+    return (function(state$8$2) {
+      var state$8 = $as_Lviw_internals_State(state$8$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(7, state$8)
+    })
+  })(this));
+  var jsx$2 = new $c_T2().init___O__O("7", y$34);
+  var y$35 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$8$1) {
+    return (function(state$9$2) {
+      var state$9 = $as_Lviw_internals_State(state$9$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(8, state$9)
+    })
+  })(this));
+  var jsx$1 = new $c_T2().init___O__O("8", y$35);
+  var y$36 = new $c_sjsr_AnonFunction1().init___sjs_js_Function1((function(this$9$1) {
+    return (function(state$10$2) {
+      var state$10 = $as_Lviw_internals_State(state$10$2);
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State(9, state$10)
+    })
+  })(this));
+  var array = [jsx$36, jsx$35, jsx$34, jsx$33, jsx$32, jsx$31, jsx$30, jsx$29, jsx$28, jsx$27, jsx$26, jsx$25, jsx$24, jsx$23, jsx$22, jsx$21, jsx$20, jsx$19, jsx$18, jsx$17, jsx$16, jsx$15, jsx$14, jsx$13, jsx$12, jsx$11, jsx$10, jsx$9, jsx$8, jsx$7, jsx$6, jsx$5, jsx$4, jsx$3, jsx$2, jsx$1, new $c_T2().init___O__O("9", y$36)];
+  var this$78 = new $c_scm_MapBuilder().init___sc_GenMap($m_sci_Map$EmptyMap$());
   var i = 0;
   var len = $uI(array.length);
   while ((i < len)) {
     var index = i;
     var arg1 = array[index];
-    this$60.$$plus$eq__T2__scm_MapBuilder($as_T2(arg1));
+    this$78.$$plus$eq__T2__scm_MapBuilder($as_T2(arg1));
     i = ((1 + i) | 0)
   };
-  this.commandMap$1 = $as_sci_Map(this$60.elems$1);
+  this.commandMap$1 = $as_sci_Map(this$78.elems$1);
   return this
 });
 $c_Lviw_Viw$.prototype.processKey__T__Lviw_internals_State__s_Option = (function(key, state) {
@@ -23382,7 +23445,7 @@ function $h_Lviw_MoveCommand() {
 }
 $h_Lviw_MoveCommand.prototype = $c_Lviw_MoveCommand.prototype;
 $c_Lviw_MoveCommand.prototype.eval__s_Option = (function() {
-  var x$1 = this.getNewPos__Lviw_internals_State$Position();
+  var x$1 = this.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.state$2.position$1);
   var this$1 = this.state$2;
   var x$2 = this$1.content$1;
   var this$2 = this.state$2;
@@ -28624,9 +28687,7 @@ function $h_Lviw_DeletionCommand() {
 $h_Lviw_DeletionCommand.prototype = $c_Lviw_DeletionCommand.prototype;
 /** @constructor */
 function $c_Lviw_MoveWordCommand() {
-  $c_Lviw_MoveCommand.call(this);
-  this.whitespacePos$3 = 0;
-  this.characterPos$3 = 0
+  $c_Lviw_MoveCommand.call(this)
 }
 $c_Lviw_MoveWordCommand.prototype = new $h_Lviw_MoveCommand();
 $c_Lviw_MoveWordCommand.prototype.constructor = $c_Lviw_MoveWordCommand;
@@ -28635,12 +28696,10 @@ function $h_Lviw_MoveWordCommand() {
   /*<skip>*/
 }
 $h_Lviw_MoveWordCommand.prototype = $c_Lviw_MoveWordCommand.prototype;
-$c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State = (function(state) {
-  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
-  this.whitespacePos$3 = $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(this.line$1)), 32, this.char$1);
+$c_Lviw_MoveWordCommand.prototype.characterPos__Lviw_internals_State$Position__I = (function(pos) {
   var jsx$1 = $m_sci_StringOps$();
-  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var x$1 = jsx$1.slice$extension__T__I__I__T(x, this.whitespacePos$3, this.lineLength__I__I(this.line$1));
+  var x = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+  var x$1 = jsx$1.slice$extension__T__I__I__T(x, this.whitespacePos__Lviw_internals_State$Position__I(pos), this.lineLength__I__I(pos.line$1));
   var this$3 = new $c_sci_StringOps().init___T(x$1);
   var $$this = this$3.repr$1;
   var len = $uI($$this.length);
@@ -28665,8 +28724,10 @@ $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State = (function(state)
     }
   };
   var n = i;
-  this.characterPos$3 = (($f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n) + this.whitespacePos$3) | 0);
-  return this
+  return (($f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n) + this.whitespacePos__Lviw_internals_State$Position__I(pos)) | 0)
+});
+$c_Lviw_MoveWordCommand.prototype.whitespacePos__Lviw_internals_State$Position__I = (function(pos) {
+  return $m_sjsr_RuntimeString$().indexOf__T__I__I__I($as_T(this.contentLines$1.apply__I__O(pos.line$1)), 32, pos.character$1)
 });
 function $f_Lviw_ViwTest__viwTest__T__Lviw_ViwTest$TestData__Lviw_ViwTest$TestData__Lorg_scalatest_compatible_Assertion($thiz, commandStack, $in, expected) {
   var this$2 = new $c_sci_StringOps().init___T(commandStack);
@@ -49218,7 +49279,7 @@ $c_Lviw_ChangeMovementCommand.prototype.wake__Lviw_Command__s_Option = (function
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$1$1, x$2, x$4, false))
   } else if ($is_Lviw_MoveCommand(argument)) {
     var x3 = $as_Lviw_MoveCommand(argument);
-    var qual$1 = new $c_Lviw_DeleteMovementCommand().init___Lviw_internals_State(this.state$3).deleteContentBetween__Lviw_internals_State$Position__Lviw_internals_State(x3.getNewPos__Lviw_internals_State$Position());
+    var qual$1 = new $c_Lviw_DeleteMovementCommand().init___Lviw_internals_State(this.state$3).deleteContentBetween__Lviw_internals_State$Position__Lviw_internals_State(x3.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1));
     var x$6 = qual$1.content$1;
     var x$7 = qual$1.position$1;
     var x$8 = qual$1.selection$1;
@@ -49259,6 +49320,108 @@ var $d_Lviw_ChangeMovementCommand = new $TypeData().initClass({
   Ljava_io_Serializable: 1
 });
 $c_Lviw_ChangeMovementCommand.prototype.$classData = $d_Lviw_ChangeMovementCommand;
+/** @constructor */
+function $c_Lviw_CountCommand() {
+  $c_Lviw_SuspendableCommand.call(this);
+  this.count$3 = 0;
+  this.state$3 = null
+}
+$c_Lviw_CountCommand.prototype = new $h_Lviw_SuspendableCommand();
+$c_Lviw_CountCommand.prototype.constructor = $c_Lviw_CountCommand;
+/** @constructor */
+function $h_Lviw_CountCommand() {
+  /*<skip>*/
+}
+$h_Lviw_CountCommand.prototype = $c_Lviw_CountCommand.prototype;
+$c_Lviw_CountCommand.prototype.productPrefix__T = (function() {
+  return "CountCommand"
+});
+$c_Lviw_CountCommand.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lviw_CountCommand.prototype.equals__O__Z = (function(x$1) {
+  if ((this === x$1)) {
+    return true
+  } else if ($is_Lviw_CountCommand(x$1)) {
+    var CountCommand$1 = $as_Lviw_CountCommand(x$1);
+    return (this.count$3 === CountCommand$1.count$3)
+  } else {
+    return false
+  }
+});
+$c_Lviw_CountCommand.prototype.productElement__I__O = (function(x$1) {
+  switch (x$1) {
+    case 0: {
+      return this.count$3;
+      break
+    }
+    default: {
+      throw new $c_jl_IndexOutOfBoundsException().init___T(("" + x$1))
+    }
+  }
+});
+$c_Lviw_CountCommand.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$().$$undtoString__s_Product__T(this)
+});
+$c_Lviw_CountCommand.prototype.wake__Lviw_Command__s_Option = (function(argument) {
+  if ($is_Lviw_MoveCommand(argument)) {
+    var x2 = $as_Lviw_MoveCommand(argument);
+    if ((this.count$3 === 0)) {
+      return new $c_s_Some().init___O(this.state$3)
+    } else {
+      var jsx$1 = this.count$3;
+      var x$9 = x2.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.state$3.position$1);
+      var this$1 = this.state$3;
+      var x$10 = this$1.content$1;
+      var this$2 = this.state$3;
+      var x$11 = this$2.selection$1;
+      var this$3 = this.state$3;
+      var x$12 = this$3.mode$1;
+      return new $c_Lviw_CountCommand().init___I__Lviw_internals_State((((-1) + jsx$1) | 0), new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$10, x$9, x$11, x$12)).wake__Lviw_Command__s_Option(x2)
+    }
+  } else {
+    return new $c_s_Some().init___O(this.state$3)
+  }
+});
+$c_Lviw_CountCommand.prototype.init___I__Lviw_internals_State = (function(count, state) {
+  this.count$3 = count;
+  this.state$3 = state;
+  $c_Lviw_Command.prototype.init___Lviw_internals_State.call(this, state);
+  return this
+});
+$c_Lviw_CountCommand.prototype.hashCode__I = (function() {
+  var acc = (-889275714);
+  acc = $m_sr_Statics$().mix__I__I__I(acc, this.count$3);
+  return $m_sr_Statics$().finalizeHash__I__I__I(acc, 1)
+});
+$c_Lviw_CountCommand.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_sr_ScalaRunTime$$anon$1().init___s_Product(this)
+});
+function $is_Lviw_CountCommand(obj) {
+  return (!(!((obj && obj.$classData) && obj.$classData.ancestors.Lviw_CountCommand)))
+}
+function $as_Lviw_CountCommand(obj) {
+  return (($is_Lviw_CountCommand(obj) || (obj === null)) ? obj : $throwClassCastException(obj, "viw.CountCommand"))
+}
+function $isArrayOf_Lviw_CountCommand(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lviw_CountCommand)))
+}
+function $asArrayOf_Lviw_CountCommand(obj, depth) {
+  return (($isArrayOf_Lviw_CountCommand(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lviw.CountCommand;", depth))
+}
+var $d_Lviw_CountCommand = new $TypeData().initClass({
+  Lviw_CountCommand: 0
+}, false, "viw.CountCommand", {
+  Lviw_CountCommand: 1,
+  Lviw_SuspendableCommand: 1,
+  Lviw_Command: 1,
+  O: 1,
+  s_Product: 1,
+  s_Equals: 1,
+  s_Serializable: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lviw_CountCommand.prototype.$classData = $d_Lviw_CountCommand;
 /** @constructor */
 function $c_Lviw_DeleteMovementCommand() {
   $c_Lviw_SuspendableCommand.call(this);
@@ -49326,7 +49489,7 @@ $c_Lviw_DeleteMovementCommand.prototype.wake__Lviw_Command__s_Option = (function
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
   } else if ($is_Lviw_MoveCommand(argument)) {
     var x3 = $as_Lviw_MoveCommand(argument);
-    return new $c_s_Some().init___O(this.deleteContentBetween__Lviw_internals_State$Position__Lviw_internals_State(x3.getNewPos__Lviw_internals_State$Position()))
+    return new $c_s_Some().init___O(this.deleteContentBetween__Lviw_internals_State$Position__Lviw_internals_State(x3.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1)))
   } else {
     return new $c_s_Some().init___O(this.state$3)
   }
@@ -49415,9 +49578,6 @@ $c_Lviw_EndLineCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_EndLineCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_EndLineCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.lineLength__I__I(this.line$1)) | 0))
-});
 $c_Lviw_EndLineCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -49448,6 +49608,9 @@ $c_Lviw_EndLineCommand.prototype.init___Lviw_internals_State = (function(state) 
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_EndLineCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  return new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, (((-1) + this.lineLength__I__I(pos.line$1)) | 0))
 });
 $c_Lviw_EndLineCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50003,109 +50166,6 @@ $c_Lviw_MatchBracketCommand.prototype.iteratePos__Lviw_internals_State$Position_
 $c_Lviw_MatchBracketCommand.prototype.productPrefix__T = (function() {
   return "MatchBracketCommand"
 });
-$c_Lviw_MatchBracketCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  $m_sci_List$();
-  var array = [new $c_jl_Character().init___C(91), new $c_jl_Character().init___C(40), new $c_jl_Character().init___C(123)];
-  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
-  var this$10 = $m_sci_List$();
-  var cbf = this$10.ReusableCBFInstance$2;
-  var openBrackets = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf));
-  $m_sci_List$();
-  var array$1 = [new $c_jl_Character().init___C(93), new $c_jl_Character().init___C(41), new $c_jl_Character().init___C(125)];
-  var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1);
-  var this$20 = $m_sci_List$();
-  var cbf$1 = this$20.ReusableCBFInstance$2;
-  var closeBrackets = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$1, cbf$1));
-  var this$21 = $m_sci_List$();
-  var brackets = $as_sci_List(openBrackets.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(closeBrackets, this$21.ReusableCBFInstance$2));
-  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var index = this.char$1;
-  var c = (65535 & $uI(x.charCodeAt(index)));
-  var elem = new $c_jl_Character().init___C(c);
-  if ((!$f_sc_LinearSeqOptimized__contains__O__Z(brackets, elem))) {
-    inlinereturn$35: {
-      var these = brackets;
-      while ((!these.isEmpty__Z())) {
-        var arg1 = these.head__O();
-        if ((arg1 === null)) {
-          var c$1 = 0
-        } else {
-          var this$28 = $as_jl_Character(arg1);
-          var c$1 = this$28.value$1
-        };
-        var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-        var this$32 = new $c_sci_StringOps().init___T(x$1);
-        var elem$1 = new $c_jl_Character().init___C(c$1);
-        if ($f_sc_SeqLike__contains__O__Z(this$32, elem$1)) {
-          var jsx$1 = true;
-          break inlinereturn$35
-        };
-        these = $as_sc_LinearSeqOptimized(these.tail__O())
-      };
-      var jsx$1 = false
-    };
-    if ((!jsx$1)) {
-      return this.position$1
-    } else {
-      var jsx$3 = this.line$1;
-      var x$2 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-      var this$34 = new $c_sci_StringOps().init___T(x$2);
-      var $$this = this$34.repr$1;
-      var len = $uI($$this.length);
-      var i = 0;
-      while (true) {
-        if ((i < len)) {
-          var arg1$1 = this$34.apply__I__O(i);
-          if ((arg1$1 === null)) {
-            var c$3 = 0
-          } else {
-            var this$40 = $as_jl_Character(arg1$1);
-            var c$3 = this$40.value$1
-          };
-          var elem$2 = new $c_jl_Character().init___C(c$3);
-          var jsx$2 = (!$f_sc_LinearSeqOptimized__contains__O__Z(brackets, elem$2))
-        } else {
-          var jsx$2 = false
-        };
-        if (jsx$2) {
-          i = ((1 + i) | 0)
-        } else {
-          break
-        }
-      };
-      var n = i;
-      return new $c_Lviw_internals_State$Position().init___I__I(jsx$3, $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$34, n))
-    }
-  } else {
-    var x$3 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-    var index$1 = this.char$1;
-    var bracket = (65535 & $uI(x$3.charCodeAt(index$1)));
-    var elem$3 = new $c_jl_Character().init___C(bracket);
-    var openBracket = $f_sc_LinearSeqOptimized__contains__O__Z(openBrackets, elem$3);
-    if (openBracket) {
-      var elem$4 = new $c_jl_Character().init___C(bracket);
-      var n$1 = $f_sc_GenSeqLike__indexOf__O__I__I(openBrackets, elem$4, 0);
-      var c$2 = $f_sc_LinearSeqOptimized__apply__I__O(closeBrackets, n$1);
-      if ((c$2 === null)) {
-        var mBracket = 0
-      } else {
-        var this$51 = $as_jl_Character(c$2);
-        var mBracket = this$51.value$1
-      }
-    } else {
-      var elem$5 = new $c_jl_Character().init___C(bracket);
-      var n$2 = $f_sc_GenSeqLike__indexOf__O__I__I(closeBrackets, elem$5, 0);
-      var c$4 = $f_sc_LinearSeqOptimized__apply__I__O(openBrackets, n$2);
-      if ((c$4 === null)) {
-        var mBracket = 0
-      } else {
-        var this$55 = $as_jl_Character(c$4);
-        var mBracket = this$55.value$1
-      }
-    };
-    return this.iteratePos__Lviw_internals_State$Position__I__C__C__Z__Lviw_internals_State$Position(this.position$1, 1, bracket, mBracket, openBracket)
-  }
-});
 $c_Lviw_MatchBracketCommand.prototype.productArity__I = (function() {
   return 1
 });
@@ -50142,6 +50202,109 @@ $c_Lviw_MatchBracketCommand.prototype.init___Lviw_internals_State = (function(st
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_MatchBracketCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  $m_sci_List$();
+  var array = [new $c_jl_Character().init___C(91), new $c_jl_Character().init___C(40), new $c_jl_Character().init___C(123)];
+  var xs = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array);
+  var this$10 = $m_sci_List$();
+  var cbf = this$10.ReusableCBFInstance$2;
+  var openBrackets = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs, cbf));
+  $m_sci_List$();
+  var array$1 = [new $c_jl_Character().init___C(93), new $c_jl_Character().init___C(41), new $c_jl_Character().init___C(125)];
+  var xs$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1);
+  var this$20 = $m_sci_List$();
+  var cbf$1 = this$20.ReusableCBFInstance$2;
+  var closeBrackets = $as_sci_List($f_sc_TraversableLike__to__scg_CanBuildFrom__O(xs$1, cbf$1));
+  var this$21 = $m_sci_List$();
+  var brackets = $as_sci_List(openBrackets.$$plus$plus__sc_GenTraversableOnce__scg_CanBuildFrom__O(closeBrackets, this$21.ReusableCBFInstance$2));
+  var x = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+  var index = pos.character$1;
+  var c = (65535 & $uI(x.charCodeAt(index)));
+  var elem = new $c_jl_Character().init___C(c);
+  if ((!$f_sc_LinearSeqOptimized__contains__O__Z(brackets, elem))) {
+    inlinereturn$35: {
+      var these = brackets;
+      while ((!these.isEmpty__Z())) {
+        var arg1 = these.head__O();
+        if ((arg1 === null)) {
+          var c$1 = 0
+        } else {
+          var this$28 = $as_jl_Character(arg1);
+          var c$1 = this$28.value$1
+        };
+        var x$1 = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+        var this$32 = new $c_sci_StringOps().init___T(x$1);
+        var elem$1 = new $c_jl_Character().init___C(c$1);
+        if ($f_sc_SeqLike__contains__O__Z(this$32, elem$1)) {
+          var jsx$1 = true;
+          break inlinereturn$35
+        };
+        these = $as_sc_LinearSeqOptimized(these.tail__O())
+      };
+      var jsx$1 = false
+    };
+    if ((!jsx$1)) {
+      return pos
+    } else {
+      var jsx$3 = pos.line$1;
+      var x$2 = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+      var this$34 = new $c_sci_StringOps().init___T(x$2);
+      var $$this = this$34.repr$1;
+      var len = $uI($$this.length);
+      var i = 0;
+      while (true) {
+        if ((i < len)) {
+          var arg1$1 = this$34.apply__I__O(i);
+          if ((arg1$1 === null)) {
+            var c$3 = 0
+          } else {
+            var this$40 = $as_jl_Character(arg1$1);
+            var c$3 = this$40.value$1
+          };
+          var elem$2 = new $c_jl_Character().init___C(c$3);
+          var jsx$2 = (!$f_sc_LinearSeqOptimized__contains__O__Z(brackets, elem$2))
+        } else {
+          var jsx$2 = false
+        };
+        if (jsx$2) {
+          i = ((1 + i) | 0)
+        } else {
+          break
+        }
+      };
+      var n = i;
+      return new $c_Lviw_internals_State$Position().init___I__I(jsx$3, $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$34, n))
+    }
+  } else {
+    var x$3 = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+    var index$1 = pos.character$1;
+    var bracket = (65535 & $uI(x$3.charCodeAt(index$1)));
+    var elem$3 = new $c_jl_Character().init___C(bracket);
+    var openBracket = $f_sc_LinearSeqOptimized__contains__O__Z(openBrackets, elem$3);
+    if (openBracket) {
+      var elem$4 = new $c_jl_Character().init___C(bracket);
+      var n$1 = $f_sc_GenSeqLike__indexOf__O__I__I(openBrackets, elem$4, 0);
+      var c$2 = $f_sc_LinearSeqOptimized__apply__I__O(closeBrackets, n$1);
+      if ((c$2 === null)) {
+        var mBracket = 0
+      } else {
+        var this$51 = $as_jl_Character(c$2);
+        var mBracket = this$51.value$1
+      }
+    } else {
+      var elem$5 = new $c_jl_Character().init___C(bracket);
+      var n$2 = $f_sc_GenSeqLike__indexOf__O__I__I(closeBrackets, elem$5, 0);
+      var c$4 = $f_sc_LinearSeqOptimized__apply__I__O(openBrackets, n$2);
+      if ((c$4 === null)) {
+        var mBracket = 0
+      } else {
+        var this$55 = $as_jl_Character(c$4);
+        var mBracket = this$55.value$1
+      }
+    };
+    return this.iteratePos__Lviw_internals_State$Position__I__C__C__Z__Lviw_internals_State$Position(pos, 1, bracket, mBracket, openBracket)
+  }
 });
 $c_Lviw_MatchBracketCommand.prototype.nextPos__Lviw_internals_State$Position__s_Option = (function(pos) {
   return ((pos.character$1 < (((-1) + this.lineLength__I__I(pos.line$1)) | 0)) ? new $c_s_Some().init___O(new $c_s_Tuple2$mcII$sp().init___I__I(pos.line$1, ((1 + pos.character$1) | 0))) : ((pos.line$1 < (((-1) + this.lines$1) | 0)) ? new $c_s_Some().init___O(new $c_s_Tuple2$mcII$sp().init___I__I(((1 + pos.line$1) | 0), 0)) : $m_s_None$()))
@@ -50196,16 +50359,6 @@ $c_Lviw_MoveDownCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveDownCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_MoveDownCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  if ((this.line$1 < (((-1) + this.lines$1) | 0))) {
-    var jsx$1 = this.line$1;
-    var a = this.lineLength__I__I(((1 + this.line$1) | 0));
-    var b = this.char$1;
-    return new $c_Lviw_internals_State$Position().init___I__I(((1 + jsx$1) | 0), ((a < b) ? a : b))
-  } else {
-    return this.position$1
-  }
-});
 $c_Lviw_MoveDownCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50236,6 +50389,16 @@ $c_Lviw_MoveDownCommand.prototype.init___Lviw_internals_State = (function(state)
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_MoveDownCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  if ((pos.line$1 < (((-1) + this.lines$1) | 0))) {
+    var jsx$1 = pos.line$1;
+    var a = this.lineLength__I__I(((1 + pos.line$1) | 0));
+    var b = pos.character$1;
+    return new $c_Lviw_internals_State$Position().init___I__I(((1 + jsx$1) | 0), ((a < b) ? a : b))
+  } else {
+    return pos
+  }
 });
 $c_Lviw_MoveDownCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50287,11 +50450,6 @@ $c_Lviw_MoveLeftCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveLeftCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_MoveLeftCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  var jsx$1 = this.state$3.position$1.line$1;
-  var b = (((-1) + this.char$1) | 0);
-  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((b < 0) ? 0 : b))
-});
 $c_Lviw_MoveLeftCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50322,6 +50480,11 @@ $c_Lviw_MoveLeftCommand.prototype.init___Lviw_internals_State = (function(state)
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_MoveLeftCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  var jsx$1 = pos.line$1;
+  var b = (((-1) + pos.character$1) | 0);
+  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((b < 0) ? 0 : b))
 });
 $c_Lviw_MoveLeftCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50373,12 +50536,6 @@ $c_Lviw_MoveRightCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveRightCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_MoveRightCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  var jsx$1 = this.line$1;
-  var a = (((-1) + this.lineLength__I__I(this.line$1)) | 0);
-  var b = ((1 + this.char$1) | 0);
-  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((a < b) ? a : b))
-});
 $c_Lviw_MoveRightCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50409,6 +50566,12 @@ $c_Lviw_MoveRightCommand.prototype.init___Lviw_internals_State = (function(state
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_MoveRightCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  var jsx$1 = pos.line$1;
+  var a = (((-1) + this.lineLength__I__I(pos.line$1)) | 0);
+  var b = ((1 + pos.character$1) | 0);
+  return new $c_Lviw_internals_State$Position().init___I__I(jsx$1, ((a < b) ? a : b))
 });
 $c_Lviw_MoveRightCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50460,16 +50623,6 @@ $c_Lviw_MoveUpCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_MoveUpCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_MoveUpCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  if ((this.line$1 > 0)) {
-    var jsx$1 = this.line$1;
-    var a = this.lineLength__I__I((((-1) + this.line$1) | 0));
-    var b = this.char$1;
-    return new $c_Lviw_internals_State$Position().init___I__I((((-1) + jsx$1) | 0), ((a < b) ? a : b))
-  } else {
-    return this.position$1
-  }
-});
 $c_Lviw_MoveUpCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50500,6 +50653,16 @@ $c_Lviw_MoveUpCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_MoveUpCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  if ((pos.line$1 > 0)) {
+    var jsx$1 = pos.line$1;
+    var a = this.lineLength__I__I((((-1) + pos.line$1) | 0));
+    var b = pos.character$1;
+    return new $c_Lviw_internals_State$Position().init___I__I((((-1) + jsx$1) | 0), ((a < b) ? a : b))
+  } else {
+    return pos
+  }
 });
 $c_Lviw_MoveUpCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50650,9 +50813,6 @@ $c_Lviw_StartLineCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_StartLineCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_StartLineCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, 0)
-});
 $c_Lviw_StartLineCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -50683,6 +50843,9 @@ $c_Lviw_StartLineCommand.prototype.init___Lviw_internals_State = (function(state
   this.state$3 = state;
   $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_StartLineCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  return new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, 0)
 });
 $c_Lviw_StartLineCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -50859,7 +51022,7 @@ $c_Lviw_YankCommand.prototype.init___Lviw_internals_State = (function(state) {
 $c_Lviw_YankCommand.prototype.wake__Lviw_Command__s_Option = (function(argument) {
   if ($is_Lviw_MoveCommand(argument)) {
     var x2 = $as_Lviw_MoveCommand(argument);
-    $m_Lviw_Viw$().pasteBuffer$1 = new $c_s_Some().init___O(this.getContentBetween__Lviw_internals_State$Position__Lviw_internals_State$Position__T(x2.getNewPos__Lviw_internals_State$Position(), this.position$1));
+    $m_Lviw_Viw$().pasteBuffer$1 = new $c_s_Some().init___O(this.getContentBetween__Lviw_internals_State$Position__Lviw_internals_State$Position__T(x2.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1), this.position$1));
     return new $c_s_Some().init___O(this.state$3)
   } else {
     return new $c_s_Some().init___O(this.state$3)
@@ -53868,50 +54031,6 @@ $h_Lviw_BackWordCommand.prototype = $c_Lviw_BackWordCommand.prototype;
 $c_Lviw_BackWordCommand.prototype.productPrefix__T = (function() {
   return "BackWordCommand"
 });
-$c_Lviw_BackWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  var jsx$2 = $m_sjsr_RuntimeString$();
-  var jsx$1 = $m_sci_StringOps$();
-  var x = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var prevWhitespace = jsx$2.lastIndexOf__T__I__I(jsx$1.slice$extension__T__I__I__T(x, 0, this.char$1), 32);
-  var wordStart = ((prevWhitespace > 0) ? ((1 + prevWhitespace) | 0) : 0);
-  var x$1 = $as_T(this.contentLines$1.apply__I__O(this.line$1));
-  var this$3 = new $c_sci_StringOps().init___T(x$1);
-  var $$this = this$3.repr$1;
-  var len = $uI($$this.length);
-  var i = 0;
-  while (true) {
-    if ((i < len)) {
-      var arg1 = this$3.apply__I__O(i);
-      if ((arg1 === null)) {
-        var c = 0
-      } else {
-        var this$9 = $as_jl_Character(arg1);
-        var c = this$9.value$1
-      };
-      var jsx$3 = (!(c !== 32))
-    } else {
-      var jsx$3 = false
-    };
-    if (jsx$3) {
-      i = ((1 + i) | 0)
-    } else {
-      break
-    }
-  };
-  var n = i;
-  var firstChar = $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n);
-  if ((this.char$1 === wordStart)) {
-    if ((this.char$1 === firstChar)) {
-      if ((this.line$1 === 0)) {
-        return this.position$1
-      };
-      return this.getPrevWordStart__I__I__Lviw_internals_State$Position((((-1) + this.line$1) | 0), this.lineLength__I__I((((-1) + this.line$1) | 0)))
-    };
-    return this.getPrevWordStart__I__I__Lviw_internals_State$Position(this.line$1, wordStart)
-  } else {
-    return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, wordStart)
-  }
-});
 $c_Lviw_BackWordCommand.prototype.productArity__I = (function() {
   return 1
 });
@@ -53943,8 +54062,52 @@ $c_Lviw_BackWordCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_BackWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_BackWordCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  var jsx$2 = $m_sjsr_RuntimeString$();
+  var jsx$1 = $m_sci_StringOps$();
+  var x = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+  var prevWhitespace = jsx$2.lastIndexOf__T__I__I(jsx$1.slice$extension__T__I__I__T(x, 0, pos.character$1), 32);
+  var wordStart = ((prevWhitespace > 0) ? ((1 + prevWhitespace) | 0) : 0);
+  var x$1 = $as_T(this.contentLines$1.apply__I__O(pos.line$1));
+  var this$3 = new $c_sci_StringOps().init___T(x$1);
+  var $$this = this$3.repr$1;
+  var len = $uI($$this.length);
+  var i = 0;
+  while (true) {
+    if ((i < len)) {
+      var arg1 = this$3.apply__I__O(i);
+      if ((arg1 === null)) {
+        var c = 0
+      } else {
+        var this$9 = $as_jl_Character(arg1);
+        var c = this$9.value$1
+      };
+      var jsx$3 = (!(c !== 32))
+    } else {
+      var jsx$3 = false
+    };
+    if (jsx$3) {
+      i = ((1 + i) | 0)
+    } else {
+      break
+    }
+  };
+  var n = i;
+  var firstChar = $f_sc_IndexedSeqOptimized__negLength__psc_IndexedSeqOptimized__I__I(this$3, n);
+  if ((pos.character$1 === wordStart)) {
+    if ((pos.character$1 === firstChar)) {
+      if ((pos.line$1 === 0)) {
+        return pos
+      };
+      return this.getPrevWordStart__I__I__Lviw_internals_State$Position((((-1) + pos.line$1) | 0), this.lineLength__I__I((((-1) + pos.line$1) | 0)))
+    };
+    return this.getPrevWordStart__I__I__Lviw_internals_State$Position(pos.line$1, wordStart)
+  } else {
+    return new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, wordStart)
+  }
 });
 $c_Lviw_BackWordCommand.prototype.getPrevWordStart__I__I__Lviw_internals_State$Position = (function(l, c) {
   var jsx$1 = $m_sci_StringOps$();
@@ -54337,35 +54500,6 @@ $c_Lviw_EndWordCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_EndWordCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_EndWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  if ((this.whitespacePos$3 === (-1))) {
-    if ((this.char$1 !== (((-1) + this.lineLength__I__I(this.line$1)) | 0))) {
-      return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.lineLength__I__I(this.line$1)) | 0))
-    } else if ((this.line$1 < (((-1) + this.lines$1) | 0))) {
-      var x$9 = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
-      var this$1 = this.state$4;
-      var x$10 = this$1.content$1;
-      var this$2 = this.state$4;
-      var x$11 = this$2.selection$1;
-      var this$3 = this.state$4;
-      var x$12 = this$3.mode$1;
-      return new $c_Lviw_EndWordCommand().init___Lviw_internals_State(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$10, x$9, x$11, x$12)).getNewPos__Lviw_internals_State$Position()
-    } else {
-      return this.position$1
-    }
-  } else if (((((-1) + this.whitespacePos$3) | 0) === this.char$1)) {
-    var x$13 = new $c_Lviw_internals_State$Position().init___I__I(this.line$1, this.characterPos$3);
-    var this$5 = this.state$4;
-    var x$14 = this$5.content$1;
-    var this$6 = this.state$4;
-    var x$15 = this$6.selection$1;
-    var this$7 = this.state$4;
-    var x$16 = this$7.mode$1;
-    return new $c_Lviw_EndWordCommand().init___Lviw_internals_State(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$14, x$13, x$15, x$16)).getNewPos__Lviw_internals_State$Position()
-  } else {
-    return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, (((-1) + this.whitespacePos$3) | 0))
-  }
-});
 $c_Lviw_EndWordCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -54394,8 +54528,11 @@ $c_Lviw_EndWordCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_EndWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_EndWordCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  return ((this.whitespacePos__Lviw_internals_State$Position__I(pos) === (-1)) ? ((pos.character$1 !== (((-1) + this.lineLength__I__I(pos.line$1)) | 0)) ? new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, (((-1) + this.lineLength__I__I(pos.line$1)) | 0)) : ((pos.line$1 < (((-1) + this.lines$1) | 0)) ? new $c_Lviw_EndWordCommand().init___Lviw_internals_State(this.state$4).getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(new $c_Lviw_internals_State$Position().init___I__I(((1 + pos.line$1) | 0), 0)) : pos)) : (((((-1) + this.whitespacePos__Lviw_internals_State$Position__I(pos)) | 0) === pos.character$1) ? new $c_Lviw_EndWordCommand().init___Lviw_internals_State(this.state$4).getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, this.characterPos__Lviw_internals_State$Position__I(pos))) : new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, (((-1) + this.whitespacePos__Lviw_internals_State$Position__I(pos)) | 0))))
 });
 $c_Lviw_EndWordCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -54448,28 +54585,6 @@ $c_Lviw_NextWordCommand.prototype.productPrefix__T = (function() {
 $c_Lviw_NextWordCommand.prototype.productArity__I = (function() {
   return 1
 });
-$c_Lviw_NextWordCommand.prototype.getNewPos__Lviw_internals_State$Position = (function() {
-  if (((this.whitespacePos$3 === (-1)) || (this.characterPos$3 === (-1)))) {
-    if ((this.line$1 === (((-1) + this.lines$1) | 0))) {
-      return this.position$1
-    } else {
-      var nextLine = new $c_Lviw_internals_State$Position().init___I__I(((1 + this.line$1) | 0), 0);
-      var x = $as_T(this.contentLines$1.apply__I__O(((1 + this.line$1) | 0)));
-      if (((65535 & $uI(x.charCodeAt(0))) !== 32)) {
-        return nextLine
-      } else {
-        var this$4 = this.state$4;
-        var x$6 = this$4.content$1;
-        var this$5 = this.state$4;
-        var x$7 = this$5.selection$1;
-        var this$6 = this.state$4;
-        var x$8 = this$6.mode$1;
-        return new $c_Lviw_NextWordCommand().init___Lviw_internals_State(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$6, nextLine, x$7, x$8)).getNewPos__Lviw_internals_State$Position()
-      }
-    }
-  };
-  return new $c_Lviw_internals_State$Position().init___I__I(this.line$1, this.characterPos$3)
-});
 $c_Lviw_NextWordCommand.prototype.equals__O__Z = (function(x$1) {
   if ((this === x$1)) {
     return true
@@ -54498,8 +54613,24 @@ $c_Lviw_NextWordCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_NextWordCommand.prototype.init___Lviw_internals_State = (function(state) {
   this.state$4 = state;
-  $c_Lviw_MoveWordCommand.prototype.init___Lviw_internals_State.call(this, state);
+  $c_Lviw_MoveCommand.prototype.init___Lviw_internals_State.call(this, state);
   return this
+});
+$c_Lviw_NextWordCommand.prototype.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position = (function(pos) {
+  if (((this.whitespacePos__Lviw_internals_State$Position__I(pos) === (-1)) || (this.characterPos__Lviw_internals_State$Position__I(pos) === (-1)))) {
+    if ((pos.line$1 === (((-1) + this.lines$1) | 0))) {
+      return pos
+    } else {
+      var nextLine = new $c_Lviw_internals_State$Position().init___I__I(((1 + pos.line$1) | 0), 0);
+      var x = $as_T(this.contentLines$1.apply__I__O(((1 + pos.line$1) | 0)));
+      if (((65535 & $uI(x.charCodeAt(0))) !== 32)) {
+        return nextLine
+      } else {
+        return new $c_Lviw_NextWordCommand().init___Lviw_internals_State(this.state$4).getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(nextLine)
+      }
+    }
+  };
+  return new $c_Lviw_internals_State$Position().init___I__I(pos.line$1, this.characterPos__Lviw_internals_State$Position__I(pos))
 });
 $c_Lviw_NextWordCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -64577,6 +64708,15 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   })(this));
   var pos$84 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 800);
   $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Yank up and paste", testTags$82, testFun$82, pos$84);
+  var array$83 = [];
+  var testTags$83 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$83);
+  var testFun$83 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$86$1) {
+    return (function() {
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$86$1, "3l", "this is #a# test", "this is a t#e#st", true)
+    })
+  })(this));
+  var pos$85 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 813);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command", testTags$83, testFun$83, pos$85);
   return this
 });
 $c_Lviw_CommandsTest.prototype.runTest__T__Lorg_scalatest_Args__Lorg_scalatest_Status = (function(testName, args) {

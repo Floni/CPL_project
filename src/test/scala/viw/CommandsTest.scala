@@ -810,4 +810,11 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Count command") {
+    viwTrue(
+      "3l",
+      "this is #a# test",
+      "this is a t#e#st"
+    )
+  }
 }

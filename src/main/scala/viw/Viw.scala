@@ -37,7 +37,16 @@ object Viw {
     "c" -> ChangeMovementCommand,
     "p" -> PasteCommand,
     "P" -> PasteBehindCommand,
-    "y" -> YankCommand
+    "y" -> YankCommand,
+    "1" -> CountCommand(1),
+    "2" -> CountCommand(2),
+    "3" -> CountCommand(3),
+    "4" -> CountCommand(4),
+    "5" -> CountCommand(5),
+    "6" -> CountCommand(6),
+    "7" -> CountCommand(7),
+    "8" -> CountCommand(8),
+    "9" -> CountCommand(9)
   )
 
   def processKey(key: String, state: State) : Option[State] = {
