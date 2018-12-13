@@ -9,25 +9,18 @@ abstract class DeletionCommand(state: State) extends ModifyTextCommand(state)
 
 case class DeleteCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    Viw.pasteBuffer = Some(contentLines(line)(char).toString)
+    updatePasteBuffer(getPositionContent(position))
     Some(state.copy(content =
-      getLines(0, line) ++
-        contentLines(line).slice(0, char) ++
-        contentLines(line).slice(char + 1, lineLength(line)) ++
-        getLines(line + 1, lines),
-      position = Position(line, if (char == lineLength(line) - 1) char - 1 else char)
-    ))
+      getContentUpto(position) ++ getContentFrom(Position(line, char + 1)),
+      position = Position(line, if (char == lineLength(line) - 1 && char > 0) char - 1 else char)))
   }
 }
 
 case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    Viw.pasteBuffer = Some(contentLines(line)(char).toString)
+    updatePasteBuffer(getPositionContent(position))
     Some(state.copy(content =
-      getLines(0, line) ++
-        contentLines(line).slice(0, char) ++
-        contentLines(line).slice(char + 1, lineLength(line)) ++
-        getLines(line + 1, lines),
+        getContentUpto(position) ++ getContentFrom(Position(line, char + 1)),
       position = position.copy(character = if (char > 0) char - 1 else 0)
     ))
   }
@@ -35,11 +28,9 @@ case class DeleteBackCommand(state: State) extends DeletionCommand(state) {
 
 case class DeleteLineCommand(state: State) extends DeletionCommand(state) {
   def eval: Option[State] = {
-    Viw.pasteBuffer = Some(contentLines(line).slice(char, lineLength(line)))
+    updatePasteBuffer(Some(contentLines(line).slice(char, lineLength(line))))
     Some(state.copy(content =
-      getLines(0, line) ++
-        (if (char > 0) contentLines(line).slice(0, char) else "") ++
-        getLines(line + 1, lines),
+      getContentUpto(position) ++ (if (lines > line + 1) getContentFrom(Position(line + 1, 0)) else ""),
       position = position.copy(character = if (char > 0) char - 1 else 0)
     ))
   }

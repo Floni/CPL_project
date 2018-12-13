@@ -26,12 +26,10 @@ case class OpenCommand(state: State) extends ExitViwCommand(state) {
 }
 
 case class SubstituteCommand(state: State) extends ExitViwCommand(state) {
-  def getEffect: State = state.copy(
-    content = getLines(0, line) ++
-      contentLines(line).slice(0, char) ++
-      contentLines(line).slice(char + 1, contentLines(line).length) ++
-      getLines(line + 1, lines),
-    position = position.copy(character = if (char == lineLength(line) - 1) char - 1 else char))
+  def getEffect: State = DeleteCommand(state).eval match {
+    case Some(s) => s
+    case _ => state
+  }
 }
 
 case class GoCommand(state: State) extends ExitViwCommand(state) {
@@ -48,7 +46,5 @@ case class InsertAfterLineCommand(state: State) extends ExitViwCommand(state) {
 
 case class ChangeLineCommand(state: State) extends ExitViwCommand(state) {
   def getEffect: State = state.copy(content =
-    getLines(0, line) ++
-      contentLines(line).slice(0, char) ++
-      getLines(line + 1, lineLength(line)))
+    getContentUpto(position) ++ getLines(line + 1, lineLength(line)))
 }

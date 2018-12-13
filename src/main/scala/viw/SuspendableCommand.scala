@@ -28,8 +28,7 @@ case class DeleteMovementCommand(state: State) extends SuspendableCommand(state)
     state.copy(content =
       getLines(0, fPos.line) ++
         contentLines(fPos.line).slice(0, fPos.character) ++
-        contentLines(nPos.line)(nPos.character).toString ++
-        contentLines(ePos.line).slice(ePos.character + 1, lineLength(ePos.line)) ++
+        contentLines(ePos.line).slice(ePos.character, lineLength(ePos.line)) ++
         "\n" ++
         getLines(ePos.line + 1, lines),
       position = fPos)
@@ -51,20 +50,9 @@ case class ChangeMovementCommand(state: State) extends SuspendableCommand(state)
 case class YankCommand(state: State) extends SuspendableCommand(state) {
   def wake(argument: Command) : Option[State] = argument match {
     case command: MoveCommand => {
-      Viw.pasteBuffer = Some(getContentBetween(command.getNewPos))
+      Viw.pasteBuffer = Some(getContentBetween(command.getNewPos, position))
       Some(state)
     }
     case _ => Some(state)
-  }
-
-  def getContentBetween(nPos: Position): String = {
-    val nPosFirst = (nPos.line < line) || (nPos.line == line && nPos.character < char)
-    val fPos = if (nPosFirst) nPos else position
-    val ePos = if (nPosFirst) position else nPos
-    if (fPos.line == ePos.line) contentLines(line).slice(fPos.character, ePos.character)
-    else contentLines(fPos.line).slice(fPos.character, lineLength(fPos.line)) ++
-      "\n" ++
-      getLines(fPos.line + 1, ePos.line) ++
-      contentLines(ePos.line).slice(0, ePos.character)
   }
 }

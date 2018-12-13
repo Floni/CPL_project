@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="585eefff-6d01-4a14-b9bd-42456cfaa2e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/viw/Command.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/Command.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,55 +48,31 @@
             <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+                  <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
                   <folding>
                     <element signature="e#13#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-472">
+                  <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#13#45#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="650">
-                  <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#13#38#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-                  <folding>
-                    <element signature="e#13#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="548">
-                  <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#13#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Command.scala">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+                <state relative-caret-position="684">
+                  <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
                   <folding>
                     <element signature="e#13#39#0" expanded="true" />
                   </folding>
@@ -107,12 +83,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="633">
-                  <caret line="795" column="11" selection-start-line="795" selection-start-column="11" selection-end-line="796" selection-end-column="11" />
+                <state relative-caret-position="671">
+                  <caret line="360" column="10" lean-forward="true" selection-start-line="360" selection-start-column="10" selection-end-line="360" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -124,6 +100,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>paste</find>
+      <find>subst</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,14 +110,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/scala/viw/ViwTest.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/viw/ExitViwCommands.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/viw/Viw.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/viw/Command.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala" />
       </list>
     </option>
   </component>
@@ -157,7 +134,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -234,12 +210,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544653889218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544653918509" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
@@ -319,18 +296,19 @@
       <workItem from="1544483553245" duration="3774000" />
       <workItem from="1544557280512" duration="2765000" />
       <workItem from="1544560718112" duration="5719000" />
-      <workItem from="1544639663336" duration="13555000" />
+      <workItem from="1544639663336" duration="13626000" />
+      <workItem from="1544705415526" duration="3944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59239000" />
+    <option name="totallyTimeSpent" value="63254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1426" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14308426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10174881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -363,6 +341,40 @@
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14427663" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32869297" />
+      <window_info active="true" anchor="bottom" id="sbt-shell-toolwindow" order="8" visible="true" weight="0.32869297" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Gradle" order="6" />
+      <window_info anchor="right" id="sbt" order="7" weight="0.3298887" />
+      <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -385,16 +397,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
-          <folding>
-            <element signature="e#13#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/viw/internals/StateTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -402,44 +404,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/internals/State.scala">
+    <entry file="file://$PROJECT_DIR$/target/scala-2.12/viw-test-fastopt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
+        <state relative-caret-position="403189">
+          <caret line="23717" selection-start-line="23717" selection-end-line="23717" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="795" column="11" selection-start-line="795" selection-start-column="11" selection-end-line="796" selection-end-column="11" />
+        <state relative-caret-position="238">
+          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding>
+            <element signature="e#13#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Viw.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
           <folding>
             <element signature="e#13#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/MoveCommand.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="-472">
+          <caret line="84" column="19" lean-forward="true" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding>
-            <element signature="e#13#39#0" expanded="true" />
+            <element signature="e#13#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/viw/CommandsTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="360" column="10" lean-forward="true" selection-start-line="360" selection-start-column="10" selection-end-line="360" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/internals/State.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" column="3" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/viw/Command.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        <state relative-caret-position="344">
+          <caret line="66" column="21" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
           <folding>
             <element signature="e#13#39#0" expanded="true" />
           </folding>
@@ -448,20 +467,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/viw/ModifyTextCommand.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        <state relative-caret-position="718">
+          <caret line="53" column="1" lean-forward="true" selection-start-line="53" selection-start-column="1" selection-end-line="53" selection-end-column="1" />
           <folding>
             <element signature="e#13#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/SuspendableCommand.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/viw/ExitViwCommand.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        <state relative-caret-position="684">
+          <caret line="48" column="69" lean-forward="true" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
           <folding>
-            <element signature="e#13#38#0" expanded="true" />
+            <element signature="e#13#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

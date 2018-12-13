@@ -32,6 +32,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Match brackets over multiple lines[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Delete[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Delete last character on line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete empty[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Delete backwards[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Delete backwards start of line[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Delete line[0m[0m

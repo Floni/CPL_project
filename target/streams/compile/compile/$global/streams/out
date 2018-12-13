@@ -1,6 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala:69:12: missing argument list for method ++ in trait TraversableLike[0m
-[0m[[0m[31merror[0m] [0m[0mUnapplied methods are only converted to functions when a function type is expected.[0m
-[0m[[0m[31merror[0m] [0m[0mYou can make this conversion explicit by writing `++ _` or `++(_)(_)` instead of `++`.[0m
-[0m[[0m[31merror[0m] [0m[0m      "\n" ++[0m
-[0m[[0m[31merror[0m] [0m[0m           ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\internals\Runner.scala:18:28: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0m    import js.JSConverters._[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

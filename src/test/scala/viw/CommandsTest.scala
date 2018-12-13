@@ -354,6 +354,14 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Delete empty") {
+    viwTrue(
+      "x",
+      "##",
+      "##"
+    )
+  }
+
 
   test("Delete backwards") {
     viwTrue(
@@ -618,7 +626,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "dh",
       "ab#c#d",
-      "a#b#d"
+      "a#c#d"
     )
   }
 
@@ -639,7 +647,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       """abc
         |d#e#f
         |ghi""".stripMargin,
-      """a#b#f
+      """a#e#f
         |ghi""".stripMargin
     )
   }
@@ -672,7 +680,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "db",
       "abc defg#h#i",
-      "abc #d#i"
+      "abc #h#i"
     )
   }
 
@@ -680,7 +688,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     viwTrue(
       "db",
       "abc #d#efghi",
-      "#a#efghi"
+      "#d#efghi"
     )
   }
 
@@ -699,7 +707,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       "d0",
       """abc defg#h#i
         |test""".stripMargin,
-      """#a#i
+      """#h#i
         |test""".stripMargin
     )
   }
@@ -709,7 +717,7 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
       "d%",
       """ab(cd#e#
         |test""".stripMargin,
-      """ab#(#
+      """ab#e#
         |test""".stripMargin
     )
   }
