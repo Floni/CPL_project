@@ -1,13 +1,10 @@
-[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:69:26: type mismatch;[0m
-[0m[[0m[31merror[0m] [0m[0m found   : Option[viw.internals.State][0m
-[0m[[0m[31merror[0m] [0m[0m required: viw.Command[0m
-[0m[[0m[31merror[0m] [0m[0m            history += ((result, subHistory))[0m
-[0m[[0m[31merror[0m] [0m[0m                         ^[0m
-[0m[[0m[31merror[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:71:27: value eval is not a member of Option[viw.internals.State][0m
-[0m[[0m[31merror[0m] [0m[0m            return result.eval[0m
-[0m[[0m[31merror[0m] [0m[0m                          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala:68:17: local val suspResult in method processKey is never used[0m
-[0m[[0m[33mwarn[0m] [0m[0m            val suspResult = suspendedCmd.wake(command(state))[0m
-[0m[[0m[33mwarn[0m] [0m[0m                ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala:4:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.math.pow[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala:5:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.math.log10[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mE:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala:6:19: Unused import[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport scala.math.floor[0m
+[0m[[0m[33mwarn[0m] [0m[0m                  ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m

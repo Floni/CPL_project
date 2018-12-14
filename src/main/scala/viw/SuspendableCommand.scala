@@ -1,9 +1,6 @@
 package viw
 
 import java.lang.Math.min
-import scala.math.pow
-import scala.math.log10
-import scala.math.floor
 
 import viw.internals.State
 import viw.internals.State.Position
@@ -80,8 +77,6 @@ case class YankResultCommand(state: State, cmd : Command) extends Command(state)
 
 case class CountCommand(count : Int)(state: State) extends SuspendableCommand(state) {
   def wake(argument: Command) : Command = argument match {
-    case cmd: MoveCountResultCommand =>
-      MoveCountResultCommand(state, count * pow(10, floor(log10(cmd.count.toDouble)) + 1).toInt + cmd.count, cmd.cmd)
     case _ => MoveCountResultCommand(state, count, argument)
   }
 }

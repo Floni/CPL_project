@@ -52,7 +52,7 @@ object Viw {
     "<" -> IndentDecCommand
   )
 
-  val repeatableCommand = ListBuffer(DeleteMovementCommand, ChangeMovementCommand, IndentIncCommand, IndentDecCommand)
+  val repeatableCommands = ListBuffer(DeleteMovementCommand, ChangeMovementCommand, IndentIncCommand, IndentDecCommand)
 
   def processKey(key: String, state: State) : Option[State] = {
     if (commandMap.contains(key)) {
@@ -62,7 +62,7 @@ object Viw {
       val result = command(state).eval
       result match {
         case None =>
-          if (suspended.nonEmpty && suspended.last == command(state) && repeatableCommand.contains(command)) {
+          if (suspended.nonEmpty && suspended.last == command(state) && repeatableCommands.contains(command)) {
             val suspendedCmd = suspended.last
             suspended.clear()
             val suspResult = suspendedCmd.wake(command(state))
