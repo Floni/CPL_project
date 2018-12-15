@@ -85,6 +85,8 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count command move right more than length[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 3 to the right[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Repeat delete count command command 3 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 11 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 10 to the right[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Indent current line[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Indent current line repeat[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Indent up[0m[0m

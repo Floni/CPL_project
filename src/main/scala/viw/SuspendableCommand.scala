@@ -79,6 +79,12 @@ case class CountCommand(count : Int)(state: State) extends SuspendableCommand(st
   def wake(argument: Command) : Command = argument match {
     case _ => MoveCountResultCommand(state, count, argument)
   }
+
+  def concatCountCommand(cmd : Command) : CountCommand = cmd match{
+    case cCmd: CountCommand => CountCommand(10 * count + cCmd.count)(state)
+    case _: StartLineCommand => CountCommand(10 * count)(state)
+    case _ => this
+  }
 }
 
 case class MoveCountResultCommand(state: State, count: Int, cmd: Command) extends MoveCommand(state) {

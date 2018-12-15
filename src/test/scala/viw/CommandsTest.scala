@@ -842,6 +842,23 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Count command delete 11 to the right") {
+    viwTrue(
+      "d11l",
+      "t#h#is is a test",
+      "t#s#t"
+    )
+  }
+
+  test("Count command delete 10 to the right") {
+    viwTrue(
+      "d10l",
+      "t#h#is is a test",
+      "t#e#st"
+    )
+  }
+
+
   test("Indent current line") {
     viwTrue(
       ">>",

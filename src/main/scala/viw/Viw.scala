@@ -59,9 +59,12 @@ object Viw {
       val command = commandMap(key)
       subHistory += key
 
-      val result = command(state).eval
+      val lastCmdCount = subHistory.length > 1 && subHistory(subHistory.length - 2).charAt(0).isDigit
+
+      val result = if (command == StartLineCommand && lastCmdCount) None else command(state).eval
       result match {
         case None =>
+          // Repeated command
           if (suspended.nonEmpty && suspended.last == command(state) && repeatableCommands.contains(command)) {
             val suspendedCmd = suspended.last
             suspended.clear()
@@ -70,10 +73,17 @@ object Viw {
             subHistory = ListBuffer()
             return suspResult.eval
           }
-          if (command(state).isInstanceOf[SuspendableCommand]) {
+
+          // Previous command was a count command
+          if (lastCmdCount) {
+            val suspendedCmd = suspended.last
+            suspended.remove(suspended.length - 1)
+            suspended.append(suspendedCmd.asInstanceOf[CountCommand].concatCountCommand(command(state)))
+          } else if (command(state).isInstanceOf[SuspendableCommand]) {
             suspended.append(command(state).asInstanceOf[SuspendableCommand])
           }
           return Some(state)
+
         case Some(_) =>
           if (suspended.nonEmpty) return foldSuspendedCommands(command(state))
       }
