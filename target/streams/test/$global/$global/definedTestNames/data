@@ -1,1 +1,1 @@
-["viw.internals.StateTest","viw.CommandsTest"]
+["viw.ModifyTextCommandsTest","viw.internals.StateTest","viw.CommandsTest","viw.MoveCommandsTest","viw.SuspendableCommandsTest","viw.ExitViwCommandsTest"]

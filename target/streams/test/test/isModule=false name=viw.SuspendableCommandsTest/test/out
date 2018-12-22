@@ -1,0 +1,34 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mSuspendableCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement left[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement down[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement next word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement end word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement end word new word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete back word same word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete back word new word[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete to end of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete to start of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete match bracket to first bracket on line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete match bracket on other line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete movement delete movement deletes line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Change command delete right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Change command change command deletes line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank right and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank left and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank down and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank up and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank whole line and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command move right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command move right more than length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 3 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Repeat delete count command command 3 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 11 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 10 to the right[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Indent current line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Indent current line repeat[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Indent up[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Indent match brackets[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Dec indent line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Dec indent line repeat[0m[0m

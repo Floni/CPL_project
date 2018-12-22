@@ -1,0 +1,12 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mModifyTextCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete last character on line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete backwards[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete backwards start of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete full line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete empty line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Delete line from end of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Join line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Join line last line[0m[0m

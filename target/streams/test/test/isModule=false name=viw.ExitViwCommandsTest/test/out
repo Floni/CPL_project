@@ -1,0 +1,17 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mExitViwCommandsTest:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert into normal mode[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Append after character[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Append after character at last character of the line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Open newline[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Open newline multiple lines[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Open newline multiple times[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Substitute[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Substitute empty[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Substitute last char of line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Go[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Go single line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert in line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert in line empty line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Insert after line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Change to the end of the line[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Change to the end of the line at end of line[0m[0m
