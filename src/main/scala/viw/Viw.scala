@@ -62,9 +62,13 @@ object Viw {
       IndentIncCommand, IndentDecCommand)
 
   def processKey(key: String, state: State) : Option[State] = {
+    handleKey(key, state, false)
+  }
+
+  def handleKey(key: String, state: State, emulated: Boolean) : Option[State] = {
     if (commandMap.contains(key)) {
       val command = commandMap(key)
-      subHistory += key
+      if (!emulated) subHistory += key
 
       // Check whether last command was a count command
       val lastCmdCount = subHistory.length > 1 && subHistory(subHistory.length - 2).charAt(0).isDigit
@@ -80,8 +84,8 @@ object Viw {
             val suspendedCmd = suspended.last
             suspended.clear()
             val suspResult = suspendedCmd.wake(command(state))
-            history += ((suspResult, subHistory))
-            subHistory = ListBuffer()
+            if (!emulated) history += ((suspResult, subHistory.clone()))
+            subHistory.clear()
             return suspResult.eval
           }
 
@@ -101,8 +105,8 @@ object Viw {
           // Command has a result
           if (suspended.nonEmpty) return foldSuspendedCommands(command(state))
       }
-      history += ((command(state), subHistory))
-      subHistory = ListBuffer()
+      if (!emulated) history += ((command(state), subHistory.clone()))
+      if (!emulated) subHistory.clear()
       return result
     }
     None
@@ -119,8 +123,8 @@ object Viw {
       foldSuspendedCommands(suspendedCmd.wake(command))
     } else {
       val resultCommand = suspendedCmd.wake(command)
-      history += ((resultCommand, subHistory))
-      subHistory = ListBuffer()
+      history += ((resultCommand, subHistory.clone()))
+      subHistory.clear()
       resultCommand.eval
     }
   }
