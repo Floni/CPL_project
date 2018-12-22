@@ -5,6 +5,7 @@ import java.lang.Math.min
 import viw.internals.State
 import viw.internals.State.Position
 
+// Command that can be suspended, does not have an effect itself without combining with other commands
 abstract class SuspendableCommand(state: State) extends Command(state) {
   def eval: Option[State] = None
 
@@ -56,7 +57,8 @@ case class ChangeMovementResultCommand(state: State, cmd : Command) extends Modi
         position = Position(min(line, lines - 1), 0),
         mode = false))
     case command: MoveCommand =>
-      Some(DeleteMovementResultCommand(state, cmd).deleteContentBetween(command.getNewPos(position)).copy(mode = false))
+      Some(DeleteMovementResultCommand(state, cmd).deleteContentBetween(
+        command.getNewPos(position)).copy(mode = false))
     case _ => Some(state)
   }
 }
@@ -66,12 +68,15 @@ case class YankCommand(state: State) extends SuspendableCommand(state) {
 }
 
 case class YankResultCommand(state: State, cmd : Command) extends Command(state) {
-  def eval: Option[State] = cmd match {
-    case command: MoveCommand => {
-      Viw.pasteBuffer = Some(getContentBetween(command.getNewPos(position), position))
-      Some(state)
+  def eval: Option[State] = {
+    cmd match {
+      case _: YankCommand =>
+        Viw.pasteBuffer = Some(getLines(line, line + 1))
+      case command: MoveCommand =>
+        Viw.pasteBuffer = Some(getContentBetween(command.getNewPos(position), position))
+      case _ =>
     }
-    case _ => Some(state)
+    Some(state)
   }
 }
 
@@ -139,7 +144,8 @@ case class IndentDecResultCommand(state: State, cmd: Command) extends ModifyText
       val newLines = decIndent(fLine, eLine, "")
       Some(state.copy(content =
         getLines(0, fLine) ++ newLines ++ getLines(eLine + 1, lines),
-        position = Position(line, char + newLines.split("\n")(line - fLine).length - lineLength(line) - 1)))
+        position = Position(line,
+          char + newLines.split("\n")(line - fLine).length - lineLength(line) - 1)))
     }
     case _ => Some(state)
   }

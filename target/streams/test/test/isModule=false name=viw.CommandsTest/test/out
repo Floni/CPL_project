@@ -81,6 +81,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- Yank left and paste[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Yank down and paste[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Yank up and paste[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Yank whole line and paste[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count command move right[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count command move right more than length[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- Count command delete 3 to the right[0m[0m

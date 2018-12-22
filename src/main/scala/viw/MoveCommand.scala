@@ -28,14 +28,18 @@ case class MoveUpCommand(state: State) extends MoveCommand(state) {
 }
 
 case class MoveRightCommand(state: State) extends MoveCommand(state) {
-  def getNewPos(pos : Position): Position = Position(pos.line, min(lineLength(pos.line) - 1, pos.character + 1))
+  def getNewPos(pos : Position): Position =
+    Position(pos.line, min(lineLength(pos.line) - 1, pos.character + 1))
 }
 
 abstract class MoveWordCommand(state: State) extends MoveCommand(state) {
+  // Next whitespace after current pos
   def whitespacePos(pos: Position) : Int =
     contentLines(pos.line).indexOf(' ', pos.character)
+  // Next (non-whitespace) character pos after whitespacePos
   def characterPos(pos: Position) : Int =
-    contentLines(pos.line).slice(whitespacePos(pos), lineLength(pos.line)).indexWhere(c => c != ' ') + whitespacePos(pos)
+    contentLines(pos.line).slice(whitespacePos(pos),
+      lineLength(pos.line)).indexWhere(c => c != ' ') + whitespacePos(pos)
 }
 
 case class NextWordCommand(state: State) extends MoveWordCommand(state) {
@@ -103,13 +107,16 @@ case class StartLineCommand(state: State) extends MoveCommand(state) {
 
 case class MatchBracketCommand(state: State) extends MoveCommand(state) {
   // Recursive function to find matching bracket position
-  def iteratePos(cPos : Position, counter: Int, bracket: Char, mBracket: Char, openBracket: Boolean): Position = {
+  def iteratePos(cPos : Position, counter: Int, bracket: Char, mBracket: Char,
+                 openBracket: Boolean): Position = {
     if (counter == 0) return cPos
     val nPos = if (openBracket) nextPos(cPos) else prevPos(cPos)
     nPos match {
       case Some((l : Int, c : Int)) =>
-        if (contentLines(l)(c) == bracket) iteratePos(Position(l, c), counter + 1, bracket, mBracket, openBracket)
-        else if (contentLines(l)(c) == mBracket) iteratePos(Position(l, c), counter - 1, bracket, mBracket, openBracket)
+        if (contentLines(l)(c) == bracket)
+          iteratePos(Position(l, c), counter + 1, bracket, mBracket, openBracket)
+        else if (contentLines(l)(c) == mBracket)
+          iteratePos(Position(l, c), counter - 1, bracket, mBracket, openBracket)
         else iteratePos(Position(l, c), counter, bracket, mBracket, openBracket)
       case None => position
     }

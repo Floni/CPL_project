@@ -810,6 +810,19 @@ class CommandsTest extends FunSuite with ViwTest with BeforeAndAfter {
     )
   }
 
+  test("Yank whole line and paste") {
+    viwTrue(
+      "yyp",
+      """abc def ghi
+        |test #a# test
+        |test""".stripMargin,
+      """abc def ghi
+        |test atest a tes#t#
+        | test
+        |test""".stripMargin
+    )
+  }
+
   test("Count command move right") {
     viwTrue(
       "3l",

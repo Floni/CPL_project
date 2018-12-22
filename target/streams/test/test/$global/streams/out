@@ -1,6 +1,6 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(viw.CommandsTest, org.scalajs.testcommon.Serializer$FingerprintSerializer$$anon$3@50d32adf, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(viw.internals.StateTest, org.scalajs.testcommon.Serializer$FingerprintSerializer$$anon$3@483c54d8, false, [SuiteSelector])[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 380 milliseconds.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(viw.CommandsTest, org.scalajs.testcommon.Serializer$FingerprintSerializer$$anon$3@e759516, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(viw.internals.StateTest, org.scalajs.testcommon.Serializer$FingerprintSerializer$$anon$3@45542234, false, [SuiteSelector])[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 250 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 2[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0[0m[0m

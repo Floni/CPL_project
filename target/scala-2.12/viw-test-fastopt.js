@@ -12441,7 +12441,7 @@ $c_Lviw_Viw$.prototype.init___ = (function() {
   };
   this.commandMap$1 = $as_sci_Map(this$82.elems$1);
   $m_scm_ListBuffer$();
-  var array$1 = [$m_Lviw_DeleteMovementCommand$(), $m_Lviw_ChangeMovementCommand$(), $m_Lviw_IndentIncCommand$(), $m_Lviw_IndentDecCommand$()];
+  var array$1 = [$m_Lviw_DeleteMovementCommand$(), $m_Lviw_ChangeMovementCommand$(), $m_Lviw_YankCommand$(), $m_Lviw_IndentIncCommand$(), $m_Lviw_IndentDecCommand$()];
   if (($uI(array$1.length) === 0)) {
     var this$86 = new $c_scm_GrowingBuilder().init___scg_Growable(new $c_scm_ListBuffer().init___());
     var jsx$39 = $as_sc_GenTraversable(this$86.elems$1)
@@ -12513,7 +12513,7 @@ $c_Lviw_Viw$.prototype.processKey__T__Lviw_internals_State__s_Option = (function
         var elems$1 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$1);
         this$15.$$plus$plus$eq__sc_TraversableOnce__scm_ListBuffer(elems$1)
       };
-      return new $c_s_Some().init___O(state)
+      return $m_s_None$()
     } else if ($is_s_Some(result)) {
       if (this.suspended$1.nonEmpty__Z()) {
         return this.foldSuspendedCommands__Lviw_Command__s_Option($as_Lviw_Command(command.apply__O__O(state)))
@@ -45264,7 +45264,7 @@ $c_Lviw_PasteBehindCommand.prototype.eval__s_Option = (function() {
   } else {
     var x$3 = $m_s_None$();
     if ((x$3 === x1)) {
-      return new $c_s_Some().init___O(this.state$2)
+      return $m_s_None$()
     } else {
       throw new $c_s_MatchError().init___O(x1)
     }
@@ -45399,7 +45399,7 @@ $c_Lviw_PasteCommand.prototype.eval__s_Option = (function() {
   } else {
     var x$3 = $m_s_None$();
     if ((x$3 === x1)) {
-      return new $c_s_Some().init___O(this.state$2)
+      return $m_s_None$()
     } else {
       throw new $c_s_MatchError().init___O(x1)
     }
@@ -45518,7 +45518,7 @@ $c_Lviw_RepeatCommand.prototype.eval__s_Option = (function() {
     };
     return $as_s_Option(acc)
   } else {
-    return new $c_s_Some().init___O(this.state$2)
+    return $m_s_None$()
   }
 });
 $c_Lviw_RepeatCommand.prototype.init___Lviw_internals_State = (function(state) {
@@ -45620,13 +45620,13 @@ $c_Lviw_YankResultCommand.prototype.toString__T = (function() {
 });
 $c_Lviw_YankResultCommand.prototype.eval__s_Option = (function() {
   var x1 = this.cmd$2;
-  if ($is_Lviw_MoveCommand(x1)) {
-    var x2 = $as_Lviw_MoveCommand(x1);
-    $m_Lviw_Viw$().pasteBuffer$1 = new $c_s_Some().init___O(this.getContentBetween__Lviw_internals_State$Position__Lviw_internals_State$Position__T(x2.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1), this.position$1));
-    return new $c_s_Some().init___O(this.state$2)
-  } else {
-    return new $c_s_Some().init___O(this.state$2)
-  }
+  if ($is_Lviw_YankCommand(x1)) {
+    $m_Lviw_Viw$().pasteBuffer$1 = new $c_s_Some().init___O(this.getLines__I__I__T(this.line$1, ((1 + this.line$1) | 0)))
+  } else if ($is_Lviw_MoveCommand(x1)) {
+    var x3 = $as_Lviw_MoveCommand(x1);
+    $m_Lviw_Viw$().pasteBuffer$1 = new $c_s_Some().init___O(this.getContentBetween__Lviw_internals_State$Position__Lviw_internals_State$Position__T(x3.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1), this.position$1))
+  };
+  return $m_s_None$()
 });
 $c_Lviw_YankResultCommand.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
@@ -49644,7 +49644,7 @@ $c_Lviw_ChangeMovementResultCommand.prototype.eval__s_Option = (function() {
     var x$9 = qual$1.selection$1;
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(x$7, x$8, x$9, false))
   } else {
-    return new $c_s_Some().init___O(this.state$3)
+    return $m_s_None$()
   }
 });
 $c_Lviw_ChangeMovementResultCommand.prototype.hashCode__I = (function() {
@@ -49939,7 +49939,7 @@ $c_Lviw_DeleteMovementResultCommand.prototype.eval__s_Option = (function() {
     var x3 = $as_Lviw_MoveCommand(x1);
     return new $c_s_Some().init___O(this.deleteContentBetween__Lviw_internals_State$Position__Lviw_internals_State(x3.getNewPos__Lviw_internals_State$Position__Lviw_internals_State$Position(this.position$1)))
   } else {
-    return new $c_s_Some().init___O(this.state$3)
+    return $m_s_None$()
   }
 });
 $c_Lviw_DeleteMovementResultCommand.prototype.hashCode__I = (function() {
@@ -50375,7 +50375,7 @@ $c_Lviw_IndentDecResultCommand.prototype.eval__s_Option = (function() {
     var mode$1 = this$20.mode$1;
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content$1, position$1, selection$1, mode$1))
   } else {
-    return new $c_s_Some().init___O(this.state$3)
+    return $m_s_None$()
   }
 });
 $c_Lviw_IndentDecResultCommand.prototype.decIndent__I__I__T__T = (function(l1, l2, acc) {
@@ -50639,7 +50639,7 @@ $c_Lviw_IndentIncResultCommand.prototype.eval__s_Option = (function() {
     var mode$1 = this$17.mode$1;
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content$1, position$1, selection$1, mode$1))
   } else {
-    return new $c_s_Some().init___O(this.state$3)
+    return $m_s_None$()
   }
 });
 $c_Lviw_IndentIncResultCommand.prototype.IncIndent__I__I__T__T = (function(l1, l2, acc) {
@@ -51038,7 +51038,7 @@ $c_Lviw_JoinLineCommand.prototype.eval__s_Option = (function() {
     var mode = this$19.mode$1;
     return new $c_s_Some().init___O(new $c_Lviw_internals_State().init___T__Lviw_internals_State$Position__s_Option__Z(content, position, selection, mode))
   } else {
-    return new $c_s_Some().init___O(this.state$3)
+    return $m_s_None$()
   }
 });
 $c_Lviw_JoinLineCommand.prototype.init___Lviw_internals_State = (function(state) {
@@ -65789,118 +65789,131 @@ $c_Lviw_CommandsTest.prototype.init___ = (function() {
   var testTags$82 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$82);
   var testFun$82 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$85$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$85$1, "3l", "this is #a# test", "this is a t#e#st", true)
+      var this$314 = new $c_sci_StringOps().init___T("abc def ghi\n        |test #a# test\n        |test");
+      var $in$34 = $f_sci_StringLike__stripMargin__C__T(this$314, 124);
+      var this$316 = new $c_sci_StringOps().init___T("abc def ghi\n        |test atest a tes#t#\n        | test\n        |test");
+      var expected$36 = $f_sci_StringLike__stripMargin__C__T(this$316, 124);
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$85$1, "yyp", $in$34, expected$36, true)
     })
   })(this));
   var pos$84 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 813);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command move right", testTags$82, testFun$82, pos$84);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Yank whole line and paste", testTags$82, testFun$82, pos$84);
   var array$83 = [];
   var testTags$83 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$83);
   var testFun$83 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$86$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$86$1, "9l", "this is #a# test", "this is a tes#t#", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$86$1, "3l", "this is #a# test", "this is a t#e#st", true)
     })
   })(this));
-  var pos$85 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 821);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command move right more than length", testTags$83, testFun$83, pos$85);
+  var pos$85 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 826);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command move right", testTags$83, testFun$83, pos$85);
   var array$84 = [];
   var testTags$84 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$84);
   var testFun$84 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$87$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$87$1, "d3l", "this is #a# test", "this is #e#st", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$87$1, "9l", "this is #a# test", "this is a tes#t#", true)
     })
   })(this));
-  var pos$86 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 829);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 3 to the right", testTags$84, testFun$84, pos$86);
+  var pos$86 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 834);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command move right more than length", testTags$84, testFun$84, pos$86);
   var array$85 = [];
   var testTags$85 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$85);
   var testFun$85 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$88$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$88$1, "d3l.", "thi#s# is a test", "thi# #test", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$88$1, "d3l", "this is #a# test", "this is #e#st", true)
     })
   })(this));
-  var pos$87 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 837);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Repeat delete count command command 3 to the right", testTags$85, testFun$85, pos$87);
+  var pos$87 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 842);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 3 to the right", testTags$85, testFun$85, pos$87);
   var array$86 = [];
   var testTags$86 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$86);
   var testFun$86 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$89$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$89$1, "d11l", "t#h#is is a test", "t#s#t", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$89$1, "d3l.", "thi#s# is a test", "thi# #test", true)
     })
   })(this));
-  var pos$88 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 845);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 11 to the right", testTags$86, testFun$86, pos$88);
+  var pos$88 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 850);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Repeat delete count command command 3 to the right", testTags$86, testFun$86, pos$88);
   var array$87 = [];
   var testTags$87 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$87);
   var testFun$87 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$90$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$90$1, "d10l", "t#h#is is a test", "t#e#st", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$90$1, "d11l", "t#h#is is a test", "t#s#t", true)
     })
   })(this));
-  var pos$89 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 853);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 10 to the right", testTags$87, testFun$87, pos$89);
+  var pos$89 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 858);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 11 to the right", testTags$87, testFun$87, pos$89);
   var array$88 = [];
   var testTags$88 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$88);
   var testFun$88 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$91$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$91$1, ">>", "this is a tes#t#", "  this is a tes#t#", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$91$1, "d10l", "t#h#is is a test", "t#e#st", true)
     })
   })(this));
-  var pos$90 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 862);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent current line", testTags$88, testFun$88, pos$90);
+  var pos$90 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 866);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Count command delete 10 to the right", testTags$88, testFun$88, pos$90);
   var array$89 = [];
   var testTags$89 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$89);
   var testFun$89 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$92$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$92$1, ">>.", "this is a tes#t#", "    this is a tes#t#", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$92$1, ">>", "this is a tes#t#", "  this is a tes#t#", true)
     })
   })(this));
-  var pos$91 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 870);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent current line repeat", testTags$89, testFun$89, pos$91);
+  var pos$91 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 875);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent current line", testTags$89, testFun$89, pos$91);
   var array$90 = [];
   var testTags$90 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$90);
   var testFun$90 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$93$1) {
     return (function() {
-      var this$330 = new $c_sci_StringOps().init___T("  test a test\n        |test #a# test\n        |test");
-      var $in$34 = $f_sci_StringLike__stripMargin__C__T(this$330, 124);
-      var this$332 = new $c_sci_StringOps().init___T("    test a test\n        |  test #a# test\n        |test");
-      var expected$36 = $f_sci_StringLike__stripMargin__C__T(this$332, 124);
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$93$1, ">k", $in$34, expected$36, true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$93$1, ">>.", "this is a tes#t#", "    this is a tes#t#", true)
     })
   })(this));
-  var pos$92 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 879);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent up", testTags$90, testFun$90, pos$92);
+  var pos$92 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 883);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent current line repeat", testTags$90, testFun$90, pos$92);
   var array$91 = [];
   var testTags$91 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$91);
   var testFun$91 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$94$1) {
     return (function() {
-      var this$336 = new $c_sci_StringOps().init___T("function(arg) {\n        |if(bla) #{#\n        |  qlzdqlzdqlz\n        |  lzqdqldlqd\n        |  qzdlqzldql\n        |  {}\n        |}\n        |}");
+      var this$336 = new $c_sci_StringOps().init___T("  test a test\n        |test #a# test\n        |test");
       var $in$35 = $f_sci_StringLike__stripMargin__C__T(this$336, 124);
-      var this$338 = new $c_sci_StringOps().init___T("function(arg) {\n        |  if(bla) #{#\n        |    qlzdqlzdqlz\n        |    lzqdqldlqd\n        |    qzdlqzldql\n        |    {}\n        |  }\n        |}");
+      var this$338 = new $c_sci_StringOps().init___T("    test a test\n        |  test #a# test\n        |test");
       var expected$37 = $f_sci_StringLike__stripMargin__C__T(this$338, 124);
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$94$1, ">%", $in$35, expected$37, true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$94$1, ">k", $in$35, expected$37, true)
     })
   })(this));
-  var pos$93 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 891);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent match brackets", testTags$91, testFun$91, pos$93);
+  var pos$93 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 892);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent up", testTags$91, testFun$91, pos$93);
   var array$92 = [];
   var testTags$92 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$92);
   var testFun$92 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$95$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$95$1, "<<", "   test this lin#e#", " test this lin#e#", true)
+      var this$342 = new $c_sci_StringOps().init___T("function(arg) {\n        |if(bla) #{#\n        |  qlzdqlzdqlz\n        |  lzqdqldlqd\n        |  qzdlqzldql\n        |  {}\n        |}\n        |}");
+      var $in$36 = $f_sci_StringLike__stripMargin__C__T(this$342, 124);
+      var this$344 = new $c_sci_StringOps().init___T("function(arg) {\n        |  if(bla) #{#\n        |    qlzdqlzdqlz\n        |    lzqdqldlqd\n        |    qzdlqzldql\n        |    {}\n        |  }\n        |}");
+      var expected$38 = $f_sci_StringLike__stripMargin__C__T(this$344, 124);
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$95$1, ">%", $in$36, expected$38, true)
     })
   })(this));
-  var pos$94 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 913);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Dec indent line", testTags$92, testFun$92, pos$94);
+  var pos$94 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 904);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Indent match brackets", testTags$92, testFun$92, pos$94);
   var array$93 = [];
   var testTags$93 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$93);
   var testFun$93 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$96$1) {
     return (function() {
-      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$96$1, "<<.", "   test this lin#e#", "test this lin#e#", true)
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$96$1, "<<", "   test this lin#e#", " test this lin#e#", true)
     })
   })(this));
-  var pos$95 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 921);
-  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Dec indent line repeat", testTags$93, testFun$93, pos$95);
+  var pos$95 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 926);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Dec indent line", testTags$93, testFun$93, pos$95);
+  var array$94 = [];
+  var testTags$94 = new $c_sjs_js_WrappedArray().init___sjs_js_Array(array$94);
+  var testFun$94 = new $c_sjsr_AnonFunction0().init___sjs_js_Function0((function(this$97$1) {
+    return (function() {
+      return $f_Lviw_ViwTest__viwMode__T__T__T__Z__Lorg_scalatest_compatible_Assertion(this$97$1, "<<.", "   test this lin#e#", "test this lin#e#", true)
+    })
+  })(this));
+  var pos$96 = new $c_Lorg_scalactic_source_Position().init___T__T__I("CommandsTest.scala", "Please set the environment variable SCALACTIC_FILL_FILE_PATHNAMES to yes at compile time to enable this feature.", 934);
+  $f_Lorg_scalatest_FunSuiteLike__test__T__sc_Seq__F0__Lorg_scalactic_source_Position__V(this, "Dec indent line repeat", testTags$94, testFun$94, pos$96);
   return this
 });
 $c_Lviw_CommandsTest.prototype.runTest__T__Lorg_scalatest_Args__Lorg_scalatest_Status = (function(testName, args) {

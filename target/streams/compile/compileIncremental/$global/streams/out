@@ -2,22 +2,23 @@
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed:Set(D:\Dropbox\CPL\Scala\2018\project\project-template\src\main\scala\viw\internals\Runner.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Command.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\ModifyTextCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\MoveCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(viw.Command, viw.JoinLineCommand, viw.IndentDecCommand, viw.DeleteMovementCommand, viw.ModifyTextCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.DeletionCommand, viw.BackWordCommand, viw.IndentIncCommand, viw.DeleteLineCommand, viw.MoveCountResultCommand, viw.SuspendableCommand, viw.MoveLeftCommand, viw.MoveWordCommand, viw.IndentDecResultCommand, viw.MoveUpCommand, viw.StartLineCommand, viw.IndentIncResultCommand, viw.EndLineCommand, viw.EndWordCommand, viw.MatchBracketCommand, viw.ChangeMovementResultCommand, viw.RepeatCommand, viw.MoveCommand, viw.CountCommand, viw.MoveRightCommand, viw.DeleteCommand, viw.DeleteBackCommand, viw.YankResultCommand, viw.DeleteMovementResultCommand, viw.YankCommand, viw.ChangeMovementCommand, viw.NextWordCommand, viw.MoveDownCommand, viw.Viw)[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(viw.Viw)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(viw.Command, viw.JoinLineCommand, viw.IndentDecCommand, viw.DeleteMovementCommand, viw.ModifyTextCommand, viw.PasteCommand, viw.PasteBehindCommand, viw.DeletionCommand, viw.BackWordCommand, viw.IndentIncCommand, viw.DeleteLineCommand, viw.MoveCountResultCommand, viw.SuspendableCommand, viw.MoveLeftCommand, viw.MoveWordCommand, viw.IndentDecResultCommand, viw.MoveUpCommand, viw.StartLineCommand, viw.IndentIncResultCommand, viw.EndLineCommand, viw.EndWordCommand, viw.MatchBracketCommand, viw.ChangeMovementResultCommand, viw.RepeatCommand, viw.MoveCommand, viw.CountCommand, viw.MoveRightCommand, viw.DeleteCommand, viw.DeleteBackCommand, viw.YankResultCommand, viw.DeleteMovementResultCommand, viw.YankCommand, viw.ChangeMovementCommand, viw.NextWordCommand, viw.MoveDownCommand, viw.Viw)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Command.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\ModifyTextCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\SuspendableCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\MoveCommand.scala, E:\Documents\Studies\CPL\CPL_project\src\main\scala\viw\Viw.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 8 sources: invalidated sources (5) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 8 Scala sources to E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.1:compile for Scala 2.12.4[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 65be95a2 for Scala compiler version 2.12.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 3ce8c203 for Scala compiler version 2.12.4[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-encoding[0m
 [0m[[0m[0mdebug[0m] [0m[0m	UTF-8[0m
@@ -35,11 +36,5 @@
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\Flori\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.12.4.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	E:\Documents\Studies\CPL\CPL_project\target\scala-2.12\classes;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-library_2.12\jars\scalajs-library_2.12-0.6.25.jar;C:\Users\Flori\.ivy2\cache\org.scala-js\scalajs-dom_sjs0.6_2.12\jars\scalajs-dom_sjs0.6_2.12-0.9.2.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.680363 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 3.6674699 s[0m
 [0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m
